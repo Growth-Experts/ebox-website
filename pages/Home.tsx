@@ -382,12 +382,31 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-gray-400 font-bold uppercase tracking-widest mb-12">Industry leaders rely on eBox</h2>
-          <div className="flex flex-wrap justify-center gap-12 opacity-50 grayscale mb-16">
-             {/* Placeholder Logos */}
-             <div className="h-8 w-32 bg-gray-800 mask-logo"></div>
-             <div className="h-8 w-32 bg-gray-800 mask-logo"></div>
-             <div className="h-8 w-32 bg-gray-800 mask-logo"></div>
-             <div className="h-8 w-32 bg-gray-800 mask-logo"></div>
+          <div className="flex flex-wrap justify-center items-center gap-12 opacity-40 mb-16">
+             {/* Fictional company logos */}
+             <svg width="140" height="36" viewBox="0 0 140 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+               <rect x="0" y="6" width="24" height="24" rx="4" fill="#1A1A1A"/>
+               <rect x="4" y="10" width="7" height="7" rx="1" fill="white"/>
+               <rect x="13" y="10" width="7" height="7" rx="1" fill="white"/>
+               <rect x="4" y="19" width="16" height="7" rx="1" fill="white"/>
+               <text x="30" y="24" fontFamily="Inter, sans-serif" fontSize="16" fontWeight="700" fill="#1A1A1A">Meridian</text>
+             </svg>
+             <svg width="150" height="36" viewBox="0 0 150 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+               <circle cx="14" cy="18" r="12" stroke="#1A1A1A" strokeWidth="3" fill="none"/>
+               <path d="M14 10 L14 18 L22 18" stroke="#1A1A1A" strokeWidth="2.5" strokeLinecap="round"/>
+               <text x="32" y="24" fontFamily="Inter, sans-serif" fontSize="16" fontWeight="700" fill="#1A1A1A">Apex REIT</text>
+             </svg>
+             <svg width="160" height="36" viewBox="0 0 160 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+               <polygon points="14,4 26,30 2,30" stroke="#1A1A1A" strokeWidth="2.5" fill="none" strokeLinejoin="round"/>
+               <line x1="8" y1="22" x2="20" y2="22" stroke="#1A1A1A" strokeWidth="2"/>
+               <text x="32" y="24" fontFamily="Inter, sans-serif" fontSize="16" fontWeight="700" fill="#1A1A1A">Vantage RE</text>
+             </svg>
+             <svg width="170" height="36" viewBox="0 0 170 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+               <rect x="2" y="16" width="10" height="16" rx="1" fill="#1A1A1A"/>
+               <rect x="14" y="10" width="10" height="22" rx="1" fill="#1A1A1A"/>
+               <rect x="26" y="4" width="10" height="28" rx="1" fill="#1A1A1A"/>
+               <text x="42" y="24" fontFamily="Inter, sans-serif" fontSize="15" fontWeight="700" fill="#1A1A1A">Cornerstone</text>
+             </svg>
           </div>
           
           <div className="max-w-3xl mx-auto">
