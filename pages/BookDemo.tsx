@@ -43,7 +43,7 @@ const BookDemo: React.FC = () => {
               </div>
               <h3 className="font-bold text-lg mb-2">Email Us</h3>
               <p className="text-gray-500 mb-4 text-sm">We usually respond within 2 hours.</p>
-              <a href="mailto:sales@ebox.com" className="text-ebox-dark font-bold hover:text-ebox-lime transition-colors">sales@ebox.com</a>
+              <a href="mailto:productsales@openboxsoftware.com" className="text-ebox-dark font-bold hover:text-ebox-lime transition-colors">productsales@openboxsoftware.com</a>
             </div>
 
             <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 flex flex-col items-center hover:shadow-md transition-shadow">

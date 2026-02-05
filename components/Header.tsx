@@ -29,23 +29,23 @@ const Header: React.FC<HeaderProps> = ({ onNavigate, currentPage }) => {
           </div>
           
           <div className="hidden md:flex items-center space-x-8">
-            <button 
+            <button
               onClick={() => handleNav('home')}
               className={`text-sm font-medium transition-colors ${currentPage === 'home' ? 'text-ebox-dark' : 'text-gray-500 hover:text-ebox-dark'}`}
             >
               Home
             </button>
-            <button 
+            <button
+              onClick={() => handleNav('about')}
+              className={`text-sm font-medium transition-colors ${currentPage === 'about' ? 'text-ebox-dark' : 'text-gray-500 hover:text-ebox-dark'}`}
+            >
+              About Us
+            </button>
+            <button
               onClick={() => handleNav('eforms')}
               className={`text-sm font-medium transition-colors ${currentPage === 'eforms' ? 'text-ebox-dark' : 'text-gray-500 hover:text-ebox-dark'}`}
             >
               eForms
-            </button>
-            <button 
-              onClick={() => handleNav('about')}
-              className={`text-sm font-medium transition-colors ${currentPage === 'about' ? 'text-ebox-dark' : 'text-gray-500 hover:text-ebox-dark'}`}
-            >
-              About
             </button>
             <a href="#" className="text-sm font-medium text-gray-500 hover:text-ebox-dark">eConnect</a>
             <Button variant="primary" size="sm" onClick={() => handleNav('book-demo')}>Book a Demo</Button>
@@ -66,25 +66,25 @@ const Header: React.FC<HeaderProps> = ({ onNavigate, currentPage }) => {
       {isMobileMenuOpen && (
         <div className="md:hidden bg-white border-t border-gray-100 absolute w-full shadow-lg">
           <div className="px-4 pt-2 pb-6 space-y-2">
-            <button 
+            <button
               onClick={() => handleNav('home')}
               className="block w-full text-left px-3 py-3 text-base font-medium text-gray-700 hover:bg-gray-50 rounded-md"
             >
               Home
             </button>
-            <button 
+            <button
+              onClick={() => handleNav('about')}
+              className="block w-full text-left px-3 py-3 text-base font-medium text-gray-700 hover:bg-gray-50 rounded-md"
+            >
+              About Us
+            </button>
+            <button
               onClick={() => handleNav('eforms')}
               className="block w-full text-left px-3 py-3 text-base font-medium text-gray-700 hover:bg-gray-50 rounded-md"
             >
               eForms
             </button>
-            <button 
-              onClick={() => handleNav('about')}
-              className="block w-full text-left px-3 py-3 text-base font-medium text-gray-700 hover:bg-gray-50 rounded-md"
-            >
-              About
-            </button>
-             <a href="#" className="block w-full text-left px-3 py-3 text-base font-medium text-gray-700 hover:bg-gray-50 rounded-md">eConnect</a>
+            <a href="#" className="block w-full text-left px-3 py-3 text-base font-medium text-gray-700 hover:bg-gray-50 rounded-md">eConnect</a>
             <div className="pt-4">
               <Button variant="primary" className="w-full" onClick={() => handleNav('book-demo')}>Book a Demo</Button>
             </div>

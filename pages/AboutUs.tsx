@@ -16,8 +16,8 @@ const AboutUs: React.FC<AboutUsProps> = ({ onNavigate }) => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-3xl">
             <h1 className="text-5xl md:text-6xl font-extrabold tracking-tight text-ebox-dark mb-6">
-              We make MRI work <br/>
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-ebox-lime to-green-600">harder for you.</span>
+              We make MRI work{' '}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-ebox-lime to-green-600">harder&nbsp;for&nbsp;you.</span>
             </h1>
             <p className="text-xl text-gray-600 mb-8 leading-relaxed">
               eBox was founded to solve the specific, messy data problems that real estate finance teams face every day. We believe enterprise software doesn't have to be complicated.
@@ -43,22 +43,44 @@ const AboutUs: React.FC<AboutUsProps> = ({ onNavigate }) => {
                <p className="text-lg text-gray-600 mb-8">
                  While eBox focuses on specific product solutions like eForms, we leverage the deep technical knowledge, security standards, and industry experience of the wider Open Box organization.
                </p>
-               <div className="p-6 bg-gray-50 rounded-xl border border-gray-100 inline-block">
-                 <p className="text-sm text-gray-500 mb-3">Part of</p>
-                 <OpenBoxLogo className="h-8" />
+               <div className="p-6 bg-gray-50 rounded-xl border border-gray-100 inline-flex items-center gap-3">
+                 <span className="text-lg text-gray-500">An</span>
+                 <OpenBoxLogo className="h-12" />
+                 <span className="text-lg text-gray-500">Company</span>
                </div>
             </div>
-            <div className="relative">
-              <div className="aspect-square bg-gray-100 rounded-2xl overflow-hidden relative shadow-lg">
-                 {/* Abstract representation of global connection */}
-                 <div className="absolute inset-0 bg-gradient-to-br from-ebox-dark to-gray-800 opacity-90"></div>
-                 <div className="absolute inset-0 flex items-center justify-center">
-                    <Globe className="w-32 h-32 text-ebox-lime opacity-20" />
-                 </div>
-                 <div className="absolute bottom-8 left-8 right-8">
-                    <div className="text-white text-4xl font-bold mb-2">20+ Years</div>
-                    <div className="text-gray-400">Of Real Estate Tech Experience</div>
-                 </div>
+            <div className="relative pl-8">
+              {/* Vertical line */}
+              <div className="absolute left-[11px] top-2 bottom-2 w-0.5 bg-gray-200"></div>
+
+              <div className="space-y-10">
+                <div className="relative">
+                  <div className="absolute -left-8 top-1 w-6 h-6 bg-ebox-lime rounded-full border-4 border-white shadow"></div>
+                  <span className="text-xs font-bold uppercase tracking-widest text-ebox-lime">2003</span>
+                  <h3 className="text-lg font-bold text-gray-900 mt-1">Open Box Founded</h3>
+                  <p className="text-sm text-gray-500 mt-1">Launched as a real estate software consultancy, specialising in MRI implementations.</p>
+                </div>
+
+                <div className="relative">
+                  <div className="absolute -left-8 top-1 w-6 h-6 bg-ebox-teal rounded-full border-4 border-white shadow"></div>
+                  <span className="text-xs font-bold uppercase tracking-widest text-ebox-teal">2010</span>
+                  <h3 className="text-lg font-bold text-gray-900 mt-1">Global Expansion</h3>
+                  <p className="text-sm text-gray-500 mt-1">Grew to serve clients across multiple continents with deep MRI expertise.</p>
+                </div>
+
+                <div className="relative">
+                  <div className="absolute -left-8 top-1 w-6 h-6 bg-ebox-dark rounded-full border-4 border-white shadow"></div>
+                  <span className="text-xs font-bold uppercase tracking-widest text-gray-400">2022</span>
+                  <h3 className="text-lg font-bold text-gray-900 mt-1">eBox Is Born</h3>
+                  <p className="text-sm text-gray-500 mt-1">Spun out as a dedicated product company to solve MRI's data import challenges.</p>
+                </div>
+
+                <div className="relative">
+                  <div className="absolute -left-8 top-1 w-6 h-6 bg-ebox-lime rounded-full border-4 border-white shadow ring-4 ring-ebox-lime/20"></div>
+                  <span className="text-xs font-bold uppercase tracking-widest text-ebox-lime">Today</span>
+                  <h3 className="text-lg font-bold text-gray-900 mt-1">eForms & eConnect</h3>
+                  <p className="text-sm text-gray-500 mt-1">Two products, one mission: make MRI data imports fast, accurate, and painless.</p>
+                </div>
               </div>
             </div>
           </div>

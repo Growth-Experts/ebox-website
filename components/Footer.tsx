@@ -36,7 +36,7 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
           </div>
 
           <div>
-             <h4 className="font-bold text-gray-900 mb-4">Part of</h4>
+             <h4 className="font-bold text-gray-900 mb-4">An Open Box Company</h4>
              <OpenBoxLogo className="h-8 opacity-70 grayscale hover:grayscale-0 transition-all" />
              <p className="text-xs text-gray-400 mt-2">Powering real estate software solutions globally.</p>
           </div>
