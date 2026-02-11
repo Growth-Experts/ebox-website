@@ -3,9 +3,11 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import Home from './pages/Home';
 import EFormsPage from './pages/EFormsPage';
+import EForms2 from './pages/EForms2';
 import AboutUs from './pages/AboutUs';
 import ContactUs from './pages/ContactUs';
 import BookDemo from './pages/BookDemo';
+import Home2 from './pages/Home2';
 import { PageRoute } from './types';
 
 const App: React.FC = () => {
@@ -20,8 +22,12 @@ const App: React.FC = () => {
     switch (currentPage) {
       case 'home':
         return <Home onNavigate={setCurrentPage} />;
+      case 'home-2':
+        return <Home2 onNavigate={setCurrentPage} />;
       case 'eforms':
         return <EFormsPage onNavigate={setCurrentPage} />;
+      case 'eforms-2':
+        return <EForms2 onNavigate={setCurrentPage} />;
       case 'about':
         return <AboutUs onNavigate={setCurrentPage} />;
       case 'contact':

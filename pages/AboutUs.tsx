@@ -25,7 +25,7 @@ const AboutUs: React.FC<AboutUsProps> = ({ onNavigate }) => {
           </div>
         </div>
         {/* Background Element */}
-        <div className="absolute top-0 right-0 -translate-y-1/2 translate-x-1/3 w-[600px] h-[600px] bg-ebox-teal/20 rounded-full blur-3xl -z-0"></div>
+        <div className="absolute top-0 right-0 -translate-y-1/2 translate-x-1/3 w-[600px] h-[600px] bg-ebox-forest/20 rounded-full blur-3xl -z-0"></div>
       </section>
 
       {/* The Open Box Connection */}
@@ -43,7 +43,7 @@ const AboutUs: React.FC<AboutUsProps> = ({ onNavigate }) => {
                <p className="text-lg text-gray-600 mb-8">
                  While eBox focuses on specific product solutions like eForms, we leverage the deep technical knowledge, security standards, and industry experience of the wider Open Box organization.
                </p>
-               <div className="p-6 bg-gray-50 rounded-xl border border-gray-100 inline-flex items-center gap-3">
+               <div className="p-6 bg-gray-50 rounded-md border border-gray-100 inline-flex items-center gap-3">
                  <span className="text-lg text-gray-500">An</span>
                  <OpenBoxLogo className="h-12" />
                  <span className="text-lg text-gray-500">Company</span>
@@ -62,8 +62,8 @@ const AboutUs: React.FC<AboutUsProps> = ({ onNavigate }) => {
                 </div>
 
                 <div className="relative">
-                  <div className="absolute -left-8 top-1 w-6 h-6 bg-ebox-teal rounded-full border-4 border-white shadow"></div>
-                  <span className="text-xs font-bold uppercase tracking-widest text-ebox-teal">2010</span>
+                  <div className="absolute -left-8 top-1 w-6 h-6 bg-ebox-forest rounded-full border-4 border-white shadow"></div>
+                  <span className="text-xs font-bold uppercase tracking-widest text-ebox-forest">2010</span>
                   <h3 className="text-lg font-bold text-gray-900 mt-1">Global Expansion</h3>
                   <p className="text-sm text-gray-500 mt-1">Grew to serve clients across multiple continents with deep MRI expertise.</p>
                 </div>
@@ -96,22 +96,22 @@ const AboutUs: React.FC<AboutUsProps> = ({ onNavigate }) => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white/5 p-8 rounded-2xl border border-white/10 hover:bg-white/10 transition-colors">
-              <div className="bg-ebox-lime/20 w-12 h-12 rounded-lg flex items-center justify-center mb-6">
+            <div className="bg-white/5 p-8 rounded-lg border border-white/10 hover:bg-white/10 transition-colors">
+              <div className="bg-ebox-lime/20 w-12 h-12 rounded-md flex items-center justify-center mb-6">
                 <Award className="text-ebox-lime w-6 h-6" />
               </div>
               <h3 className="text-xl font-bold mb-3">Expertise First</h3>
               <p className="text-gray-400 leading-relaxed">We understand GL codes, lease structures, and the difference between a modification and a renewal. We speak your language.</p>
             </div>
-            <div className="bg-white/5 p-8 rounded-2xl border border-white/10 hover:bg-white/10 transition-colors">
-              <div className="bg-ebox-teal/20 w-12 h-12 rounded-lg flex items-center justify-center mb-6">
-                <Users className="text-ebox-teal w-6 h-6" />
+            <div className="bg-white/5 p-8 rounded-lg border border-white/10 hover:bg-white/10 transition-colors">
+              <div className="bg-ebox-forest/20 w-12 h-12 rounded-md flex items-center justify-center mb-6">
+                <Users className="text-ebox-forest w-6 h-6" />
               </div>
               <h3 className="text-xl font-bold mb-3">User Experience</h3>
               <p className="text-gray-400 leading-relaxed">Enterprise software shouldn't require a manual. We design our interfaces to be intuitive for the person doing the data entry.</p>
             </div>
-            <div className="bg-white/5 p-8 rounded-2xl border border-white/10 hover:bg-white/10 transition-colors">
-              <div className="bg-purple-500/20 w-12 h-12 rounded-lg flex items-center justify-center mb-6">
+            <div className="bg-white/5 p-8 rounded-lg border border-white/10 hover:bg-white/10 transition-colors">
+              <div className="bg-purple-500/20 w-12 h-12 rounded-md flex items-center justify-center mb-6">
                 <Heart className="text-purple-400 w-6 h-6" />
               </div>
               <h3 className="text-xl font-bold mb-3">Customer Success</h3>

@@ -1,6 +1,6 @@
 import React from 'react';
 
-export type PageRoute = 'home' | 'eforms' | 'about' | 'contact' | 'book-demo';
+export type PageRoute = 'home' | 'home-2' | 'eforms' | 'eforms-2' | 'about' | 'contact' | 'book-demo';
 
 export interface NavItem {
   label: string;

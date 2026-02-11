@@ -14,9 +14,9 @@ const BookDemo: React.FC = () => {
 
       {/* Calendly Embed Placeholder */}
       <section className="pb-16 px-4">
-        <div className="max-w-4xl mx-auto bg-white rounded-xl shadow-2xl border border-gray-100 overflow-hidden min-h-[600px] relative">
+        <div className="max-w-4xl mx-auto bg-white rounded-md shadow-2xl border border-gray-100 overflow-hidden min-h-[600px] relative">
           {/* This is where the actual Calendly embed would go */}
-          <div className="absolute inset-0 bg-gray-50 flex flex-col items-center justify-center border-2 border-dashed border-gray-300 m-4 rounded-lg">
+          <div className="absolute inset-0 bg-gray-50 flex flex-col items-center justify-center border-2 border-dashed border-gray-300 m-4 rounded-md">
              <div className="text-center p-8">
                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
                  <span className="text-2xl">📅</span>
@@ -37,8 +37,8 @@ const BookDemo: React.FC = () => {
           <h2 className="text-2xl font-bold text-ebox-dark mb-8">Prefer to talk to someone first?</h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 flex flex-col items-center hover:shadow-md transition-shadow">
-              <div className="bg-ebox-teal/20 p-3 rounded-full mb-4">
+            <div className="bg-white p-6 rounded-md shadow-sm border border-gray-100 flex flex-col items-center hover:shadow-md transition-shadow">
+              <div className="bg-ebox-forest/20 p-3 rounded-full mb-4">
                 <Mail className="w-6 h-6 text-teal-700" />
               </div>
               <h3 className="font-bold text-lg mb-2">Email Us</h3>
@@ -46,7 +46,7 @@ const BookDemo: React.FC = () => {
               <a href="mailto:productsales@openboxsoftware.com" className="text-ebox-dark font-bold hover:text-ebox-lime transition-colors">productsales@openboxsoftware.com</a>
             </div>
 
-            <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 flex flex-col items-center hover:shadow-md transition-shadow">
+            <div className="bg-white p-6 rounded-md shadow-sm border border-gray-100 flex flex-col items-center hover:shadow-md transition-shadow">
                <div className="bg-ebox-lime/20 p-3 rounded-full mb-4">
                 <Phone className="w-6 h-6 text-green-700" />
               </div>

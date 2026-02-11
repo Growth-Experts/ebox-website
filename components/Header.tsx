@@ -36,6 +36,12 @@ const Header: React.FC<HeaderProps> = ({ onNavigate, currentPage }) => {
               Home
             </button>
             <button
+              onClick={() => handleNav('home-2')}
+              className={`text-sm font-medium transition-colors ${currentPage === 'home-2' ? 'text-ebox-dark' : 'text-gray-500 hover:text-ebox-dark'}`}
+            >
+              Home 2
+            </button>
+            <button
               onClick={() => handleNav('about')}
               className={`text-sm font-medium transition-colors ${currentPage === 'about' ? 'text-ebox-dark' : 'text-gray-500 hover:text-ebox-dark'}`}
             >
@@ -46,6 +52,12 @@ const Header: React.FC<HeaderProps> = ({ onNavigate, currentPage }) => {
               className={`text-sm font-medium transition-colors ${currentPage === 'eforms' ? 'text-ebox-dark' : 'text-gray-500 hover:text-ebox-dark'}`}
             >
               eForms
+            </button>
+            <button
+              onClick={() => handleNav('eforms-2')}
+              className={`text-sm font-medium transition-colors ${currentPage === 'eforms-2' ? 'text-ebox-dark' : 'text-gray-500 hover:text-ebox-dark'}`}
+            >
+              eForms 2
             </button>
             <a href="#" className="text-sm font-medium text-gray-500 hover:text-ebox-dark">eConnect</a>
             <Button variant="primary" size="sm" onClick={() => handleNav('book-demo')}>Book a Demo</Button>
@@ -73,6 +85,12 @@ const Header: React.FC<HeaderProps> = ({ onNavigate, currentPage }) => {
               Home
             </button>
             <button
+              onClick={() => handleNav('home-2')}
+              className="block w-full text-left px-3 py-3 text-base font-medium text-gray-700 hover:bg-gray-50 rounded-md"
+            >
+              Home 2
+            </button>
+            <button
               onClick={() => handleNav('about')}
               className="block w-full text-left px-3 py-3 text-base font-medium text-gray-700 hover:bg-gray-50 rounded-md"
             >
@@ -83,6 +101,12 @@ const Header: React.FC<HeaderProps> = ({ onNavigate, currentPage }) => {
               className="block w-full text-left px-3 py-3 text-base font-medium text-gray-700 hover:bg-gray-50 rounded-md"
             >
               eForms
+            </button>
+            <button
+              onClick={() => handleNav('eforms-2')}
+              className="block w-full text-left px-3 py-3 text-base font-medium text-gray-700 hover:bg-gray-50 rounded-md"
+            >
+              eForms 2
             </button>
             <a href="#" className="block w-full text-left px-3 py-3 text-base font-medium text-gray-700 hover:bg-gray-50 rounded-md">eConnect</a>
             <div className="pt-4">

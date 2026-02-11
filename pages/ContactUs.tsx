@@ -17,16 +17,16 @@ const ContactUs: React.FC = () => {
 
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-white rounded-2xl shadow-xl overflow-hidden flex flex-col md:flex-row">
+          <div className="bg-white rounded-lg shadow-xl overflow-hidden flex flex-col md:flex-row">
             
             {/* Contact Info (Left Side) */}
-            <div className="bg-ebox-teal/10 p-10 md:w-2/5 flex flex-col justify-between">
+            <div className="bg-ebox-forest/10 p-10 md:w-2/5 flex flex-col justify-between">
               <div>
                 <h2 className="text-2xl font-bold text-ebox-dark mb-8">Contact Information</h2>
                 
                 <div className="space-y-8">
                   <div className="flex items-start gap-4">
-                    <div className="bg-white p-3 rounded-lg shadow-sm text-ebox-teal">
+                    <div className="bg-white p-3 rounded-md shadow-sm text-ebox-forest">
                       <Mail className="w-6 h-6" />
                     </div>
                     <div>
@@ -36,7 +36,7 @@ const ContactUs: React.FC = () => {
                   </div>
 
                   <div className="flex items-start gap-4">
-                    <div className="bg-white p-3 rounded-lg shadow-sm text-ebox-teal">
+                    <div className="bg-white p-3 rounded-md shadow-sm text-ebox-forest">
                       <MapPin className="w-6 h-6" />
                     </div>
                     <div>
@@ -52,7 +52,7 @@ const ContactUs: React.FC = () => {
 
               <div className="mt-12">
                 <p className="text-sm text-gray-500">
-                  Looking for technical support? Visit our <a href="#" className="text-ebox-teal underline font-medium">Help Center</a>.
+                  Looking for technical support? Visit our <a href="#" className="text-ebox-forest underline font-medium">Help Center</a>.
                 </p>
               </div>
             </div>
@@ -67,7 +67,7 @@ const ContactUs: React.FC = () => {
                     <input 
                       type="text" 
                       id="firstName" 
-                      className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-ebox-lime focus:border-transparent outline-none transition-all"
+                      className="w-full px-4 py-3 rounded-md border border-gray-300 focus:ring-2 focus:ring-ebox-lime focus:border-transparent outline-none transition-all"
                       placeholder="Sam"
                     />
                   </div>
@@ -76,7 +76,7 @@ const ContactUs: React.FC = () => {
                     <input 
                       type="text" 
                       id="lastName" 
-                      className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-ebox-lime focus:border-transparent outline-none transition-all"
+                      className="w-full px-4 py-3 rounded-md border border-gray-300 focus:ring-2 focus:ring-ebox-lime focus:border-transparent outline-none transition-all"
                       placeholder="Property"
                     />
                   </div>
@@ -87,7 +87,7 @@ const ContactUs: React.FC = () => {
                   <input 
                     type="email" 
                     id="email" 
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-ebox-lime focus:border-transparent outline-none transition-all"
+                    className="w-full px-4 py-3 rounded-md border border-gray-300 focus:ring-2 focus:ring-ebox-lime focus:border-transparent outline-none transition-all"
                     placeholder="sam@company.com"
                   />
                 </div>
@@ -97,7 +97,7 @@ const ContactUs: React.FC = () => {
                   <textarea 
                     id="message" 
                     rows={4}
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-ebox-lime focus:border-transparent outline-none transition-all resize-none"
+                    className="w-full px-4 py-3 rounded-md border border-gray-300 focus:ring-2 focus:ring-ebox-lime focus:border-transparent outline-none transition-all resize-none"
                     placeholder="Tell us about your needs..."
                   ></textarea>
                 </div>
@@ -118,9 +118,9 @@ const ContactUs: React.FC = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* New York */}
-            <div className="bg-gray-50 rounded-2xl p-8">
+            <div className="bg-gray-50 rounded-lg p-8">
               <h3 className="text-xl font-bold text-ebox-dark mb-1">New York</h3>
-              <p className="text-ebox-teal font-semibold mb-4">
+              <p className="text-ebox-forest font-semibold mb-4">
                 <a href="tel:+13322454315" className="hover:text-ebox-dark transition-colors">+1 332 245 4315</a>
               </p>
               <div className="text-gray-600 space-y-0.5">
@@ -132,9 +132,9 @@ const ContactUs: React.FC = () => {
             </div>
 
             {/* London */}
-            <div className="bg-gray-50 rounded-2xl p-8">
+            <div className="bg-gray-50 rounded-lg p-8">
               <h3 className="text-xl font-bold text-ebox-dark mb-1">London</h3>
-              <p className="text-ebox-teal font-semibold mb-4">
+              <p className="text-ebox-forest font-semibold mb-4">
                 <a href="tel:+442045511386" className="hover:text-ebox-dark transition-colors">+44 20 4551 1386</a>
               </p>
               <div className="text-gray-600 space-y-0.5">
@@ -146,9 +146,9 @@ const ContactUs: React.FC = () => {
             </div>
 
             {/* Cape Town */}
-            <div className="bg-gray-50 rounded-2xl p-8">
+            <div className="bg-gray-50 rounded-lg p-8">
               <h3 className="text-xl font-bold text-ebox-dark mb-1">Cape Town</h3>
-              <p className="text-ebox-teal font-semibold mb-4">
+              <p className="text-ebox-forest font-semibold mb-4">
                 <a href="tel:+27217139300" className="hover:text-ebox-dark transition-colors">+27 21 713 9300</a>
               </p>
               <div className="text-gray-600 space-y-0.5">

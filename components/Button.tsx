@@ -17,7 +17,7 @@ const Button: React.FC<ButtonProps> = ({
   
   const variants = {
     primary: "bg-ebox-lime text-ebox-dark hover:brightness-95 border border-transparent shadow-sm hover:shadow-md",
-    secondary: "bg-ebox-teal text-white hover:brightness-95 border border-transparent shadow-sm",
+    secondary: "bg-ebox-forest text-white hover:brightness-95 border border-transparent shadow-sm",
     outline: "bg-transparent border-2 border-ebox-dark text-ebox-dark hover:bg-ebox-dark hover:text-white",
     ghost: "bg-transparent text-gray-600 hover:text-ebox-dark hover:bg-gray-100"
   };
