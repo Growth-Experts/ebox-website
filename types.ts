@@ -1,6 +1,15 @@
 import React from 'react';
 
-export type PageRoute = 'home' | 'home-2' | 'eforms' | 'eforms-2' | 'about' | 'contact' | 'book-demo';
+export type PageRoute = 'home' | 'eforms' | 'econnect' | 'about' | 'contact' | 'book-demo';
+
+export const ROUTE_PATHS: Record<PageRoute, string> = {
+  home: '/',
+  eforms: '/eforms',
+  econnect: '/econnect',
+  about: '/about',
+  contact: '/contact',
+  'book-demo': '/book-demo',
+};
 
 export interface NavItem {
   label: string;

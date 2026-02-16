@@ -1,23 +1,24 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import Button from '../components/Button';
 import { OpenBoxLogo } from '../components/Logos';
 import { Users, Globe, Award, Heart } from 'lucide-react';
-import { PageRoute } from '../types';
 
-interface AboutUsProps {
-    onNavigate: (page: PageRoute) => void;
-}
-
-const AboutUs: React.FC<AboutUsProps> = ({ onNavigate }) => {
+const AboutUs: React.FC = () => {
   return (
     <div className="flex flex-col w-full">
+      <Helmet>
+        <title>About Us | eBox — Built from 25 Years in Real Estate Tech</title>
+        <meta name="description" content="eBox is part of the Open Box Group, a global software consultancy serving real estate for over two decades. We build tools that make MRI work harder for you." />
+        <link rel="canonical" href="https://eboxplatform.com/about" />
+      </Helmet>
       {/* Hero Section */}
       <section className="bg-ebox-light pt-20 pb-24 relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-3xl">
             <h1 className="text-5xl md:text-6xl font-extrabold tracking-tight text-ebox-dark mb-6">
               We make MRI work{' '}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-ebox-lime to-green-600">harder&nbsp;for&nbsp;you.</span>
+              <span className="text-ebox-lime">harder&nbsp;for&nbsp;you.</span>
             </h1>
             <p className="text-xl text-gray-600 mb-8 leading-relaxed">
               eBox was founded to solve the specific, messy data problems that real estate finance teams face every day. We believe enterprise software doesn't have to be complicated.
@@ -43,7 +44,7 @@ const AboutUs: React.FC<AboutUsProps> = ({ onNavigate }) => {
                <p className="text-lg text-gray-600 mb-8">
                  While eBox focuses on specific product solutions like eForms, we leverage the deep technical knowledge, security standards, and industry experience of the wider Open Box organization.
                </p>
-               <div className="p-6 bg-gray-50 rounded-md border border-gray-100 inline-flex items-center gap-3">
+               <div className="inline-flex items-center gap-3">
                  <span className="text-lg text-gray-500">An</span>
                  <OpenBoxLogo className="h-12" />
                  <span className="text-lg text-gray-500">Company</span>
@@ -126,7 +127,7 @@ const AboutUs: React.FC<AboutUsProps> = ({ onNavigate }) => {
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-4xl font-extrabold text-ebox-dark mb-6">Want to learn more?</h2>
           <p className="text-xl text-gray-600 mb-10">See how we can help your team work smarter with MRI.</p>
-          <Button variant="primary" size="lg" onClick={() => onNavigate('contact')}>Contact Us</Button>
+          <Button variant="primary" size="lg" to="/contact">Contact Us</Button>
         </div>
       </section>
     </div>

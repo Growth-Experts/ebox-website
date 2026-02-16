@@ -1,10 +1,16 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import Button from '../components/Button';
 import { Mail, MapPin } from 'lucide-react';
 
 const ContactUs: React.FC = () => {
   return (
     <div className="flex flex-col w-full">
+      <Helmet>
+        <title>Contact Us | eBox — Get in Touch</title>
+        <meta name="description" content="Have questions about eForms or eConnect? Need a custom solution? Contact the eBox team — offices in New York, London, and Cape Town." />
+        <link rel="canonical" href="https://eboxplatform.com/contact" />
+      </Helmet>
       {/* Header */}
       <section className="bg-ebox-dark text-white pt-20 pb-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

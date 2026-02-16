@@ -1,12 +1,8 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { EBoxLogo, OpenBoxLogo } from './Logos';
-import { PageRoute } from '../types';
 
-interface FooterProps {
-    onNavigate: (page: PageRoute) => void;
-}
-
-const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
+const Footer: React.FC = () => {
   return (
     <footer className="bg-gray-50 pt-16 pb-12 border-t border-gray-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -21,16 +17,16 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
           <div>
             <h4 className="font-bold text-gray-900 mb-4">Products</h4>
             <ul className="space-y-3">
-              <li><button onClick={() => onNavigate('eforms')} className="text-gray-600 hover:text-ebox-lime transition-colors">eForms</button></li>
-              <li><a href="#" className="text-gray-600 hover:text-ebox-lime transition-colors">eConnect</a></li>
+              <li><Link to="/eforms" className="text-gray-600 hover:text-ebox-lime transition-colors">eForms</Link></li>
+              <li><Link to="/econnect" className="text-gray-600 hover:text-ebox-lime transition-colors">eConnect</Link></li>
             </ul>
           </div>
           
           <div>
             <h4 className="font-bold text-gray-900 mb-4">Company</h4>
             <ul className="space-y-3">
-              <li><button onClick={() => onNavigate('about')} className="text-gray-600 hover:text-ebox-lime transition-colors">About Us</button></li>
-              <li><button onClick={() => onNavigate('contact')} className="text-gray-600 hover:text-ebox-lime transition-colors">Contact</button></li>
+              <li><Link to="/about" className="text-gray-600 hover:text-ebox-lime transition-colors">About Us</Link></li>
+              <li><Link to="/contact" className="text-gray-600 hover:text-ebox-lime transition-colors">Contact</Link></li>
               <li><a href="#" className="text-gray-600 hover:text-ebox-lime transition-colors">Privacy Policy</a></li>
             </ul>
           </div>
@@ -43,7 +39,7 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
         </div>
         
         <div className="border-t border-gray-200 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-sm text-gray-400">© {new Date().getFullYear()} eBox. All rights reserved.</p>
+          <p className="text-sm text-gray-400">&copy; {new Date().getFullYear()} eBox. All rights reserved.</p>
         </div>
       </div>
     </footer>

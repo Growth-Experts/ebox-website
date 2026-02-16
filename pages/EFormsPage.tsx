@@ -1,17 +1,27 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import Button from '../components/Button';
 import { EFormsLogo } from '../components/Logos';
-import { Check, Shield, Lock, FileText, Settings, RefreshCw, AlertCircle, Database, Upload, Users, Layers, ArrowRight, ChevronRight, CheckCircle, PlayCircle, Mail, Globe, Layout, Star } from 'lucide-react';
-import { PageRoute } from '../types';
+import { Check, Shield, Lock, FileText, Settings, RefreshCw, AlertCircle, Database, Upload, Users, Layers, ArrowRight, ChevronRight, CheckCircle, PlayCircle, Layout, Star } from 'lucide-react';
 
-interface EFormsPageProps {
-  onNavigate: (page: PageRoute) => void;
-}
+const EFormsPage: React.FC = () => {
+  const useCases = [
+    { gradient: "from-blue-600 to-blue-700", color: "blue", iconBg: "bg-blue-100", iconText: "text-blue-600", borderColor: "border-blue-500", statBg: "bg-blue-50", statText: "text-blue-700", dotColor: "bg-blue-500", icon: <Database className="text-white w-6 h-6" />, title: "Month-End Close", desc: "Process 200+ journal entries with approval workflows", stat: "6 hrs → 70 min" },
+    { gradient: "from-emerald-600 to-emerald-700", color: "emerald", iconBg: "bg-emerald-100", iconText: "text-emerald-600", borderColor: "border-emerald-500", statBg: "bg-emerald-50", statText: "text-emerald-700", dotColor: "bg-emerald-500", icon: <FileText className="text-white w-6 h-6" />, title: "Lease Administration", desc: "Property managers enter leases, finance approves before posting", stat: "No bottlenecks" },
+    { gradient: "from-purple-600 to-purple-700", color: "purple", iconBg: "bg-purple-100", iconText: "text-purple-600", borderColor: "border-purple-500", statBg: "bg-purple-50", statText: "text-purple-700", dotColor: "bg-purple-500", icon: <Settings className="text-white w-6 h-6" />, title: "Accounts Payable", desc: "Structured invoice entry with auto-routing by amount or vendor", stat: "Full audit trail" },
+    { gradient: "from-amber-500 to-orange-600", color: "amber", iconBg: "bg-amber-100", iconText: "text-amber-600", borderColor: "border-amber-500", statBg: "bg-amber-50", statText: "text-amber-700", dotColor: "bg-amber-500", icon: <RefreshCw className="text-white w-6 h-6" />, title: "Recurring Processes", desc: "Configure once, apply to hundreds of units with validation", stat: "10 min / 50 units" },
+    { gradient: "from-rose-500 to-pink-600", color: "rose", iconBg: "bg-rose-100", iconText: "text-rose-600", borderColor: "border-rose-500", statBg: "bg-rose-50", statText: "text-rose-700", dotColor: "bg-rose-500", icon: <Database className="text-white w-6 h-6" />, title: "Master Data Management", desc: "Regional teams create buildings and units with approval layer", stat: "Data standards met" },
+    { gradient: "from-teal-500 to-cyan-600", color: "teal", iconBg: "bg-teal-100", iconText: "text-teal-600", borderColor: "border-teal-500", statBg: "bg-teal-50", statText: "text-teal-700", dotColor: "bg-teal-500", icon: <Check className="text-white w-6 h-6" />, title: "Tenant Payments", desc: "Validate account, lease status, and charge codes before posting", stat: "Zero misapplied" },
+  ];
 
-const EFormsPage: React.FC<EFormsPageProps> = ({ onNavigate }) => {
   return (
     <div className="flex flex-col w-full">
-      {/* Product Hero */}
+      <Helmet>
+        <title>eForms | Structured MRI Data Imports &amp; Approval Workflows | eBox</title>
+        <meta name="description" content="eForms provides structured forms for MRI imports with real-time validation, approval routing, and complete audit trails. Built for real estate finance teams." />
+        <link rel="canonical" href="https://eboxplatform.com/eforms" />
+      </Helmet>
+      {/* Product Hero — Light, product-centric (distinct from Home2 dark hero) */}
       <section className="bg-white pt-20 pb-0 overflow-hidden">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <EFormsLogo className="h-12 mx-auto mb-6" />
@@ -22,17 +32,16 @@ const EFormsPage: React.FC<EFormsPageProps> = ({ onNavigate }) => {
             Structured data entry. Approval routing. Real-time validation. All feeding directly into your MRI database.
           </p>
           <div className="flex gap-4 justify-center mb-16">
-            <Button variant="primary" size="lg" onClick={() => onNavigate('book-demo')}>Book a Demo</Button>
+            <Button variant="primary" size="lg" to="/book-demo">Book a Demo</Button>
             <Button variant="outline" size="lg" className="group">
               Watch Overview <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Button>
           </div>
         </div>
 
-        {/* Wide product mockup */}
+        {/* Wide product mockup — lime accent border */}
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-gray-50 rounded-t-md border border-b-0 border-gray-200 shadow-2xl overflow-hidden">
-            {/* Browser bar */}
             <div className="flex items-center gap-3 px-5 py-3 bg-gray-100 border-b border-gray-200">
               <div className="flex items-center gap-1.5">
                 <div className="w-3 h-3 rounded-full bg-gray-300"></div>
@@ -45,9 +54,7 @@ const EFormsPage: React.FC<EFormsPageProps> = ({ onNavigate }) => {
               <div className="w-14"></div>
             </div>
 
-            {/* App content */}
             <div className="flex min-h-[340px]">
-              {/* Sidebar */}
               <div className="w-52 bg-ebox-dark p-4 hidden md:flex flex-col flex-shrink-0">
                 <div className="mb-6">
                   <EFormsLogo variant="white" className="h-7" />
@@ -74,9 +81,7 @@ const EFormsPage: React.FC<EFormsPageProps> = ({ onNavigate }) => {
                 </div>
               </div>
 
-              {/* Main area */}
               <div className="flex-1 p-6 bg-white">
-                {/* Header row */}
                 <div className="flex items-center justify-between mb-5">
                   <div>
                     <div className="text-sm font-bold text-ebox-dark">Journal Entry — December 2025</div>
@@ -87,9 +92,7 @@ const EFormsPage: React.FC<EFormsPageProps> = ({ onNavigate }) => {
                   </div>
                 </div>
 
-                {/* Spreadsheet-style table */}
                 <div className="border border-gray-200 rounded-md overflow-hidden text-[11px]">
-                  {/* Table header */}
                   <div className="grid grid-cols-12 bg-gray-50 border-b border-gray-200 text-[10px] font-semibold text-gray-500 uppercase tracking-wider">
                     <div className="col-span-1 px-3 py-2">#</div>
                     <div className="col-span-2 px-3 py-2">Entity</div>
@@ -99,7 +102,6 @@ const EFormsPage: React.FC<EFormsPageProps> = ({ onNavigate }) => {
                     <div className="col-span-1 px-3 py-2 text-right">Credit</div>
                     <div className="col-span-1 px-3 py-2 text-center">Status</div>
                   </div>
-                  {/* Row 1 */}
                   <div className="grid grid-cols-12 border-b border-gray-100 items-center">
                     <div className="col-span-1 px-3 py-2.5 text-gray-400">1</div>
                     <div className="col-span-2 px-3 py-2.5 font-mono text-gray-700">ENT-001</div>
@@ -109,7 +111,6 @@ const EFormsPage: React.FC<EFormsPageProps> = ({ onNavigate }) => {
                     <div className="col-span-1 px-3 py-2.5 text-right font-mono text-gray-300">—</div>
                     <div className="col-span-1 px-3 py-2.5 text-center"><CheckCircle className="w-3.5 h-3.5 text-green-500 inline-block" /></div>
                   </div>
-                  {/* Row 2 */}
                   <div className="grid grid-cols-12 border-b border-gray-100 items-center">
                     <div className="col-span-1 px-3 py-2.5 text-gray-400">2</div>
                     <div className="col-span-2 px-3 py-2.5 font-mono text-gray-700">ENT-001</div>
@@ -119,7 +120,6 @@ const EFormsPage: React.FC<EFormsPageProps> = ({ onNavigate }) => {
                     <div className="col-span-1 px-3 py-2.5 text-right font-mono text-gray-700">8,200</div>
                     <div className="col-span-1 px-3 py-2.5 text-center"><CheckCircle className="w-3.5 h-3.5 text-green-500 inline-block" /></div>
                   </div>
-                  {/* Row 3 — error */}
                   <div className="grid grid-cols-12 border-b border-gray-100 items-center bg-red-50/50">
                     <div className="col-span-1 px-3 py-2.5 text-gray-400">3</div>
                     <div className="col-span-2 px-3 py-2.5 font-mono text-gray-700">ENT-002</div>
@@ -129,7 +129,6 @@ const EFormsPage: React.FC<EFormsPageProps> = ({ onNavigate }) => {
                     <div className="col-span-1 px-3 py-2.5 text-right font-mono text-gray-300">—</div>
                     <div className="col-span-1 px-3 py-2.5 text-center"><AlertCircle className="w-3.5 h-3.5 text-red-500 inline-block" /></div>
                   </div>
-                  {/* Row 4 */}
                   <div className="grid grid-cols-12 items-center">
                     <div className="col-span-1 px-3 py-2.5 text-gray-400">4</div>
                     <div className="col-span-2 px-3 py-2.5 font-mono text-gray-700">ENT-002</div>
@@ -141,7 +140,6 @@ const EFormsPage: React.FC<EFormsPageProps> = ({ onNavigate }) => {
                   </div>
                 </div>
 
-                {/* Validation summary */}
                 <div className="flex items-center justify-between mt-4">
                   <div className="flex items-center gap-4">
                     <div className="flex items-center gap-1.5 text-[11px] text-green-600 font-medium">
@@ -161,13 +159,12 @@ const EFormsPage: React.FC<EFormsPageProps> = ({ onNavigate }) => {
         </div>
       </section>
 
-      {/* Bento Grid - The Extension */}
-      <section className="py-24 bg-gray-50">
+      {/* Bento — ebox-deep/5 */}
+      <section className="py-24 bg-ebox-deep/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-gray-900">What eForms adds to MRI</h2>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="md:col-span-2 bg-white p-8 rounded-lg shadow-sm border border-gray-100">
               <div className="h-10 w-10 bg-blue-100 rounded-md flex items-center justify-center mb-4">
@@ -225,7 +222,7 @@ const EFormsPage: React.FC<EFormsPageProps> = ({ onNavigate }) => {
         </div>
       </section>
 
-      {/* Section 3: Validation - How It Works */}
+      {/* Validation — white */}
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -254,7 +251,7 @@ const EFormsPage: React.FC<EFormsPageProps> = ({ onNavigate }) => {
         </div>
       </section>
 
-      {/* Section 4: Templates Showcase */}
+      {/* Templates — gray-50 */}
       <section className="py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -294,8 +291,8 @@ const EFormsPage: React.FC<EFormsPageProps> = ({ onNavigate }) => {
               <p className="text-gray-500">Configure once, apply across hundreds of units.</p>
             </div>
             <div className="bg-white p-8 rounded-lg shadow-sm border border-gray-100">
-              <div className="h-10 w-10 bg-teal-100 rounded-md flex items-center justify-center mb-4">
-                <Database className="text-teal-600" />
+              <div className="h-10 w-10 bg-emerald-100 rounded-md flex items-center justify-center mb-4">
+                <Database className="text-emerald-600" />
               </div>
               <h3 className="text-xl font-bold mb-2">Building Creation</h3>
               <p className="text-gray-500">Property setup with all required fields and approval layers.</p>
@@ -304,85 +301,40 @@ const EFormsPage: React.FC<EFormsPageProps> = ({ onNavigate }) => {
         </div>
       </section>
 
-      {/* Use Cases - Colored Rows */}
-      <section className="py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
-           <h2 className="text-3xl font-bold">Where finance teams use eForms</h2>
-        </div>
-        
-        <div className="w-full">
-           {[
-             { 
-               accent: "border-l-blue-600", 
-               iconBg: "bg-blue-100",
-               icon: <Database className="text-blue-700" />,
-               title: "Month-End Close", 
-               desc: "Process 200+ journal entries with approval workflows",
-               stat: "From 6 hours to 70 minutes"
-             },
-             { 
-               accent: "border-l-green-600", 
-               iconBg: "bg-green-100",
-               icon: <FileText className="text-green-700" />,
-               title: "Lease Administration", 
-               desc: "Property managers enter leases, finance approves before posting",
-               stat: "No more bottlenecks"
-             },
-             { 
-               accent: "border-l-purple-600", 
-               iconBg: "bg-purple-100",
-               icon: <Settings className="text-purple-700" />,
-               title: "Accounts Payable", 
-               desc: "Structured invoice entry with auto-routing by amount/vendor",
-               stat: "Know who approved what, instantly"
-             },
-             {
-               accent: "border-l-orange-600",
-               iconBg: "bg-orange-100",
-               icon: <RefreshCw className="text-orange-700" />,
-               title: "Recurring Processes",
-               desc: "Configure once, apply to hundreds of units with validation",
-               stat: "10 minutes to set up 50 units"
-             },
-             {
-               accent: "border-l-pink-600",
-               iconBg: "bg-pink-100",
-               icon: <Database className="text-pink-700" />,
-               title: "Master Data Management",
-               desc: "Regional teams create buildings/units with approval layer",
-               stat: "Maintain data standards"
-             },
-             {
-               accent: "border-l-teal-600",
-               iconBg: "bg-teal-100",
-               icon: <Check className="text-teal-700" />,
-               title: "Tenant Payments",
-               desc: "Validate account, lease status, and charge codes before posting",
-               stat: "Zero misapplied payments"
-             }
-           ].map((row, i) => (
-             <div key={i} className={`bg-white border-y border-gray-100 border-l-4 ${row.accent} py-12`}>
-               <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-8">
-                  <div className="flex items-center gap-6">
-                    <div className={`p-4 ${row.iconBg} rounded-lg shadow-sm`}>{row.icon}</div>
-                    <div>
-                      <h3 className="text-xl font-bold text-gray-900">{row.title}</h3>
-                      <p className="text-gray-600">{row.desc}</p>
+      {/* Use Cases — Dark background for higher contrast */}
+      <section className="py-24 bg-gray-800">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="mb-14 text-center">
+            <p className="text-ebox-lime font-bold uppercase tracking-wider text-sm mb-3">Built for real estate finance</p>
+            <h2 className="text-4xl font-bold text-white">Where finance teams use eForms</h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+            {useCases.map((uc, i) => (
+              <div key={`c-${i}`} className="bg-white/10 rounded-xl overflow-hidden border border-white/10 hover:bg-white/15 transition-all duration-200">
+                <div className={`h-1.5 bg-gradient-to-r ${uc.gradient}`}></div>
+                <div className="p-7">
+                  <div className="flex items-center gap-4 mb-4">
+                    <div className={`w-11 h-11 ${uc.iconBg} rounded-lg flex items-center justify-center`}>
+                      {React.cloneElement(uc.icon, { className: `${uc.iconText} w-5 h-5` })}
                     </div>
+                    <h3 className="text-lg font-bold text-white">{uc.title}</h3>
                   </div>
-                  <div className="bg-gray-50 px-6 py-3 rounded-md shadow-sm border border-gray-200 font-bold text-gray-800 whitespace-nowrap">
-                    {row.stat}
+                  <p className="text-gray-300 text-sm leading-relaxed mb-5">{uc.desc}</p>
+                  <div className="flex items-center gap-2 pt-4 border-t border-white/10">
+                    <div className={`w-2 h-2 rounded-full ${uc.dotColor}`}></div>
+                    <span className={`${uc.statText} font-semibold text-sm`}>{uc.stat}</span>
                   </div>
-               </div>
-             </div>
-           ))}
-           <div className="text-center py-8">
-             <span className="text-lg font-bold text-gray-400">+100 more workflows</span>
-           </div>
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className="text-center pt-10">
+            <span className="text-lg font-bold text-gray-500">+100 more workflows available</span>
+          </div>
         </div>
       </section>
 
-      {/* Section 6: Import Methods */}
+      {/* Import Methods — gray-50 */}
       <section className="py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -413,8 +365,8 @@ const EFormsPage: React.FC<EFormsPageProps> = ({ onNavigate }) => {
         </div>
       </section>
 
-      {/* Section 7: Approval Workflows */}
-      <section className="py-24 bg-white">
+      {/* Approval Workflows — ebox-deep/5 */}
+      <section className="py-24 bg-ebox-deep/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
             <div>
@@ -451,7 +403,7 @@ const EFormsPage: React.FC<EFormsPageProps> = ({ onNavigate }) => {
         </div>
       </section>
 
-      {/* Section 8: Access Control */}
+      {/* Access Control — ebox-dark */}
       <section className="py-24 bg-ebox-dark text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
@@ -476,8 +428,8 @@ const EFormsPage: React.FC<EFormsPageProps> = ({ onNavigate }) => {
         </div>
       </section>
 
-      {/* Section 9: Audit Trail (light bg) */}
-      <section className="py-24 bg-gray-50 overflow-hidden">
+      {/* Audit Trail — white */}
+      <section className="py-24 bg-white overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
             <div>
@@ -530,8 +482,8 @@ const EFormsPage: React.FC<EFormsPageProps> = ({ onNavigate }) => {
         </div>
       </section>
 
-      {/* Section 10: Testimonials */}
-      <section className="py-24 bg-white">
+      {/* Testimonials — gray-50 */}
+      <section className="py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-gray-900">Teams using eForms</h2>
@@ -554,7 +506,7 @@ const EFormsPage: React.FC<EFormsPageProps> = ({ onNavigate }) => {
                 company: 'Mixed-Use Property Fund',
               },
             ].map((testimonial, i) => (
-              <div key={i} className="bg-gray-50 p-8 rounded-lg border border-gray-100">
+              <div key={i} className="bg-white p-8 rounded-lg border border-gray-100">
                 <div className="flex gap-1 mb-4">
                   {[...Array(5)].map((_, j) => (
                     <Star key={j} className="w-5 h-5 text-yellow-400 fill-current" />
@@ -576,16 +528,16 @@ const EFormsPage: React.FC<EFormsPageProps> = ({ onNavigate }) => {
         </div>
       </section>
 
-      {/* Section 11: Error Handling Comparison */}
-      <section className="py-24 bg-gray-50">
+      {/* Error Handling — white */}
+      <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-gray-900">Clear errors, not cryptic codes</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-            <div className="bg-white p-8 rounded-lg border border-gray-100 shadow-sm opacity-60">
+            <div className="bg-gray-50 p-8 rounded-lg border border-gray-100 shadow-sm opacity-60">
               <span className="inline-block bg-red-100 text-red-700 px-3 py-1 rounded-full text-xs font-bold mb-6">MRI Error Log</span>
-              <div className="bg-gray-50 p-6 rounded-md font-mono text-sm space-y-3">
+              <div className="bg-white p-6 rounded-md font-mono text-sm space-y-3">
                 <div className="text-red-500">Import failed - batch processing error</div>
                 <div className="text-gray-400">See log file...</div>
                 <div className="text-gray-300">Error code: MRI-4521-BATCH</div>
@@ -606,8 +558,8 @@ const EFormsPage: React.FC<EFormsPageProps> = ({ onNavigate }) => {
         </div>
       </section>
 
-      {/* Section 12: Customization */}
-      <section className="py-24 bg-white">
+      {/* Customization — ebox-deep/5 */}
+      <section className="py-24 bg-ebox-deep/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
@@ -635,11 +587,11 @@ const EFormsPage: React.FC<EFormsPageProps> = ({ onNavigate }) => {
         </div>
       </section>
 
-      {/* Section 13: Recurring Workflows */}
-      <section className="py-24 bg-[#FEFCF0]">
+      {/* Recurring Workflows — ebox-forest/8 */}
+      <section className="py-24 bg-ebox-forest/8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <p className="text-sm font-bold tracking-wide uppercase text-gray-400 mb-2">For monthly imports</p>
+            <p className="text-sm font-bold tracking-wide uppercase text-ebox-forest mb-2">For monthly imports</p>
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Duplicate last month. Update. Submit.</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Monthly accruals? Duplicate the previous month's journal. Change the amounts. Submit through the same approval flow.
@@ -682,7 +634,7 @@ const EFormsPage: React.FC<EFormsPageProps> = ({ onNavigate }) => {
         </div>
       </section>
 
-      {/* Section 14: Integration */}
+      {/* Integration — ebox-dark */}
       <section className="py-24 bg-ebox-dark text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-ebox-lime font-bold uppercase tracking-wider text-sm mb-3">Works with your MRI database</p>
@@ -721,7 +673,7 @@ const EFormsPage: React.FC<EFormsPageProps> = ({ onNavigate }) => {
         </div>
       </section>
 
-      {/* Section 15: Watch the Full Demo */}
+      {/* Watch Demo — gray-50 */}
       <section className="py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
@@ -749,32 +701,32 @@ const EFormsPage: React.FC<EFormsPageProps> = ({ onNavigate }) => {
             </div>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <Button variant="primary" size="lg">Watch Full Demo</Button>
-              <Button variant="outline" size="lg" onClick={() => onNavigate('book-demo')}>Book Live Demo</Button>
+              <Button variant="outline" size="lg" to="/book-demo">Book Live Demo</Button>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Section 16: Final CTA */}
-      <section className="py-24 bg-[#FEFCF0]">
+      {/* Final CTA — dark gradient with lime accent */}
+      <section className="py-24 bg-gradient-to-r from-ebox-dark to-ebox-deep text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <EFormsLogo className="h-12 mx-auto mb-8" />
-          <h2 className="text-4xl font-extrabold text-ebox-dark mb-4">See how eForms extends your MRI system</h2>
-          <p className="text-xl text-gray-600 mb-8">20-minute demo. Your workflows. Your use cases.</p>
+          <EFormsLogo variant="white" className="h-12 mx-auto mb-8" />
+          <h2 className="text-4xl font-extrabold mb-4">See how eForms extends your MRI system</h2>
+          <p className="text-xl text-gray-300 mb-8">20-minute demo. Your workflows. Your use cases.</p>
           <div className="flex flex-col md:flex-row justify-center items-center gap-8 mb-12">
             <div className="text-left">
               <span className="block text-sm font-bold text-gray-400 uppercase">Week 1</span>
               <span className="text-lg font-bold">Connect to MRI + configure forms</span>
             </div>
-            <div className="w-16 h-0.5 bg-gray-300 hidden md:block"></div>
+            <div className="w-16 h-0.5 bg-gray-500 hidden md:block"></div>
             <div className="text-left">
               <span className="block text-sm font-bold text-gray-400 uppercase">Week 2</span>
               <span className="text-lg font-bold">Train team + go live</span>
             </div>
           </div>
-          <Button variant="primary" size="lg" onClick={() => onNavigate('book-demo')}>Schedule a Demo</Button>
-          <p className="mt-6 text-gray-500">
-            Questions? <a href="mailto:productsales@openboxsoftware.com" className="text-ebox-forest hover:underline font-medium">productsales@openboxsoftware.com</a>
+          <Button variant="primary" size="lg" to="/book-demo">Schedule a Demo</Button>
+          <p className="mt-6 text-gray-400">
+            Questions? <a href="mailto:productsales@openboxsoftware.com" className="text-ebox-lime hover:underline font-medium">productsales@openboxsoftware.com</a>
           </p>
         </div>
       </section>

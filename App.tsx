@@ -1,52 +1,48 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
+import { Routes, Route, Navigate, useLocation, Outlet } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Home from './pages/Home';
 import EFormsPage from './pages/EFormsPage';
-import EForms2 from './pages/EForms2';
+import EConnectPage from './pages/EConnectPage';
 import AboutUs from './pages/AboutUs';
 import ContactUs from './pages/ContactUs';
 import BookDemo from './pages/BookDemo';
-import Home2 from './pages/Home2';
-import { PageRoute } from './types';
 
-const App: React.FC = () => {
-  const [currentPage, setCurrentPage] = useState<PageRoute>('home');
-
-  // Simple scroll to top on page change
+const ScrollToTop: React.FC = () => {
+  const { pathname } = useLocation();
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, [currentPage]);
+  }, [pathname]);
+  return null;
+};
 
-  const renderPage = () => {
-    switch (currentPage) {
-      case 'home':
-        return <Home onNavigate={setCurrentPage} />;
-      case 'home-2':
-        return <Home2 onNavigate={setCurrentPage} />;
-      case 'eforms':
-        return <EFormsPage onNavigate={setCurrentPage} />;
-      case 'eforms-2':
-        return <EForms2 onNavigate={setCurrentPage} />;
-      case 'about':
-        return <AboutUs onNavigate={setCurrentPage} />;
-      case 'contact':
-        return <ContactUs />;
-      case 'book-demo':
-        return <BookDemo />;
-      default:
-        return <Home onNavigate={setCurrentPage} />;
-    }
-  };
-
+const Layout: React.FC = () => {
   return (
     <div className="min-h-screen flex flex-col bg-white">
-      <Header onNavigate={setCurrentPage} currentPage={currentPage} />
+      <ScrollToTop />
+      <Header />
       <main className="flex-grow">
-        {renderPage()}
+        <Outlet />
       </main>
-      <Footer onNavigate={setCurrentPage} />
+      <Footer />
     </div>
+  );
+};
+
+const App: React.FC = () => {
+  return (
+    <Routes>
+      <Route element={<Layout />}>
+        <Route path="/" element={<Home />} />
+        <Route path="/eforms" element={<EFormsPage />} />
+        <Route path="/econnect" element={<EConnectPage />} />
+        <Route path="/about" element={<AboutUs />} />
+        <Route path="/contact" element={<ContactUs />} />
+        <Route path="/book-demo" element={<BookDemo />} />
+        <Route path="*" element={<Navigate to="/" replace />} />
+      </Route>
+    </Routes>
   );
 };
 

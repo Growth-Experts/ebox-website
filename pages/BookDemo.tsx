@@ -1,9 +1,15 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Mail, Phone } from 'lucide-react';
 
 const BookDemo: React.FC = () => {
   return (
     <div className="flex flex-col w-full bg-white">
+      <Helmet>
+        <title>Book a Demo | eBox — See It in Action</title>
+        <meta name="description" content="Schedule a 20-minute personalised walkthrough. See how eForms can streamline your specific MRI workflows." />
+        <link rel="canonical" href="https://eboxplatform.com/book-demo" />
+      </Helmet>
       {/* Header */}
       <section className="pt-16 pb-10 text-center px-4">
         <h1 className="text-4xl md:text-5xl font-extrabold text-ebox-dark mb-4">See eBox in action</h1>

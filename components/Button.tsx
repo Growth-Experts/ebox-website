@@ -1,16 +1,25 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+interface ButtonBaseProps {
   variant?: 'primary' | 'secondary' | 'outline' | 'ghost';
   size?: 'sm' | 'md' | 'lg';
   children: React.ReactNode;
+  className?: string;
+  to?: string;
 }
+
+type ButtonAsButton = ButtonBaseProps & Omit<React.ButtonHTMLAttributes<HTMLButtonElement>, keyof ButtonBaseProps> & { to?: undefined };
+type ButtonAsLink = ButtonBaseProps & Omit<React.AnchorHTMLAttributes<HTMLAnchorElement>, keyof ButtonBaseProps> & { to: string };
+
+type ButtonProps = ButtonAsButton | ButtonAsLink;
 
 const Button: React.FC<ButtonProps> = ({ 
   variant = 'primary', 
   size = 'md', 
   className = '', 
-  children, 
+  children,
+  to,
   ...props 
 }) => {
   const baseStyles = "inline-flex items-center justify-center font-semibold rounded-full transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2";
@@ -28,10 +37,21 @@ const Button: React.FC<ButtonProps> = ({
     lg: "px-8 py-4 text-lg"
   };
 
+  const combinedClassName = `${baseStyles} ${variants[variant]} ${sizes[size]} ${className}`;
+
+  if (to) {
+    const { ...linkProps } = props as Omit<React.AnchorHTMLAttributes<HTMLAnchorElement>, keyof ButtonBaseProps>;
+    return (
+      <Link to={to} className={combinedClassName} {...linkProps}>
+        {children}
+      </Link>
+    );
+  }
+
   return (
     <button 
-      className={`${baseStyles} ${variants[variant]} ${sizes[size]} ${className}`}
-      {...props}
+      className={combinedClassName}
+      {...(props as React.ButtonHTMLAttributes<HTMLButtonElement>)}
     >
       {children}
     </button>
