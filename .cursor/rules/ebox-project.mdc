@@ -1,0 +1,119 @@
+---
+description: Core project context for the eBox marketing website — tech stack, structure, design system, and conventions
+alwaysApply: true
+---
+
+# eBox Project Context
+
+## What is eBox?
+
+eBox is a B2B SaaS product by Open Box Group (a global real estate software consultancy). It provides structured forms (eForms) and workflows for real estate teams using MRI software, eliminating manual data entry and spreadsheet management. The second product, eConnect, handles tenant communications powered by MRI data.
+
+## Tech Stack
+
+- **React 19** + **TypeScript 5.8** (JSX automatic transform)
+- **Vite 6** — dev server on port 3000, host 0.0.0.0
+- **React Router 7** (`react-router-dom`) — URL-based routing with `<BrowserRouter>`
+- **react-helmet-async** — per-page SEO metadata (`<title>`, `<meta>`, canonical URLs)
+- **Tailwind CSS** — loaded via CDN in index.html (not installed as a dependency; future improvement to install properly)
+- **Lucide React** — icon library
+- **Puppeteer** (dev) — build-time prerendering of static HTML
+- No backend — this is a static marketing site
+
+## Hosting & Deployment
+
+- **Hosted on Vercel** — auto-deploys from `main` branch
+- **Repo**: github.com/Growth-Experts/ebox-website (private)
+- **Default branch**: main
+- Vercel handles SPA fallback routing automatically
+- Production build includes prerendered HTML for all routes (SEO)
+
+## Commands
+
+- `npm run dev` — start dev server (http://localhost:3000)
+- `npm run build` — production build to dist/ + prerender all routes
+- `npm run build:no-prerender` — production build without prerendering (faster, for quick checks)
+- `npm run preview` — preview production build
+- When adding dependencies, use `--legacy-peer-deps` (react-helmet-async declares React 18 peer dep but works fine with React 19)
+
+## Project Structure
+
+```
+App.tsx              — Layout shell (Header + Outlet + Footer) and route definitions
+index.tsx            — React entry point (BrowserRouter, HelmetProvider, createRoot)
+index.html           — HTML shell, CDN imports (Tailwind, fonts), import map
+types.ts             — PageRoute, ROUTE_PATHS, NavItem, Testimonial, Feature types
+vite.config.ts       — Vite config with @/ path alias
+components/
+  Header.tsx         — Sticky nav with mobile hamburger, uses React Router <Link>
+  Footer.tsx         — 4-column footer with React Router <Link> nav
+  Button.tsx         — Reusable button (variants: primary/secondary/outline/ghost)
+                       Accepts optional `to` prop to render as <Link> instead of <button>
+  Logos.tsx          — EBoxLogo, EFormsLogo, OpenBoxLogo components
+pages/
+  Home.tsx           — Landing page (hero, problem/solution, features, products, testimonial, CTA)
+  EFormsPage.tsx     — eForms product detail page
+  EConnectPage.tsx   — eConnect product page (tenant communications)
+  AboutUs.tsx        — Company story and values
+  ContactUs.tsx      — Contact form
+  BookDemo.tsx       — Demo booking (Calendly placeholder)
+scripts/
+  prerender.mjs      — Build-time prerender script (Puppeteer) — generates static HTML per route
+public/images/       — Static assets served by Vite
+  ebox-logo.svg      — Official eBox logo (SVG)
+  eforms-logo.png    — Official eForms logo (grey text, light backgrounds)
+  eforms-logo-white.png — eForms logo white variant (dark backgrounds)
+```
+
+## Routing & Navigation
+
+URL-based routing via React Router in App.tsx. Routes are defined as `<Route>` elements inside a shared `<Layout>` component.
+
+| Route       | Path         | Component        |
+|-------------|-------------|------------------|
+| Home        | `/`          | Home.tsx         |
+| eForms      | `/eforms`    | EFormsPage.tsx   |
+| eConnect    | `/econnect`  | EConnectPage.tsx |
+| About Us    | `/about`     | AboutUs.tsx      |
+| Contact     | `/contact`   | ContactUs.tsx    |
+| Book a Demo | `/book-demo` | BookDemo.tsx     |
+
+- `ROUTE_PATHS` in types.ts maps `PageRoute` values to URL paths
+- Navigation uses `<Link to="/path">` from react-router-dom (not callbacks)
+- `Button` component accepts a `to` prop — renders as `<Link>` when provided, `<button>` otherwise
+- Header uses `useLocation()` for active nav state
+- `ScrollToTop` component scrolls to top on route change
+- Catch-all `*` route redirects to `/`
+
+## SEO
+
+- Each page has `<Helmet>` from react-helmet-async with unique title, meta description, and canonical URL
+- Canonical URLs use `https://eboxplatform.com` as the domain
+- Build step prerenders all routes to static HTML via Puppeteer (`scripts/prerender.mjs`)
+- Prerendered output: `dist/[route]/index.html` for each route
+- Navigation links are proper `<a>` tags (crawlable by search engines)
+- Sitemap: not yet implemented (planned for future)
+
+## Resources Folder
+
+`resources/` is NOT part of the website build. It contains reference materials, brand assets, copy documents, and inspiration files. Use these for context when writing copy or working with brand assets. Logo source files live here — when adding logos to the site, copy them to `public/images/`.
+
+## Design System
+
+- **Colors** (defined as Tailwind extensions in index.html):
+  - `ebox-lime`: #BCD632 (primary brand green)
+  - `ebox-teal`: #A0C9C9 (secondary teal)
+  - `ebox-dark`: #1A1A1A (text/dark backgrounds)
+  - `ebox-gray`: #F3F4F6 (light backgrounds)
+  - `ebox-light`: #FAFAF9 (lighter backgrounds)
+  - `ebox-deep`: #1B3A20 (dark green for gradients)
+  - `ebox-forest`: #2D5016 (forest green accents)
+- **Font**: Inter (Google Fonts, weights 300-800)
+- **Patterns**: rounded-full buttons, rounded-2xl cards, mobile-first with md:/lg: breakpoints
+
+## Logos
+
+Managed in `components/Logos.tsx`:
+- `EBoxLogo` — renders from `/images/ebox-logo.svg`
+- `EFormsLogo` — accepts `variant` prop: `"default"` (grey) or `"white"` (for dark backgrounds)
+- `OpenBoxLogo` — still inline SVG placeholder (no official SVG file yet)
