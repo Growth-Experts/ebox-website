@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import Button from '../components/Button';
 import { ArrowRight, CheckCircle, Upload, Shield, Users, Layers, FileText, Layout, PlayCircle, Lock, Clock, Building2, TrendingUp } from 'lucide-react';
-import { EFormsLogo } from '../components/Logos';
+import { EFormsLogo, EConnectLogo } from '../components/Logos';
 
 const Home: React.FC = () => {
   return (
@@ -196,9 +196,7 @@ const Home: React.FC = () => {
             </div>
             
             <div className="bg-white p-8 rounded-lg shadow-lg border border-gray-200 border-t-8 border-t-ebox-forest flex flex-col items-start hover:shadow-xl transition-shadow">
-               <div className="h-10 mb-6 flex items-center">
-                 <span className="text-3xl font-bold font-sans">eConnect</span>
-               </div>
+               <EConnectLogo className="h-10 mb-6" />
                <p className="text-lg text-gray-600 mb-8 flex-grow">Email hundreds of tenants. Track every delivery. Handle correspondence directly from your data.</p>
                <Button variant="outline" to="/econnect">Learn more about eConnect</Button>
             </div>

@@ -2,6 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Button from '../components/Button';
 import { Mail, Send, BarChart3, Shield, Users, ArrowRight } from 'lucide-react';
+import { EConnectLogo } from '../components/Logos';
 
 const EConnectPage: React.FC = () => {
   return (
@@ -14,9 +15,7 @@ const EConnectPage: React.FC = () => {
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-ebox-dark to-ebox-deep pt-20 pb-24 overflow-hidden relative">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-          <div className="h-12 mb-6 flex items-center justify-center">
-            <span className="text-4xl font-bold text-white">eConnect</span>
-          </div>
+          <EConnectLogo variant="white" className="h-12 mb-6 mx-auto" />
           <h1 className="text-5xl md:text-6xl font-extrabold mb-6 leading-tight text-white">
             Communications for MRI,{' '}
             <span className="text-ebox-lime">done right.</span>
