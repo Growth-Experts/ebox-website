@@ -2,7 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Button from '../components/Button';
 import { EFormsLogo } from '../components/Logos';
-import { Check, Shield, Lock, FileText, Settings, RefreshCw, AlertCircle, Database, Upload, Users, Layers, ArrowRight, ChevronRight, CheckCircle, PlayCircle, Layout, Star } from 'lucide-react';
+import { Check, Shield, Lock, FileText, Settings, RefreshCw, AlertCircle, Database, Upload, Users, Layers, ArrowRight, ChevronRight, CheckCircle, Layout, Star } from 'lucide-react';
 
 const EFormsPage: React.FC = () => {
   const useCases = [
@@ -33,9 +33,6 @@ const EFormsPage: React.FC = () => {
           </p>
           <div className="flex gap-4 justify-center mb-16">
             <Button variant="primary" size="lg" to="/book-demo">Book a Demo</Button>
-            <Button variant="outline" size="lg" className="group">
-              Watch Overview <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </Button>
           </div>
         </div>
 
@@ -673,39 +670,6 @@ const EFormsPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Watch Demo — gray-50 */}
-      <section className="py-24 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900">See a complete import workflow</h2>
-          </div>
-          <div className="max-w-4xl mx-auto">
-            <div className="bg-gray-800 rounded-lg aspect-video flex flex-col items-center justify-center mb-12">
-              <PlayCircle className="w-20 h-20 text-white/80" />
-              <span className="text-white text-lg font-bold mt-4">12-Minute Demo</span>
-            </div>
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-8">
-              {[
-                { time: '0:00', title: 'Introduction' },
-                { time: '2:00', title: 'Template selection' },
-                { time: '4:30', title: 'File upload & validation' },
-                { time: '7:00', title: 'Approval routing' },
-                { time: '9:30', title: 'MRI import' },
-                { time: '11:00', title: 'Audit trail' },
-              ].map((chapter, i) => (
-                <div key={i} className="bg-white p-4 rounded-md border border-gray-100 text-left">
-                  <span className="text-ebox-forest font-mono text-sm font-bold">{chapter.time}</span>
-                  <p className="text-sm font-medium text-gray-700">{chapter.title}</p>
-                </div>
-              ))}
-            </div>
-            <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <Button variant="primary" size="lg">Watch Full Demo</Button>
-              <Button variant="outline" size="lg" to="/book-demo">Book Live Demo</Button>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Final CTA — dark gradient with lime accent */}
       <section className="py-24 bg-gradient-to-r from-ebox-dark to-ebox-deep text-white">
