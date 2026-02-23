@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import Button from '../components/Button';
-import { ArrowRight, CheckCircle, Upload, Shield, Users, Layers, FileText, Layout, PlayCircle, Lock, Clock, Building2, TrendingUp } from 'lucide-react';
+import { ArrowRight, CheckCircle, Upload, Shield, Users, Layers, FileText, Layout, Lock, Clock, Building2, TrendingUp } from 'lucide-react';
 import { EFormsLogo, EConnectLogo } from '../components/Logos';
 
 const Home: React.FC = () => {
@@ -264,11 +264,6 @@ const Home: React.FC = () => {
                 <p className="text-gray-500 max-w-xs">{item.desc}</p>
               </div>
             ))}
-          </div>
-          <div className="mt-16">
-            <Link to="/book-demo" className="inline-flex items-center text-ebox-forest font-bold hover:underline">
-              <PlayCircle className="w-6 h-6 mr-2" /> See it in action
-            </Link>
           </div>
         </div>
       </section>

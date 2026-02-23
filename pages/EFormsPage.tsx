@@ -51,107 +51,11 @@ const EFormsPage: React.FC = () => {
               <div className="w-14"></div>
             </div>
 
-            <div className="flex min-h-[340px]">
-              <div className="w-52 bg-ebox-dark p-4 hidden md:flex flex-col flex-shrink-0">
-                <div className="mb-6">
-                  <EFormsLogo variant="white" className="h-7" />
-                </div>
-                <div className="space-y-1">
-                  <div className="flex items-center gap-2.5 px-3 py-2 rounded-md bg-white/10 text-white text-xs font-medium">
-                    <FileText className="w-3.5 h-3.5" /> <span>Journal Entry</span>
-                  </div>
-                  <div className="flex items-center gap-2.5 px-3 py-2 rounded-md text-gray-400 text-xs hover:text-gray-300">
-                    <FileText className="w-3.5 h-3.5" /> <span>Lease Entry</span>
-                  </div>
-                  <div className="flex items-center gap-2.5 px-3 py-2 rounded-md text-gray-400 text-xs hover:text-gray-300">
-                    <FileText className="w-3.5 h-3.5" /> <span>AP Invoice</span>
-                  </div>
-                  <div className="flex items-center gap-2.5 px-3 py-2 rounded-md text-gray-400 text-xs hover:text-gray-300">
-                    <RefreshCw className="w-3.5 h-3.5" /> <span>Recurring Charges</span>
-                  </div>
-                  <div className="flex items-center gap-2.5 px-3 py-2 rounded-md text-gray-400 text-xs hover:text-gray-300">
-                    <Database className="w-3.5 h-3.5" /> <span>Building Creation</span>
-                  </div>
-                </div>
-                <div className="mt-auto pt-4 border-t border-white/10">
-                  <span className="text-[10px] text-gray-500">100+ templates</span>
-                </div>
-              </div>
-
-              <div className="flex-1 p-6 bg-white">
-                <div className="flex items-center justify-between mb-5">
-                  <div>
-                    <div className="text-sm font-bold text-ebox-dark">Journal Entry — December 2025</div>
-                    <div className="text-[11px] text-gray-400 mt-0.5">Batch #JE-4920 &middot; 12 rows &middot; Created by S. Mitchell</div>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <span className="text-[10px] font-semibold text-amber-600 bg-amber-50 px-2.5 py-1 rounded-full border border-amber-200">Pending Approval</span>
-                  </div>
-                </div>
-
-                <div className="border border-gray-200 rounded-md overflow-hidden text-[11px]">
-                  <div className="grid grid-cols-12 bg-gray-50 border-b border-gray-200 text-[10px] font-semibold text-gray-500 uppercase tracking-wider">
-                    <div className="col-span-1 px-3 py-2">#</div>
-                    <div className="col-span-2 px-3 py-2">Entity</div>
-                    <div className="col-span-3 px-3 py-2">GL Account</div>
-                    <div className="col-span-3 px-3 py-2">Description</div>
-                    <div className="col-span-1 px-3 py-2 text-right">Debit</div>
-                    <div className="col-span-1 px-3 py-2 text-right">Credit</div>
-                    <div className="col-span-1 px-3 py-2 text-center">Status</div>
-                  </div>
-                  <div className="grid grid-cols-12 border-b border-gray-100 items-center">
-                    <div className="col-span-1 px-3 py-2.5 text-gray-400">1</div>
-                    <div className="col-span-2 px-3 py-2.5 font-mono text-gray-700">ENT-001</div>
-                    <div className="col-span-3 px-3 py-2.5 font-mono text-gray-700">4100-001-00</div>
-                    <div className="col-span-3 px-3 py-2.5 text-gray-600">Rent adjustment — Lvl 4</div>
-                    <div className="col-span-1 px-3 py-2.5 text-right font-mono text-gray-700">12,450</div>
-                    <div className="col-span-1 px-3 py-2.5 text-right font-mono text-gray-300">—</div>
-                    <div className="col-span-1 px-3 py-2.5 text-center"><CheckCircle className="w-3.5 h-3.5 text-green-500 inline-block" /></div>
-                  </div>
-                  <div className="grid grid-cols-12 border-b border-gray-100 items-center">
-                    <div className="col-span-1 px-3 py-2.5 text-gray-400">2</div>
-                    <div className="col-span-2 px-3 py-2.5 font-mono text-gray-700">ENT-001</div>
-                    <div className="col-span-3 px-3 py-2.5 font-mono text-gray-700">5200-003-00</div>
-                    <div className="col-span-3 px-3 py-2.5 text-gray-600">Maintenance accrual</div>
-                    <div className="col-span-1 px-3 py-2.5 text-right font-mono text-gray-300">—</div>
-                    <div className="col-span-1 px-3 py-2.5 text-right font-mono text-gray-700">8,200</div>
-                    <div className="col-span-1 px-3 py-2.5 text-center"><CheckCircle className="w-3.5 h-3.5 text-green-500 inline-block" /></div>
-                  </div>
-                  <div className="grid grid-cols-12 border-b border-gray-100 items-center bg-red-50/50">
-                    <div className="col-span-1 px-3 py-2.5 text-gray-400">3</div>
-                    <div className="col-span-2 px-3 py-2.5 font-mono text-gray-700">ENT-002</div>
-                    <div className="col-span-3 px-3 py-2.5 font-mono text-red-600">5200<span className="text-red-400 ml-1 font-sans text-[10px]">not found</span></div>
-                    <div className="col-span-3 px-3 py-2.5 text-gray-600">Insurance prepayment</div>
-                    <div className="col-span-1 px-3 py-2.5 text-right font-mono text-gray-700">4,250</div>
-                    <div className="col-span-1 px-3 py-2.5 text-right font-mono text-gray-300">—</div>
-                    <div className="col-span-1 px-3 py-2.5 text-center"><AlertCircle className="w-3.5 h-3.5 text-red-500 inline-block" /></div>
-                  </div>
-                  <div className="grid grid-cols-12 items-center">
-                    <div className="col-span-1 px-3 py-2.5 text-gray-400">4</div>
-                    <div className="col-span-2 px-3 py-2.5 font-mono text-gray-700">ENT-002</div>
-                    <div className="col-span-3 px-3 py-2.5 font-mono text-gray-700">4100-002-00</div>
-                    <div className="col-span-3 px-3 py-2.5 text-gray-600">Rent straight-lining</div>
-                    <div className="col-span-1 px-3 py-2.5 text-right font-mono text-gray-300">—</div>
-                    <div className="col-span-1 px-3 py-2.5 text-right font-mono text-gray-700">8,500</div>
-                    <div className="col-span-1 px-3 py-2.5 text-center"><CheckCircle className="w-3.5 h-3.5 text-green-500 inline-block" /></div>
-                  </div>
-                </div>
-
-                <div className="flex items-center justify-between mt-4">
-                  <div className="flex items-center gap-4">
-                    <div className="flex items-center gap-1.5 text-[11px] text-green-600 font-medium">
-                      <CheckCircle className="w-3.5 h-3.5" /> 11 rows valid
-                    </div>
-                    <div className="flex items-center gap-1.5 text-[11px] text-red-500 font-medium">
-                      <AlertCircle className="w-3.5 h-3.5" /> 1 error — fix to continue
-                    </div>
-                  </div>
-                  <div className="px-4 py-1.5 bg-gray-100 rounded-full text-[11px] font-bold text-gray-400">
-                    Submit for Approval
-                  </div>
-                </div>
-              </div>
-            </div>
+            <img
+              src="/images/eforms-screenshot.png"
+              alt="eForms new lease creation screen showing form statuses, approval workflows, and data upload tracking"
+              className="w-full block"
+            />
           </div>
         </div>
       </section>
@@ -162,18 +66,44 @@ const EFormsPage: React.FC = () => {
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-gray-900">What eForms adds to MRI</h2>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="md:col-span-2 bg-white p-8 rounded-lg shadow-sm border border-gray-100">
-              <div className="h-10 w-10 bg-blue-100 rounded-md flex items-center justify-center mb-4">
-                <FileText className="text-blue-600" />
+          <div className="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden mb-6">
+            <div className="grid grid-cols-1 lg:grid-cols-2">
+              <div className="p-10 lg:p-12 flex flex-col justify-center">
+                <div className="h-10 w-10 bg-blue-100 rounded-md flex items-center justify-center mb-5">
+                  <FileText className="text-blue-600" />
+                </div>
+                <h3 className="text-2xl font-bold mb-3">Structured Forms</h3>
+                <p className="text-gray-500 text-lg leading-relaxed mb-6">MRI gives you bulk import tools. eForms gives you forms anyone can fill out — no training required.</p>
+                <ul className="space-y-3">
+                  <li className="flex gap-3 items-center text-gray-700"><CheckCircle className="w-5 h-5 text-ebox-forest flex-shrink-0" /> Guided fields with dropdowns and date pickers</li>
+                  <li className="flex gap-3 items-center text-gray-700"><CheckCircle className="w-5 h-5 text-ebox-forest flex-shrink-0" /> Tabs for multi-section entries like leases</li>
+                  <li className="flex gap-3 items-center text-gray-700"><CheckCircle className="w-5 h-5 text-ebox-forest flex-shrink-0" /> Required fields enforced before submission</li>
+                </ul>
               </div>
-              <h3 className="text-2xl font-bold mb-2">Structured Forms</h3>
-              <p className="text-gray-500">MRI gives you bulk import tools. eForms gives you forms anyone can fill out—no training required.</p>
-              <div className="mt-6 bg-gray-50 h-48 rounded-md w-full border border-gray-100 flex items-center justify-center text-gray-400">
-                Form Interface Preview
+              <div className="bg-gray-50 flex items-end justify-center px-8 pt-8 lg:px-10 lg:pt-10">
+                <div className="w-full max-w-md rounded-t-lg shadow-lg border border-b-0 border-gray-200 overflow-hidden">
+                  <div className="flex items-center gap-2.5 px-4 py-2.5 bg-gray-100 border-b border-gray-200">
+                    <div className="flex items-center gap-1.5">
+                      <div className="w-2.5 h-2.5 rounded-full bg-gray-300"></div>
+                      <div className="w-2.5 h-2.5 rounded-full bg-gray-300"></div>
+                      <div className="w-2.5 h-2.5 rounded-full bg-gray-300"></div>
+                    </div>
+                    <div className="flex-1 flex justify-center">
+                      <div className="bg-white rounded-md px-3 py-0.5 text-[10px] text-gray-400 border border-gray-200 text-center">app.eboxplatform.com</div>
+                    </div>
+                    <div className="w-10"></div>
+                  </div>
+                  <img
+                    src="/images/eforms-form.png"
+                    alt="eForms new lease creation form with structured fields for property details, occupant info, and lease dates"
+                    className="w-full block"
+                  />
+                </div>
               </div>
             </div>
+          </div>
 
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="bg-white p-8 rounded-lg shadow-sm border border-gray-100">
               <div className="h-10 w-10 bg-purple-100 rounded-md flex items-center justify-center mb-4">
                 <Shield className="text-purple-600" />
@@ -195,25 +125,13 @@ const EFormsPage: React.FC = () => {
               <p className="text-gray-500">Let people enter data without full MRI access.</p>
             </div>
 
-            <div className="md:col-span-2 bg-ebox-forest/10 p-8 rounded-lg border border-ebox-forest/20">
-              <div className="flex flex-col md:flex-row items-center gap-8">
-                <div className="flex-1">
-                  <h3 className="text-2xl font-bold mb-2 text-ebox-dark">Catch errors at the source</h3>
-                  <ul className="space-y-3 mt-4">
-                    <li className="flex gap-2 items-center text-gray-800"><AlertCircle className="w-5 h-5 text-ebox-forest" /> GL account checked instantly</li>
-                    <li className="flex gap-2 items-center text-gray-800"><AlertCircle className="w-5 h-5 text-ebox-forest" /> Journals balanced before submit</li>
-                    <li className="flex gap-2 items-center text-gray-800"><AlertCircle className="w-5 h-5 text-ebox-forest" /> Clean data flows to MRI</li>
-                  </ul>
-                </div>
-                <div className="flex-1 bg-white p-4 rounded-md shadow-sm w-full">
-                   <div className="flex items-center gap-2 text-red-500 mb-2 text-sm font-mono p-2 bg-red-50 rounded">
-                      <span>❌ GL Account "5200" not found</span>
-                   </div>
-                   <div className="flex items-center gap-2 text-green-600 text-sm font-mono p-2 bg-green-50 rounded">
-                      <span>✓ 197 rows validated</span>
-                   </div>
-                </div>
-              </div>
+            <div className="bg-ebox-forest/10 p-8 rounded-lg border border-ebox-forest/20">
+              <h3 className="text-xl font-bold mb-2 text-ebox-dark">Catch errors at the source</h3>
+              <ul className="space-y-3 mt-4">
+                <li className="flex gap-2 items-center text-gray-800"><AlertCircle className="w-5 h-5 text-ebox-forest" /> GL account checked instantly</li>
+                <li className="flex gap-2 items-center text-gray-800"><AlertCircle className="w-5 h-5 text-ebox-forest" /> Journals balanced before submit</li>
+                <li className="flex gap-2 items-center text-gray-800"><AlertCircle className="w-5 h-5 text-ebox-forest" /> Clean data flows to MRI</li>
+              </ul>
             </div>
           </div>
         </div>
