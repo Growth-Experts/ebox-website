@@ -88,7 +88,7 @@ URL-based routing via React Router in App.tsx. Routes are defined as `<Route>` e
 ## SEO
 
 - Each page has `<Helmet>` from react-helmet-async with unique title, meta description, and canonical URL
-- Canonical URLs use `https://eboxplatform.com` as the domain
+- Canonical URLs use `https://eboxsoftware.com` as the domain
 - Build step prerenders all routes to static HTML via Puppeteer (`scripts/prerender.mjs`)
 - Prerendered output: `dist/[route]/index.html` for each route
 - Navigation links are proper `<a>` tags (crawlable by search engines)

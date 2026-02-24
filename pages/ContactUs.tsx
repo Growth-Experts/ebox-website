@@ -9,14 +9,14 @@ const ContactUs: React.FC = () => {
       <Helmet>
         <title>Contact Us | eBox — Get in Touch</title>
         <meta name="description" content="Have questions about eForms or eConnect? Need a custom solution? Contact the eBox team — offices in New York, London, and Cape Town." />
-        <link rel="canonical" href="https://eboxplatform.com/contact" />
+        <link rel="canonical" href="https://eboxsoftware.com/contact" />
       </Helmet>
       {/* Header */}
       <section className="bg-ebox-dark text-white pt-20 pb-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-5xl font-extrabold mb-6">Get in touch</h1>
           <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-            Have questions about eForms? Need a custom solution?<br />We're here to help.
+            Have questions about eBox? Need a custom solution?<br />We're here to help.
           </p>
         </div>
       </section>

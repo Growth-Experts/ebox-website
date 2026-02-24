@@ -8,7 +8,7 @@ const BookDemo: React.FC = () => {
       <Helmet>
         <title>Book a Demo | eBox — See It in Action</title>
         <meta name="description" content="Schedule a 20-minute personalised walkthrough. See how eForms can streamline your specific MRI workflows." />
-        <link rel="canonical" href="https://eboxplatform.com/book-demo" />
+        <link rel="canonical" href="https://eboxsoftware.com/book-demo" />
       </Helmet>
       {/* Header */}
       <section className="pt-16 pb-10 text-center px-4">

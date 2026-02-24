@@ -10,7 +10,7 @@ const EConnectPage: React.FC = () => {
       <Helmet>
         <title>eConnect | Tenant Communications for MRI | eBox</title>
         <meta name="description" content="Email hundreds of tenants directly from your MRI data. Track every delivery. Handle correspondence without leaving your workflow." />
-        <link rel="canonical" href="https://eboxplatform.com/econnect" />
+        <link rel="canonical" href="https://eboxsoftware.com/econnect" />
       </Helmet>
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-ebox-dark to-ebox-deep pt-20 pb-24 overflow-hidden relative">

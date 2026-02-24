@@ -19,7 +19,7 @@ const EFormsPage: React.FC = () => {
       <Helmet>
         <title>eForms | Structured MRI Data Imports &amp; Approval Workflows | eBox</title>
         <meta name="description" content="eForms provides structured forms for MRI imports with real-time validation, approval routing, and complete audit trails. Built for real estate finance teams." />
-        <link rel="canonical" href="https://eboxplatform.com/eforms" />
+        <link rel="canonical" href="https://eboxsoftware.com/eforms" />
       </Helmet>
       {/* Product Hero — Light, product-centric (distinct from Home2 dark hero) */}
       <section className="bg-white pt-20 pb-0 overflow-hidden">
@@ -46,7 +46,7 @@ const EFormsPage: React.FC = () => {
                 <div className="w-3 h-3 rounded-full bg-gray-300"></div>
               </div>
               <div className="flex-1 flex justify-center">
-                <div className="bg-white rounded-md px-4 py-1 text-xs text-gray-400 border border-gray-200 w-64 text-center">app.eboxplatform.com</div>
+                <div className="bg-white rounded-md px-4 py-1 text-xs text-gray-400 border border-gray-200 w-64 text-center">app.eboxsoftware.com</div>
               </div>
               <div className="w-14"></div>
             </div>
@@ -89,7 +89,7 @@ const EFormsPage: React.FC = () => {
                       <div className="w-2.5 h-2.5 rounded-full bg-gray-300"></div>
                     </div>
                     <div className="flex-1 flex justify-center">
-                      <div className="bg-white rounded-md px-3 py-0.5 text-[10px] text-gray-400 border border-gray-200 text-center">app.eboxplatform.com</div>
+                      <div className="bg-white rounded-md px-3 py-0.5 text-[10px] text-gray-400 border border-gray-200 text-center">app.eboxsoftware.com</div>
                     </div>
                     <div className="w-10"></div>
                   </div>
@@ -147,16 +147,16 @@ const EFormsPage: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 relative">
             <div className="hidden md:block absolute top-12 left-[16%] right-[16%] h-0.5 bg-ebox-forest/30"></div>
             {[
-              { num: '1', title: 'As you type', desc: 'GL account gets checked against your MRI database immediately.' },
-              { num: '2', title: 'Before submit', desc: 'All fields verified. Journals balanced. Format checked.' },
-              { num: '3', title: 'Import with confidence', desc: 'Clean data flows to MRI. No cryptic error logs.' },
+              { num: '1', title: 'As you type', desc: 'GL account gets checked against your MRI database immediately.', img: '/images/validation-step1-as-you-type.png', alt: 'eForms real-time GL account validation as you type' },
+              { num: '2', title: 'Before submit', desc: 'All fields verified. Journals balanced. Format checked.', img: '/images/validation-step2-before-submit.png', alt: 'eForms pre-submission validation showing errors to fix' },
+              { num: '3', title: 'Import with confidence', desc: 'Clean data flows to MRI. No cryptic error logs.', img: '/images/validation-step3-import-ready.png', alt: 'eForms all rows validated and ready to import to MRI' },
             ].map((step, i) => (
               <div key={i} className="flex flex-col items-center text-center">
                 <div className="w-24 h-24 bg-white border-4 border-ebox-forest rounded-full flex items-center justify-center text-3xl font-bold text-ebox-forest mb-6 shadow-sm relative z-10">
                   {step.num}
                 </div>
-                <div className="bg-gray-100 h-40 rounded-md w-full mb-4 flex items-center justify-center text-gray-400 text-sm">
-                  Screenshot placeholder
+                <div className="rounded-lg w-full mb-4 overflow-hidden shadow-md border border-gray-200">
+                  <img src={step.img} alt={step.alt} className="w-full block" />
                 </div>
                 <h4 className="text-xl font-bold mb-2">{step.title}</h4>
                 <p className="text-gray-500">{step.desc}</p>
@@ -256,24 +256,50 @@ const EFormsPage: React.FC = () => {
             <h2 className="text-3xl font-bold text-gray-900">Two ways to work</h2>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            <div className="bg-white p-8 rounded-lg shadow-sm border border-gray-100">
+            <div className="bg-white p-8 rounded-lg shadow-sm border border-gray-100 flex flex-col">
               <div className="p-4 bg-blue-100 rounded-lg w-fit mb-6">
                 <FileText className="text-blue-600 w-6 h-6" />
               </div>
               <h3 className="text-2xl font-bold mb-2">Structured forms</h3>
               <p className="text-gray-500 mb-6">For one-at-a-time entry by team members</p>
-              <div className="bg-gray-50 h-56 rounded-md border border-gray-100 flex items-center justify-center text-gray-400">
-                Form interface preview
+              <div className="rounded-lg overflow-hidden border border-gray-200 shadow-md">
+                <div className="flex items-center gap-2.5 px-4 py-2.5 bg-gray-100 border-b border-gray-200">
+                  <div className="flex items-center gap-1.5">
+                    <div className="w-2.5 h-2.5 rounded-full bg-gray-300"></div>
+                    <div className="w-2.5 h-2.5 rounded-full bg-gray-300"></div>
+                    <div className="w-2.5 h-2.5 rounded-full bg-gray-300"></div>
+                  </div>
+                  <div className="flex-1 flex justify-center">
+                    <div className="bg-white rounded-md px-3 py-0.5 text-[10px] text-gray-400 border border-gray-200 text-center">app.eboxsoftware.com</div>
+                  </div>
+                  <div className="w-10"></div>
+                </div>
+                <div className="h-72 overflow-hidden">
+                  <img src="/images/eforms-single-entry.png" alt="eForms structured form for creating new buildings in MRI with guided fields and dropdowns" className="w-full block" />
+                </div>
               </div>
             </div>
-            <div className="bg-white p-8 rounded-lg shadow-sm border border-gray-100">
+            <div className="bg-white p-8 rounded-lg shadow-sm border border-gray-100 flex flex-col">
               <div className="p-4 bg-green-100 rounded-lg w-fit mb-6">
                 <Upload className="text-green-600 w-6 h-6" />
               </div>
               <h3 className="text-2xl font-bold mb-2">File upload</h3>
               <p className="text-gray-500 mb-6">For bulk imports from your existing spreadsheets</p>
-              <div className="bg-gray-50 h-56 rounded-md border border-gray-100 flex items-center justify-center text-gray-400">
-                Spreadsheet upload preview
+              <div className="rounded-lg overflow-hidden border border-gray-200 shadow-md">
+                <div className="flex items-center gap-2.5 px-4 py-2.5 bg-gray-100 border-b border-gray-200">
+                  <div className="flex items-center gap-1.5">
+                    <div className="w-2.5 h-2.5 rounded-full bg-gray-300"></div>
+                    <div className="w-2.5 h-2.5 rounded-full bg-gray-300"></div>
+                    <div className="w-2.5 h-2.5 rounded-full bg-gray-300"></div>
+                  </div>
+                  <div className="flex-1 flex justify-center">
+                    <div className="bg-white rounded-md px-3 py-0.5 text-[10px] text-gray-400 border border-gray-200 text-center">app.eboxsoftware.com</div>
+                  </div>
+                  <div className="w-10"></div>
+                </div>
+                <div className="h-72 overflow-hidden">
+                  <img src="/images/eforms-file-import.png" alt="eForms file upload interface for bulk spreadsheet imports into MRI" className="w-full block" />
+                </div>
               </div>
             </div>
           </div>
@@ -346,7 +372,7 @@ const EFormsPage: React.FC = () => {
       {/* Audit Trail — white */}
       <section className="py-24 bg-white overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
               <p className="text-ebox-forest font-bold uppercase tracking-wider text-sm mb-3">Audit Trail</p>
               <h3 className="text-4xl font-bold mb-6 text-gray-900">Built-in compliance.</h3>

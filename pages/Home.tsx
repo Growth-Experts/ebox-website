@@ -11,7 +11,7 @@ const Home: React.FC = () => {
       <Helmet>
         <title>eBox | MRI Data Imports Made Easy</title>
         <meta name="description" content="eBox gives your real estate team the tools to eliminate manual processes, reduce errors, and get more from MRI — starting with eForms for data imports and eConnect for communications." />
-        <link rel="canonical" href="https://eboxplatform.com/" />
+        <link rel="canonical" href="https://eboxsoftware.com/" />
       </Helmet>
       {/* Hero Section — Dark, eBox-branded */}
       <section className="bg-gradient-to-br from-ebox-dark to-ebox-deep pt-20 pb-24 overflow-hidden relative">

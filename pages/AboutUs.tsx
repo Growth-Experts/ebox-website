@@ -10,7 +10,7 @@ const AboutUs: React.FC = () => {
       <Helmet>
         <title>About Us | eBox — Built from 25 Years in Real Estate Tech</title>
         <meta name="description" content="eBox is part of the Open Box Group, a global software consultancy serving real estate for over two decades. We build tools that make MRI work harder for you." />
-        <link rel="canonical" href="https://eboxplatform.com/about" />
+        <link rel="canonical" href="https://eboxsoftware.com/about" />
       </Helmet>
       {/* Hero Section */}
       <section className="bg-ebox-light pt-20 pb-24 relative overflow-hidden">

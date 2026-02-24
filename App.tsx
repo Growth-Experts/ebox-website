@@ -8,6 +8,7 @@ import EConnectPage from './pages/EConnectPage';
 import AboutUs from './pages/AboutUs';
 import ContactUs from './pages/ContactUs';
 import BookDemo from './pages/BookDemo';
+import PrivacyPolicy from './pages/PrivacyPolicy';
 
 const ScrollToTop: React.FC = () => {
   const { pathname } = useLocation();
@@ -40,6 +41,7 @@ const App: React.FC = () => {
         <Route path="/about" element={<AboutUs />} />
         <Route path="/contact" element={<ContactUs />} />
         <Route path="/book-demo" element={<BookDemo />} />
+        <Route path="/privacy" element={<PrivacyPolicy />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Route>
     </Routes>
