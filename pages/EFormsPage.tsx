@@ -94,7 +94,7 @@ const EFormsPage: React.FC = () => {
                     <div className="w-10"></div>
                   </div>
                   <img
-                    src="/images/eforms-form.png"
+                    src="/images/eforms-form-zoomed-in.png"
                     alt="eForms new lease creation form with structured fields for property details, occupant info, and lease dates"
                     className="w-full block"
                   />
