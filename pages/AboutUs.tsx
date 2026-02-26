@@ -17,11 +17,12 @@ const AboutUs: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-3xl">
             <h1 className="text-5xl md:text-6xl font-extrabold tracking-tight text-ebox-dark mb-6">
-              We make MRI work{' '}
-              <span className="text-ebox-lime">harder&nbsp;for&nbsp;you.</span>
+              <span className="block">Making your</span>
+              <span className="block">property systems</span>
+              <span className="block text-ebox-lime">work harder for&nbsp;you</span>
             </h1>
             <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-              eBox was founded to solve the specific, messy data problems that real estate finance teams face every day. We believe enterprise software doesn't have to be complicated.
+              eBox was founded to solve the specific, messy data problems that real estate teams face every day. We believe enterprise software doesn't have to be&nbsp;complicated.
             </p>
           </div>
         </div>
@@ -57,7 +58,7 @@ const AboutUs: React.FC = () => {
               <div className="space-y-10">
                 <div className="relative">
                   <div className="absolute -left-8 top-1 w-6 h-6 bg-ebox-lime rounded-full border-4 border-white shadow"></div>
-                  <span className="text-xs font-bold uppercase tracking-widest text-ebox-lime">2003</span>
+                  <span className="text-xs font-bold uppercase tracking-widest text-ebox-lime">2001</span>
                   <h3 className="text-lg font-bold text-gray-900 mt-1">Open Box Founded</h3>
                   <p className="text-sm text-gray-500 mt-1">Launched as a real estate software consultancy, specialising in MRI implementations.</p>
                 </div>
@@ -71,7 +72,7 @@ const AboutUs: React.FC = () => {
 
                 <div className="relative">
                   <div className="absolute -left-8 top-1 w-6 h-6 bg-ebox-dark rounded-full border-4 border-white shadow"></div>
-                  <span className="text-xs font-bold uppercase tracking-widest text-gray-400">2022</span>
+                  <span className="text-xs font-bold uppercase tracking-widest text-gray-400">2023</span>
                   <h3 className="text-lg font-bold text-gray-900 mt-1">eBox Is Born</h3>
                   <p className="text-sm text-gray-500 mt-1">Spun out as a dedicated product company to solve MRI's data import challenges.</p>
                 </div>
@@ -80,7 +81,7 @@ const AboutUs: React.FC = () => {
                   <div className="absolute -left-8 top-1 w-6 h-6 bg-ebox-lime rounded-full border-4 border-white shadow ring-4 ring-ebox-lime/20"></div>
                   <span className="text-xs font-bold uppercase tracking-widest text-ebox-lime">Today</span>
                   <h3 className="text-lg font-bold text-gray-900 mt-1">eForms & eConnect</h3>
-                  <p className="text-sm text-gray-500 mt-1">Two products, one mission: make MRI data imports fast, accurate, and painless.</p>
+                  <p className="text-sm text-gray-500 mt-1">Two products, one mission: zero friction in your business processes.</p>
                 </div>
               </div>
             </div>
@@ -93,7 +94,7 @@ const AboutUs: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold">Our Philosophy</h2>
-            <p className="text-gray-400 mt-4 max-w-2xl mx-auto">We don't build general-purpose tools. We build specifically for the nuances of Real Estate and MRI Software.</p>
+            <p className="text-gray-400 mt-4 max-w-2xl mx-auto">We build specifically for the real estate industry and MRI software.</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -101,15 +102,8 @@ const AboutUs: React.FC = () => {
               <div className="bg-ebox-lime/20 w-12 h-12 rounded-md flex items-center justify-center mb-6">
                 <Award className="text-ebox-lime w-6 h-6" />
               </div>
-              <h3 className="text-xl font-bold mb-3">Expertise First</h3>
-              <p className="text-gray-400 leading-relaxed">We understand GL codes, lease structures, and the difference between a modification and a renewal. We speak your language.</p>
-            </div>
-            <div className="bg-white/5 p-8 rounded-lg border border-white/10 hover:bg-white/10 transition-colors">
-              <div className="bg-ebox-forest/20 w-12 h-12 rounded-md flex items-center justify-center mb-6">
-                <Users className="text-ebox-forest w-6 h-6" />
-              </div>
-              <h3 className="text-xl font-bold mb-3">User Experience</h3>
-              <p className="text-gray-400 leading-relaxed">Enterprise software shouldn't require a manual. We design our interfaces to be intuitive for the person doing the data entry.</p>
+              <h3 className="text-xl font-bold mb-3">Industry Expertise</h3>
+              <p className="text-gray-400 leading-relaxed">Decades of property and software experience. We speak your language.</p>
             </div>
             <div className="bg-white/5 p-8 rounded-lg border border-white/10 hover:bg-white/10 transition-colors">
               <div className="bg-purple-500/20 w-12 h-12 rounded-md flex items-center justify-center mb-6">
@@ -117,6 +111,13 @@ const AboutUs: React.FC = () => {
               </div>
               <h3 className="text-xl font-bold mb-3">Customer Success</h3>
               <p className="text-gray-400 leading-relaxed">We don't just sell you software. We help you map your workflows, train your team, and ensure you get value from day one.</p>
+            </div>
+            <div className="bg-white/5 p-8 rounded-lg border border-white/10 hover:bg-white/10 transition-colors">
+              <div className="bg-ebox-forest/20 w-12 h-12 rounded-md flex items-center justify-center mb-6">
+                <Users className="text-ebox-forest w-6 h-6" />
+              </div>
+              <h3 className="text-xl font-bold mb-3">User Experience</h3>
+              <p className="text-gray-400 leading-relaxed">Enterprise software shouldn't require a manual. We design our interfaces to be intuitive for the user.</p>
             </div>
           </div>
         </div>
@@ -126,7 +127,7 @@ const AboutUs: React.FC = () => {
       <section className="py-24 bg-[#FEFCF0]">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-4xl font-extrabold text-ebox-dark mb-6">Want to learn more?</h2>
-          <p className="text-xl text-gray-600 mb-10">See how we can help your team work smarter with MRI.</p>
+          <p className="text-xl text-gray-600 mb-10">See how we can help your team work smarter.</p>
           <Button variant="primary" size="lg" to="/contact">Contact Us</Button>
         </div>
       </section>
