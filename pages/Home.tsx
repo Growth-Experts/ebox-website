@@ -21,9 +21,10 @@ const Home: React.FC = () => {
               <span className="inline-block py-1.5 px-4 rounded-full bg-ebox-lime/15 text-ebox-lime font-semibold text-sm mb-6 border border-ebox-lime/20">
                 Built from 25 years in real estate technology
               </span>
-              <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight text-white leading-[1.1] mb-6">
-                The smarter <span className="whitespace-nowrap">way to</span><br />
-                <span className="text-ebox-lime">work with MRI.</span>
+              <h1 className="text-5xl md:text-6xl font-extrabold tracking-tight text-white leading-[1.1] mb-6">
+                Making your<br />
+                property systems<br />
+                <span className="text-ebox-lime">work harder for you</span>
               </h1>
               <p className="text-xl text-gray-300 mb-10 max-w-2xl leading-relaxed">
                 eBox gives your real estate team the tools to eliminate manual processes, reduce errors, and get more from MRI — starting with eForms for data imports and eConnect for communications.

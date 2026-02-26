@@ -6,12 +6,12 @@ import { Check, Shield, Lock, FileText, Settings, RefreshCw, AlertCircle, Databa
 
 const EFormsPage: React.FC = () => {
   const useCases = [
-    { gradient: "from-blue-600 to-blue-700", color: "blue", iconBg: "bg-blue-100", iconText: "text-blue-600", borderColor: "border-blue-500", statBg: "bg-blue-50", statText: "text-blue-300", dotColor: "bg-blue-400", icon: <Database className="text-white w-6 h-6" />, title: "Month-End Close", desc: "Process 200+ journal entries with approval workflows", stat: "80% faster close" },
-    { gradient: "from-emerald-600 to-emerald-700", color: "emerald", iconBg: "bg-emerald-100", iconText: "text-emerald-600", borderColor: "border-emerald-500", statBg: "bg-emerald-50", statText: "text-emerald-300", dotColor: "bg-emerald-400", icon: <FileText className="text-white w-6 h-6" />, title: "Lease Administration", desc: "Property managers enter leases, finance approves before posting", stat: "No MRI access needed" },
+    { gradient: "from-blue-600 to-blue-700", color: "blue", iconBg: "bg-blue-100", iconText: "text-blue-600", borderColor: "border-blue-500", statBg: "bg-blue-50", statText: "text-blue-300", dotColor: "bg-blue-400", icon: <Database className="text-white w-6 h-6" />, title: "Month-End Close", desc: "Process and schedule 1000s of journal entries with approval workflows.", stat: "No more late nights" },
+    { gradient: "from-emerald-600 to-emerald-700", color: "emerald", iconBg: "bg-emerald-100", iconText: "text-emerald-600", borderColor: "border-emerald-500", statBg: "bg-emerald-50", statText: "text-emerald-300", dotColor: "bg-emerald-400", icon: <FileText className="text-white w-6 h-6" />, title: "Lease Administration", desc: "Property administrators enter leases, finance captures charges, property managers approve into MRI.", stat: "Real-time email notifications." },
     { gradient: "from-purple-600 to-purple-700", color: "purple", iconBg: "bg-purple-100", iconText: "text-purple-600", borderColor: "border-purple-500", statBg: "bg-purple-50", statText: "text-purple-300", dotColor: "bg-purple-400", icon: <Settings className="text-white w-6 h-6" />, title: "Accounts Payable", desc: "Structured invoice entry with auto-routing by amount or vendor", stat: "Every action logged" },
     { gradient: "from-amber-500 to-orange-600", color: "amber", iconBg: "bg-amber-100", iconText: "text-amber-600", borderColor: "border-amber-500", statBg: "bg-amber-50", statText: "text-amber-300", dotColor: "bg-amber-400", icon: <RefreshCw className="text-white w-6 h-6" />, title: "Recurring Processes", desc: "Configure once, apply to hundreds of units with validation", stat: "Set up once, reuse monthly" },
     { gradient: "from-rose-500 to-pink-600", color: "rose", iconBg: "bg-rose-100", iconText: "text-rose-600", borderColor: "border-rose-500", statBg: "bg-rose-50", statText: "text-rose-300", dotColor: "bg-rose-400", icon: <Database className="text-white w-6 h-6" />, title: "Master Data Management", desc: "Regional teams create buildings and units with approval layer", stat: "Consistent data, every time" },
-    { gradient: "from-teal-500 to-cyan-600", color: "teal", iconBg: "bg-teal-100", iconText: "text-teal-600", borderColor: "border-teal-500", statBg: "bg-teal-50", statText: "text-teal-300", dotColor: "bg-teal-400", icon: <Check className="text-white w-6 h-6" />, title: "Tenant Payments", desc: "Validate account, lease status, and charge codes before posting", stat: "Zero misapplied payments" },
+    { gradient: "from-teal-500 to-cyan-600", color: "teal", iconBg: "bg-teal-100", iconText: "text-teal-600", borderColor: "border-teal-500", statBg: "bg-teal-50", statText: "text-teal-300", dotColor: "bg-teal-400", icon: <Check className="text-white w-6 h-6" />, title: "Tenant Charges", desc: "Validate accounts, tenant details and charge codes before posting", stat: "Reduce tenant queries" },
   ];
 
   return (
@@ -26,7 +26,7 @@ const EFormsPage: React.FC = () => {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <EFormsLogo className="h-12 mx-auto mb-6" />
           <h1 className="text-5xl md:text-6xl font-extrabold mb-6 leading-tight text-ebox-dark">
-            The forms and workflows MRI doesn't have
+            Data imports for MRI, made easy
           </h1>
           <p className="text-xl text-gray-500 mb-8 leading-relaxed max-w-2xl mx-auto">
             Structured data entry. Approval routing. Real-time validation. All feeding directly into your MRI database.
@@ -111,7 +111,7 @@ const EFormsPage: React.FC = () => {
               <h3 className="text-xl font-bold mb-2">Approval Layers</h3>
               <p className="text-gray-500 mb-4">Add approval workflows before data hits MRI.</p>
               <div className="space-y-2">
-                 <div className="flex items-center gap-2 text-sm"><div className="w-2 h-2 rounded-full bg-green-500"></div> Submit</div>
+                <div className="flex items-center gap-2 text-sm"><div className="w-2 h-2 rounded-full bg-green-500"></div> Notify</div>
                  <div className="flex items-center gap-2 text-sm"><div className="w-2 h-2 rounded-full bg-green-500"></div> Review</div>
                  <div className="flex items-center gap-2 text-sm"><div className="w-2 h-2 rounded-full bg-green-500"></div> Approve</div>
               </div>
@@ -122,15 +122,21 @@ const EFormsPage: React.FC = () => {
                 <Lock className="text-orange-600" />
               </div>
               <h3 className="text-xl font-bold mb-2">Granular Access</h3>
-              <p className="text-gray-500">Let people enter data without full MRI access.</p>
+              <p className="text-gray-500">
+                Enable external users to import, submit, and approve data.
+              </p>
+              <p className="text-gray-500 mt-3">
+                Give them the access they need and nothing more.
+              </p>
             </div>
 
             <div className="bg-ebox-forest/10 p-8 rounded-lg border border-ebox-forest/20">
               <h3 className="text-xl font-bold mb-2 text-ebox-dark">Catch errors at the source</h3>
               <ul className="space-y-3 mt-4">
-                <li className="flex gap-2 items-center text-gray-800"><AlertCircle className="w-5 h-5 text-ebox-forest" /> GL account checked instantly</li>
-                <li className="flex gap-2 items-center text-gray-800"><AlertCircle className="w-5 h-5 text-ebox-forest" /> Journals balanced before submit</li>
-                <li className="flex gap-2 items-center text-gray-800"><AlertCircle className="w-5 h-5 text-ebox-forest" /> Clean data flows to MRI</li>
+                <li className="flex gap-2 items-center text-gray-800"><AlertCircle className="w-5 h-5 shrink-0 text-ebox-forest" /> Avoid human error.</li>
+                <li className="flex gap-2 items-center text-gray-800"><AlertCircle className="w-5 h-5 shrink-0 text-ebox-forest" /> Enforce business rules.</li>
+                <li className="flex gap-2 items-center text-gray-800"><AlertCircle className="w-5 h-5 shrink-0 text-ebox-forest" /> Respect your organisation's data security hierarchy.</li>
+                <li className="flex gap-2 items-center text-gray-800"><AlertCircle className="w-5 h-5 shrink-0 text-ebox-forest" /> Clean data flows to MRI.</li>
               </ul>
             </div>
           </div>
@@ -142,6 +148,7 @@ const EFormsPage: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <p className="text-sm font-bold tracking-wide uppercase text-ebox-forest mb-2">Real-Time Validation</p>
+            <p className="text-xs text-gray-500 mb-2">Transactional data example.</p>
             <h2 className="text-3xl font-bold text-gray-900">Catch errors at the source</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 relative">
@@ -149,7 +156,7 @@ const EFormsPage: React.FC = () => {
             {[
               { num: '1', title: 'As you type', desc: 'GL account gets checked against your MRI database immediately.', img: '/images/validation-step1-as-you-type.png', alt: 'eForms real-time GL account validation as you type' },
               { num: '2', title: 'Before submit', desc: 'All fields verified. Journals balanced. Format checked.', img: '/images/validation-step2-before-submit.png', alt: 'eForms pre-submission validation showing errors to fix' },
-              { num: '3', title: 'Import with confidence', desc: 'Clean data flows to MRI. No cryptic error logs.', img: '/images/validation-step3-import-ready.png', alt: 'eForms all rows validated and ready to import to MRI' },
+              { num: '3', title: 'Import with confidence', desc: 'Clean data flows to MRI. No complicated error logs.', img: '/images/validation-step3-import-ready.png', alt: 'eForms all rows validated and ready to import to MRI' },
             ].map((step, i) => (
               <div key={i} className="flex flex-col items-center text-center">
                 <div className="w-24 h-24 bg-white border-4 border-ebox-forest rounded-full flex items-center justify-center text-3xl font-bold text-ebox-forest mb-6 shadow-sm relative z-10">
@@ -171,7 +178,7 @@ const EFormsPage: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <p className="text-sm font-bold tracking-wide uppercase text-ebox-forest mb-2">Start importing in minutes</p>
-            <h2 className="text-3xl font-bold text-gray-900">100+ pre-built templates for every MRI workflow</h2>
+            <h2 className="text-3xl font-bold text-gray-900">Pre-built templates for every MRI workflow</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="md:col-span-2 bg-white p-8 rounded-lg shadow-sm border border-gray-100">
@@ -179,7 +186,7 @@ const EFormsPage: React.FC = () => {
                 <Layers className="text-blue-600" />
               </div>
               <h3 className="text-2xl font-bold mb-2">Journal Entries</h3>
-              <p className="text-gray-500">Single batch, multi-batch, auto-split by entity/period</p>
+              <p className="text-gray-500">Single or multiple auto posting batches.</p>
               <div className="mt-6 bg-gray-50 h-48 rounded-md w-full border border-gray-100 flex items-center justify-center text-gray-400">
                 Journal form preview
               </div>
@@ -189,7 +196,7 @@ const EFormsPage: React.FC = () => {
                 <FileText className="text-green-600" />
               </div>
               <h3 className="text-xl font-bold mb-2">Lease Entry</h3>
-              <p className="text-gray-500">New leases, renewals, and amendments with full validation.</p>
+              <p className="text-gray-500">Lease creation, renewals, and amendments with full validation workflows.</p>
             </div>
             <div className="bg-white p-8 rounded-lg shadow-sm border border-gray-100">
               <div className="h-10 w-10 bg-purple-100 rounded-md flex items-center justify-center mb-4">
@@ -210,7 +217,7 @@ const EFormsPage: React.FC = () => {
                 <Database className="text-emerald-600" />
               </div>
               <h3 className="text-xl font-bold mb-2">Building Creation</h3>
-              <p className="text-gray-500">Property setup with all required fields and approval layers.</p>
+              <p className="text-gray-500">Create any part of your property hierarchy: portfolios, entities, buildings, suites, and more.</p>
             </div>
           </div>
         </div>
@@ -244,7 +251,7 @@ const EFormsPage: React.FC = () => {
             ))}
           </div>
           <div className="text-center pt-10">
-            <span className="text-lg font-bold text-gray-500">+100 more workflows available</span>
+            <span className="text-lg font-bold text-gray-500">+100 more potential business workflows available.</span>
           </div>
         </div>
       </section>
@@ -311,7 +318,7 @@ const EFormsPage: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
             <div>
-              <p className="text-sm font-bold tracking-wide uppercase text-ebox-forest mb-3">Add what MRI doesn't have</p>
+              <p className="text-sm font-bold tracking-wide uppercase text-ebox-forest mb-3">add flexibility to your business workflows</p>
               <h2 className="text-4xl font-bold mb-8">Route data to the right approver automatically</h2>
               <p className="text-lg font-semibold mb-4">Conditional logic:</p>
               <ul className="space-y-3 mb-8">
@@ -335,7 +342,7 @@ const EFormsPage: React.FC = () => {
                   </React.Fragment>
                 ))}
               </div>
-              <p className="text-gray-500"><span className="font-semibold text-gray-700">Status tracking:</span> Everyone sees where submissions are in the process.</p>
+              <p className="text-gray-500"><span className="font-semibold text-gray-700">Status tracking:</span> See where submissions are in the process.</p>
             </div>
             <div className="bg-gray-100 rounded-lg h-80 flex items-center justify-center text-gray-400">
               Workflow builder screenshot
@@ -349,7 +356,7 @@ const EFormsPage: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
-              <p className="text-ebox-lime font-bold uppercase tracking-wider text-sm mb-3">Extend MRI's security</p>
+              <p className="text-ebox-lime font-bold uppercase tracking-wider text-sm mb-3">Security done your way</p>
               <h2 className="text-4xl font-bold mb-6">Give people forms, not full system access</h2>
               <p className="text-xl text-gray-400">They enter data. You control what gets approved. What goes to MRI.</p>
             </div>
@@ -357,7 +364,7 @@ const EFormsPage: React.FC = () => {
               {[
                 { icon: <Users className="text-ebox-lime w-6 h-6" />, text: 'Property managers get lease forms for their buildings' },
                 { icon: <FileText className="text-ebox-lime w-6 h-6" />, text: 'AP clerks get invoice forms' },
-                { icon: <Lock className="text-ebox-lime w-6 h-6" />, text: 'External admins get specific forms only' },
+                { icon: <Lock className="text-ebox-lime w-6 h-6" />, text: 'Admins get full access to their region' },
               ].map((card, i) => (
                 <div key={i} className="bg-white/5 p-6 rounded-md border border-white/10 flex items-center gap-4">
                   {card.icon}
@@ -375,8 +382,8 @@ const EFormsPage: React.FC = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
               <p className="text-ebox-forest font-bold uppercase tracking-wider text-sm mb-3">Audit Trail</p>
-              <h3 className="text-4xl font-bold mb-6 text-gray-900">Built-in compliance.</h3>
-              <p className="text-xl text-gray-500 mb-8">Every submission. Every change. Logged. Answer auditor questions in seconds, not hours.</p>
+              <h3 className="text-4xl font-bold mb-6 text-gray-900">Built-in tracking</h3>
+              <p className="text-xl text-gray-500 mb-8">Every submission. Every change. Logged. Answer questions in seconds, not hours.</p>
               <ul className="space-y-6">
                 {[
                   'Who submitted (name, timestamp)',
@@ -477,11 +484,11 @@ const EFormsPage: React.FC = () => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             <div className="bg-gray-50 p-8 rounded-lg border border-gray-100 shadow-sm opacity-60">
-              <span className="inline-block bg-red-100 text-red-700 px-3 py-1 rounded-full text-xs font-bold mb-6">MRI Error Log</span>
+                <span className="inline-block bg-red-100 text-red-700 px-3 py-1 rounded-full text-xs font-bold mb-6">Typical Error Log</span>
               <div className="bg-white p-6 rounded-md font-mono text-sm space-y-3">
-                <div className="text-red-500">Import failed - batch processing error</div>
+                  <div className="text-red-500">Import failed</div>
                 <div className="text-gray-400">See log file...</div>
-                <div className="text-gray-300">Error code: MRI-4521-BATCH</div>
+                  <div className="text-gray-300">Error code: 4521-BATCH</div>
               </div>
             </div>
             <div className="bg-white p-8 rounded-lg border-2 border-ebox-lime/30 shadow-xl">
@@ -505,13 +512,13 @@ const EFormsPage: React.FC = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
               <p className="text-sm font-bold tracking-wide uppercase text-ebox-forest mb-3">Beyond templates</p>
-              <h2 className="text-4xl font-bold mb-8 text-gray-900">Build forms that match your exact workflow</h2>
+              <h2 className="text-4xl font-bold mb-8 text-gray-900">Build forms that match your business needs</h2>
               <ul className="space-y-4">
                 {[
-                  'Hide fields you don\'t use',
-                  'Make fields mandatory that MRI doesn\'t require',
-                  'Add custom fields that don\'t go to MRI (internal notes, file attachments)',
-                  'Rearrange sections and tabs',
+                  'No fields you don\'t use',
+                  'Mandatory fields on business conditions',
+                  'Add custom fields (internal notes, file attachments)',
+                  'Design sections and tabs',
                   'Create field dependencies',
                 ].map((item, i) => (
                   <li key={i} className="flex gap-3 items-start">
@@ -533,9 +540,9 @@ const EFormsPage: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <p className="text-sm font-bold tracking-wide uppercase text-ebox-forest mb-2">For monthly imports</p>
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Duplicate last month. Update. Submit.</h2>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Automate each month. Update. Submit.</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Monthly accruals? Duplicate the previous month's journal. Change the amounts. Submit through the same approval flow.
+              Monthly accruals? Schedule each month's journal. Update amounts. Submit through the same approval flow.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
@@ -553,18 +560,20 @@ const EFormsPage: React.FC = () => {
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm border-2 border-ebox-lime/30">
               <span className="inline-block bg-green-100 text-green-700 px-3 py-1 rounded-full text-xs font-bold mb-4">With eForms</span>
-              <div className="space-y-3">
-                <div className="flex items-center gap-3 text-gray-700">
+              <div className="space-y-2">
+                <div className="flex items-center gap-3 text-gray-700 bg-gray-50 rounded-md px-3 py-2">
                   <RefreshCw className="w-5 h-5 text-ebox-forest flex-shrink-0" />
                   <span className="text-sm">Duplicate December journal</span>
                 </div>
-                <div className="flex justify-center"><ArrowRight className="w-4 h-4 text-gray-300" /></div>
-                <div className="flex items-center gap-3 text-gray-700">
+                <div className="flex items-center gap-3 text-gray-700 bg-gray-50 rounded-md px-3 py-2">
                   <Layout className="w-5 h-5 text-ebox-forest flex-shrink-0" />
                   <span className="text-sm">Update 3 amounts</span>
                 </div>
-                <div className="flex justify-center"><ArrowRight className="w-4 h-4 text-gray-300" /></div>
-                <div className="flex items-center gap-3 text-green-600">
+                <div className="flex items-center gap-3 text-gray-700 bg-gray-50 rounded-md px-3 py-2">
+                  <Upload className="w-5 h-5 text-ebox-forest flex-shrink-0" />
+                  <span className="text-sm">Schedule posting date</span>
+                </div>
+                <div className="flex items-center gap-3 text-green-700 bg-green-50 rounded-md px-3 py-2 mt-3 border border-green-100">
                   <CheckCircle className="w-5 h-5 flex-shrink-0" />
                   <span className="text-sm font-bold">Done in 2 minutes</span>
                 </div>
@@ -619,7 +628,7 @@ const EFormsPage: React.FC = () => {
       <section className="py-24 bg-gradient-to-r from-ebox-dark to-ebox-deep text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <EFormsLogo variant="white" className="h-12 mx-auto mb-8" />
-          <h2 className="text-4xl font-extrabold mb-4">See how eForms extends your MRI system</h2>
+          <h2 className="text-4xl font-extrabold mb-4">See how eForms transforms your data journey</h2>
           <p className="text-xl text-gray-300 mb-8">20-minute demo. Your workflows. Your use cases.</p>
           <div className="flex flex-col md:flex-row justify-center items-center gap-8 mb-12">
             <div className="text-left">
