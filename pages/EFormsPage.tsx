@@ -26,7 +26,7 @@ const EFormsPage: React.FC = () => {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <EFormsLogo className="h-12 mx-auto mb-6" />
           <h1 className="text-5xl md:text-6xl font-extrabold mb-6 leading-tight text-ebox-dark">
-            Data imports for MRI, made easy
+            Data imports for MRI, made&nbsp;easy
           </h1>
           <p className="text-xl text-gray-500 mb-8 leading-relaxed max-w-2xl mx-auto">
             Structured data entry. Approval routing. Real-time validation. All feeding directly into your MRI database.
@@ -66,6 +66,189 @@ const EFormsPage: React.FC = () => {
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-gray-900">What eForms adds to MRI</h2>
           </div>
+
+          {/* Import Flow — hero card */}
+          <div className="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden mb-6">
+            {/* Copy header */}
+            <div className="p-8 lg:p-10 pb-0 lg:pb-0 text-center">
+              <div className="h-10 w-10 bg-green-100 rounded-md flex items-center justify-center mb-4 mx-auto">
+                <Upload className="text-green-600" />
+              </div>
+              <h3 className="text-2xl font-bold mb-2">Import from Excel</h3>
+              <p className="text-gray-500 text-lg leading-relaxed max-w-2xl mx-auto">
+                Your team already works in spreadsheets. eForms lets you import journals, vendors, invoices, charges, and leases directly into MRI — validated and approved before anything touches your database.
+              </p>
+            </div>
+
+            {/* Full-width flow diagram */}
+            <div className="p-8 lg:px-12 lg:py-10">
+              {/* Desktop: horizontal flow */}
+              <div className="hidden md:flex items-start gap-5 lg:gap-8">
+                {/* Excel node */}
+                <div className="flex-[2] min-w-0">
+                  <div className="bg-white rounded-lg border border-gray-200 shadow-md overflow-hidden">
+                    <div className="bg-[#217346] px-4 py-2 flex items-center gap-2">
+                      <svg viewBox="0 0 16 16" className="w-4 h-4 text-white fill-current"><path d="M1.5 0A1.5 1.5 0 000 1.5v13A1.5 1.5 0 001.5 16h13a1.5 1.5 0 001.5-1.5V5l-5-5H1.5zM10 0v5h5L10 0zM3 7h2.5v1.25H4.25v.5H5.5V10H3V8.75h1.25v-.5H3V7zm4 0h1.5c.28 0 .5.22.5.5v2c0 .28-.22.5-.5.5H7V7zm1 .75v1.5h.25v-1.5H8zm2-0.75h1.5c.28 0 .5.22.5.5v.75l-.75.75.75.75V10h-1l-.5-.75V10H10V7z" /></svg>
+                      <span className="text-xs font-semibold text-white/90 truncate">journal_entries.xlsx</span>
+                    </div>
+                    <table className="w-full text-xs border-collapse">
+                      <thead>
+                        <tr className="bg-gray-50 text-gray-500">
+                          <th className="border-r border-b border-gray-200 px-3 py-2 text-left font-medium">Entity</th>
+                          <th className="border-r border-b border-gray-200 px-3 py-2 text-left font-medium">GL Acct</th>
+                          <th className="border-r border-b border-gray-200 px-3 py-2 text-left font-medium">Description</th>
+                          <th className="border-b border-gray-200 px-3 py-2 text-right font-medium">Amount</th>
+                        </tr>
+                      </thead>
+                      <tbody className="text-gray-700">
+                        <tr><td className="border-r border-b border-gray-100 px-3 py-1.5">PROP-001</td><td className="border-r border-b border-gray-100 px-3 py-1.5">4200</td><td className="border-r border-b border-gray-100 px-3 py-1.5">Rent accrual</td><td className="border-b border-gray-100 px-3 py-1.5 text-right">12,500</td></tr>
+                        <tr><td className="border-r border-b border-gray-100 px-3 py-1.5">PROP-002</td><td className="border-r border-b border-gray-100 px-3 py-1.5">5100</td><td className="border-r border-b border-gray-100 px-3 py-1.5">Service charge</td><td className="border-b border-gray-100 px-3 py-1.5 text-right">8,750</td></tr>
+                        <tr><td className="border-r border-b border-gray-100 px-3 py-1.5">PROP-003</td><td className="border-r border-b border-gray-100 px-3 py-1.5">4200</td><td className="border-r border-b border-gray-100 px-3 py-1.5">Insurance</td><td className="border-b border-gray-100 px-3 py-1.5 text-right">3,200</td></tr>
+                        <tr><td className="border-r border-gray-100 px-3 py-1.5 text-gray-400">PROP-004</td><td className="border-r border-gray-100 px-3 py-1.5 text-gray-400">6300</td><td className="border-r border-gray-100 px-3 py-1.5 text-gray-400">Maintenance</td><td className="px-3 py-1.5 text-right text-gray-400">5,100</td></tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <p className="text-sm text-gray-500 text-center mt-3 font-medium">Your spreadsheet</p>
+                </div>
+
+                {/* Arrow 1 */}
+                <div className="flex flex-col items-center flex-shrink-0 pt-14">
+                  <svg width="48" height="20" viewBox="0 0 48 20" className="text-ebox-forest">
+                    <line x1="0" y1="10" x2="38" y2="10" stroke="currentColor" strokeWidth="2" />
+                    <polygon points="38,4 48,10 38,16" fill="currentColor" />
+                  </svg>
+                  <span className="text-xs text-gray-400 font-medium mt-1.5">Upload</span>
+                </div>
+
+                {/* eForms node */}
+                <div className="flex-[2] min-w-0">
+                  <div className="rounded-lg border border-gray-200 shadow-md overflow-hidden">
+                    <div className="flex items-center gap-2 px-3 py-2 bg-gray-100 border-b border-gray-200">
+                      <div className="flex items-center gap-1">
+                        <div className="w-2 h-2 rounded-full bg-gray-300"></div>
+                        <div className="w-2 h-2 rounded-full bg-gray-300"></div>
+                        <div className="w-2 h-2 rounded-full bg-gray-300"></div>
+                      </div>
+                      <div className="flex-1 flex justify-center">
+                        <div className="bg-white rounded-md px-2.5 py-0.5 text-[10px] text-gray-400 border border-gray-200 text-center">app.eboxsoftware.com</div>
+                      </div>
+                      <div className="w-8"></div>
+                    </div>
+                    <img src="/images/eforms-file-import.png" alt="eForms file upload and validation interface" className="w-full block" />
+                  </div>
+                  <p className="text-sm text-gray-500 text-center mt-3 font-medium">Validate &amp; approve</p>
+                </div>
+
+                {/* Arrow 2 */}
+                <div className="flex flex-col items-center flex-shrink-0 pt-14">
+                  <svg width="48" height="20" viewBox="0 0 48 20" className="text-ebox-forest">
+                    <line x1="0" y1="10" x2="38" y2="10" stroke="currentColor" strokeWidth="2" />
+                    <polygon points="38,4 48,10 38,16" fill="currentColor" />
+                  </svg>
+                  <span className="text-xs text-gray-400 font-medium mt-1.5">Import</span>
+                </div>
+
+                {/* MRI node */}
+                <div className="flex-1 min-w-0">
+                  <div className="bg-white rounded-lg border border-gray-200 shadow-md p-6 flex flex-col items-center gap-3 h-full justify-center">
+                    <div className="relative">
+                      <Database className="w-12 h-12 text-gray-700" />
+                      <div className="absolute -bottom-1 -right-1 w-5 h-5 bg-green-500 rounded-full flex items-center justify-center">
+                        <Check className="w-3 h-3 text-white" />
+                      </div>
+                    </div>
+                    <span className="text-sm font-bold text-gray-800">MRI</span>
+                  </div>
+                  <p className="text-sm text-gray-500 text-center mt-3 font-medium">Clean data in MRI</p>
+                </div>
+              </div>
+
+              {/* Mobile: vertical flow */}
+              <div className="flex md:hidden flex-col items-center gap-4 w-full max-w-sm mx-auto">
+                {/* Excel node */}
+                <div className="w-full">
+                  <div className="bg-white rounded-lg border border-gray-200 shadow-sm overflow-hidden">
+                    <div className="bg-[#217346] px-3 py-2 flex items-center gap-2">
+                      <svg viewBox="0 0 16 16" className="w-4 h-4 text-white fill-current"><path d="M1.5 0A1.5 1.5 0 000 1.5v13A1.5 1.5 0 001.5 16h13a1.5 1.5 0 001.5-1.5V5l-5-5H1.5zM10 0v5h5L10 0zM3 7h2.5v1.25H4.25v.5H5.5V10H3V8.75h1.25v-.5H3V7zm4 0h1.5c.28 0 .5.22.5.5v2c0 .28-.22.5-.5.5H7V7zm1 .75v1.5h.25v-1.5H8zm2-0.75h1.5c.28 0 .5.22.5.5v.75l-.75.75.75.75V10h-1l-.5-.75V10H10V7z" /></svg>
+                      <span className="text-xs font-semibold text-white/90">journal_entries.xlsx</span>
+                    </div>
+                    <table className="w-full text-[11px] border-collapse">
+                      <thead>
+                        <tr className="bg-gray-50 text-gray-500">
+                          <th className="border-r border-b border-gray-200 px-2.5 py-1.5 text-left font-medium">Entity</th>
+                          <th className="border-r border-b border-gray-200 px-2.5 py-1.5 text-left font-medium">GL Acct</th>
+                          <th className="border-b border-gray-200 px-2.5 py-1.5 text-right font-medium">Amount</th>
+                        </tr>
+                      </thead>
+                      <tbody className="text-gray-700">
+                        <tr><td className="border-r border-b border-gray-100 px-2.5 py-1.5">PROP-001</td><td className="border-r border-b border-gray-100 px-2.5 py-1.5">4200</td><td className="border-b border-gray-100 px-2.5 py-1.5 text-right">12,500</td></tr>
+                        <tr><td className="border-r border-b border-gray-100 px-2.5 py-1.5">PROP-002</td><td className="border-r border-b border-gray-100 px-2.5 py-1.5">5100</td><td className="border-b border-gray-100 px-2.5 py-1.5 text-right">8,750</td></tr>
+                        <tr><td className="border-r border-gray-100 px-2.5 py-1.5">PROP-003</td><td className="border-r border-gray-100 px-2.5 py-1.5">4200</td><td className="px-2.5 py-1.5 text-right">3,200</td></tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <p className="text-xs text-gray-500 text-center mt-2 font-medium">Your spreadsheet</p>
+                </div>
+
+                {/* Arrow down */}
+                <div className="flex flex-col items-center">
+                  <div className="w-px h-4 bg-ebox-forest/30"></div>
+                  <svg viewBox="0 0 12 8" className="w-3 h-2 text-ebox-forest fill-current"><polygon points="6,8 0,0 12,0" /></svg>
+                  <span className="text-[10px] text-gray-400 font-medium mt-0.5">Upload</span>
+                </div>
+
+                {/* eForms node */}
+                <div className="w-full">
+                  <div className="rounded-lg border border-gray-200 shadow-sm overflow-hidden">
+                    <div className="flex items-center gap-2 px-3 py-2 bg-gray-100 border-b border-gray-200">
+                      <div className="flex items-center gap-1">
+                        <div className="w-2 h-2 rounded-full bg-gray-300"></div>
+                        <div className="w-2 h-2 rounded-full bg-gray-300"></div>
+                        <div className="w-2 h-2 rounded-full bg-gray-300"></div>
+                      </div>
+                      <div className="flex-1 flex justify-center">
+                        <div className="bg-white rounded px-2 py-0.5 text-[9px] text-gray-400 border border-gray-200 text-center">app.eboxsoftware.com</div>
+                      </div>
+                    </div>
+                    <img src="/images/eforms-file-import.png" alt="eForms file upload and validation interface" className="w-full block" />
+                  </div>
+                  <p className="text-xs text-gray-500 text-center mt-2 font-medium">Validate &amp; approve</p>
+                </div>
+
+                {/* Arrow down */}
+                <div className="flex flex-col items-center">
+                  <div className="w-px h-4 bg-ebox-forest/30"></div>
+                  <svg viewBox="0 0 12 8" className="w-3 h-2 text-ebox-forest fill-current"><polygon points="6,8 0,0 12,0" /></svg>
+                  <span className="text-[10px] text-gray-400 font-medium mt-0.5">Import</span>
+                </div>
+
+                {/* MRI node */}
+                <div className="w-full">
+                  <div className="bg-white rounded-lg border border-gray-200 shadow-sm p-5 flex flex-col items-center gap-2">
+                    <div className="relative">
+                      <Database className="w-10 h-10 text-gray-700" />
+                      <div className="absolute -bottom-1 -right-1 w-5 h-5 bg-green-500 rounded-full flex items-center justify-center">
+                        <Check className="w-3 h-3 text-white" />
+                      </div>
+                    </div>
+                    <span className="text-sm font-bold text-gray-800">MRI</span>
+                  </div>
+                  <p className="text-xs text-gray-500 text-center mt-2 font-medium">Clean data in MRI</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Bottom row — quick steps */}
+            <div className="border-t border-gray-100 bg-gray-50/50 px-8 lg:px-12 py-5">
+              <div className="flex flex-wrap justify-center gap-x-8 gap-y-2">
+                <span className="flex items-center gap-2 text-sm text-gray-600"><CheckCircle className="w-4 h-4 text-ebox-forest" /> Download a template</span>
+                <span className="flex items-center gap-2 text-sm text-gray-600"><CheckCircle className="w-4 h-4 text-ebox-forest" /> Fill it in Excel</span>
+                <span className="flex items-center gap-2 text-sm text-gray-600"><CheckCircle className="w-4 h-4 text-ebox-forest" /> Upload to eForms</span>
+                <span className="flex items-center gap-2 text-sm text-gray-600"><CheckCircle className="w-4 h-4 text-ebox-forest" /> Data imports to MRI</span>
+              </div>
+            </div>
+          </div>
+
           <div className="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden mb-6">
             <div className="grid grid-cols-1 lg:grid-cols-2">
               <div className="p-10 lg:p-12 flex flex-col justify-center">
@@ -344,8 +527,63 @@ const EFormsPage: React.FC = () => {
               </div>
               <p className="text-gray-500"><span className="font-semibold text-gray-700">Status tracking:</span> See where submissions are in the process.</p>
             </div>
-            <div className="bg-gray-100 rounded-lg h-80 flex items-center justify-center text-gray-400">
-              Workflow builder screenshot
+            <div className="bg-white rounded-xl shadow-lg border border-gray-200 p-8 flex flex-col items-center gap-0">
+              {/* Form Submitted */}
+              <div className="bg-ebox-forest text-white px-6 py-3 rounded-lg text-sm font-semibold shadow-sm">
+                Form Submitted
+              </div>
+              <div className="w-px h-6 bg-gray-300"></div>
+
+              {/* Condition */}
+              <div className="relative">
+                <div className="bg-amber-50 border-2 border-amber-400 px-5 py-3 rounded-lg text-sm font-semibold text-amber-800 rotate-0">
+                  Invoice &gt; $25K?
+                </div>
+              </div>
+
+              {/* Split connectors */}
+              <svg width="280" height="40" className="flex-shrink-0" viewBox="0 0 280 40">
+                <line x1="140" y1="0" x2="70" y2="40" stroke="#D1D5DB" strokeWidth="2" />
+                <line x1="140" y1="0" x2="210" y2="40" stroke="#D1D5DB" strokeWidth="2" />
+              </svg>
+
+              {/* Two paths */}
+              <div className="flex gap-12 w-full justify-center">
+                {/* Yes path */}
+                <div className="flex flex-col items-center gap-0">
+                  <span className="text-xs font-bold text-emerald-600 mb-2 uppercase tracking-wide">Yes</span>
+                  <div className="bg-emerald-50 border border-emerald-200 px-5 py-2.5 rounded-lg text-sm font-medium text-emerald-800">
+                    CFO Review
+                  </div>
+                  <div className="w-px h-5 bg-gray-300"></div>
+                  <div className="bg-emerald-100 border border-emerald-300 px-5 py-2.5 rounded-lg text-sm font-semibold text-emerald-700 flex items-center gap-2">
+                    <CheckCircle className="w-4 h-4" /> Approved
+                  </div>
+                </div>
+
+                {/* No path */}
+                <div className="flex flex-col items-center gap-0">
+                  <span className="text-xs font-bold text-blue-600 mb-2 uppercase tracking-wide">No</span>
+                  <div className="bg-blue-50 border border-blue-200 px-5 py-2.5 rounded-lg text-sm font-medium text-blue-800">
+                    Manager Review
+                  </div>
+                  <div className="w-px h-5 bg-gray-300"></div>
+                  <div className="bg-blue-100 border border-blue-300 px-5 py-2.5 rounded-lg text-sm font-semibold text-blue-700 flex items-center gap-2">
+                    <CheckCircle className="w-4 h-4" /> Approved
+                  </div>
+                </div>
+              </div>
+
+              {/* Merge connectors */}
+              <svg width="280" height="40" className="flex-shrink-0" viewBox="0 0 280 40">
+                <line x1="70" y1="0" x2="140" y2="40" stroke="#D1D5DB" strokeWidth="2" />
+                <line x1="210" y1="0" x2="140" y2="40" stroke="#D1D5DB" strokeWidth="2" />
+              </svg>
+
+              {/* Import to MRI */}
+              <div className="bg-ebox-lime text-ebox-dark px-6 py-3 rounded-lg text-sm font-bold shadow-sm flex items-center gap-2">
+                <Database className="w-4 h-4" /> Import to MRI
+              </div>
             </div>
           </div>
         </div>
@@ -528,8 +766,23 @@ const EFormsPage: React.FC = () => {
                 ))}
               </ul>
             </div>
-            <div className="bg-gray-100 rounded-lg h-80 flex items-center justify-center text-gray-400">
-              Form builder screenshot
+            <div className="rounded-lg overflow-hidden shadow-lg border border-gray-200">
+              <div className="flex items-center gap-2.5 px-4 py-2.5 bg-gray-100 border-b border-gray-200">
+                <div className="flex items-center gap-1.5">
+                  <div className="w-2.5 h-2.5 rounded-full bg-gray-300"></div>
+                  <div className="w-2.5 h-2.5 rounded-full bg-gray-300"></div>
+                  <div className="w-2.5 h-2.5 rounded-full bg-gray-300"></div>
+                </div>
+                <div className="flex-1 flex justify-center">
+                  <div className="bg-white rounded-md px-3 py-0.5 text-[10px] text-gray-400 border border-gray-200 text-center">app.eboxsoftware.com</div>
+                </div>
+                <div className="w-10"></div>
+              </div>
+              <img
+                src="/images/eforms-form-designer.png"
+                alt="eForms form designer showing custom field configuration, sections, and field dependencies"
+                className="w-full block"
+              />
             </div>
           </div>
         </div>

@@ -60,21 +60,21 @@ const AboutUs: React.FC = () => {
                   <div className="absolute -left-8 top-1 w-6 h-6 bg-ebox-lime rounded-full border-4 border-white shadow"></div>
                   <span className="text-xs font-bold uppercase tracking-widest text-ebox-lime">2001</span>
                   <h3 className="text-lg font-bold text-gray-900 mt-1">Open Box Founded</h3>
-                  <p className="text-sm text-gray-500 mt-1">Launched as a real estate software consultancy, specialising in MRI implementations.</p>
+                  <p className="text-sm text-gray-500 mt-1">Launched as a real estate software consultancy.</p>
                 </div>
 
                 <div className="relative">
                   <div className="absolute -left-8 top-1 w-6 h-6 bg-ebox-forest rounded-full border-4 border-white shadow"></div>
-                  <span className="text-xs font-bold uppercase tracking-widest text-ebox-forest">2010</span>
-                  <h3 className="text-lg font-bold text-gray-900 mt-1">Global Expansion</h3>
-                  <p className="text-sm text-gray-500 mt-1">Grew to serve clients across multiple continents with deep MRI expertise.</p>
+                  <span className="text-xs font-bold uppercase tracking-widest text-ebox-forest">2008</span>
+                  <h3 className="text-lg font-bold text-gray-900 mt-1">First MRI Support & Consulting Projects</h3>
+                  <p className="text-sm text-gray-500 mt-1">Grew to serve clients across multiple continents with deep MRI expertise, winning MRI Partner of the Year for many years.</p>
                 </div>
 
                 <div className="relative">
                   <div className="absolute -left-8 top-1 w-6 h-6 bg-ebox-dark rounded-full border-4 border-white shadow"></div>
                   <span className="text-xs font-bold uppercase tracking-widest text-gray-400">2023</span>
                   <h3 className="text-lg font-bold text-gray-900 mt-1">eBox Is Born</h3>
-                  <p className="text-sm text-gray-500 mt-1">Spun out as a dedicated product company to solve MRI's data import challenges.</p>
+                  <p className="text-sm text-gray-500 mt-1">eBox is a dedicated product company that builds tools to solve common real estate challenges.</p>
                 </div>
 
                 <div className="relative">

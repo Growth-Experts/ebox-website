@@ -31,10 +31,13 @@ const Footer: React.FC = () => {
             </ul>
           </div>
 
-          <div>
+          <div className="text-left">
              <h4 className="font-bold text-gray-900 mb-4">An Open Box Company</h4>
              <OpenBoxLogo className="h-8 opacity-70 grayscale hover:grayscale-0 transition-all" />
              <p className="text-xs text-gray-400 mt-2">Powering real estate software solutions globally.</p>
+             <a href="https://www.mrisoftware.com/partners/" target="_blank" rel="noopener noreferrer" className="mt-4 block w-fit">
+               <img src="/images/mri-certified.png" alt="MRI Software Certified Solutions Partner" className="h-12 block" />
+             </a>
           </div>
         </div>
         
