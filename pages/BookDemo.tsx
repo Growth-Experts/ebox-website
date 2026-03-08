@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Mail, Phone } from 'lucide-react';
+import Button from '../components/Button';
 
 const CALENDLY_URL = 'https://calendly.com/bjornpeterson-eboxsoftware/30min';
 
@@ -53,29 +53,57 @@ const BookDemo: React.FC = () => {
         </div>
       </section>
 
-      {/* Alternative Contact Options */}
+      {/* Contact Form */}
       <section className="bg-ebox-light py-16 border-t border-gray-200">
-        <div className="max-w-3xl mx-auto px-4 text-center">
-          <h2 className="text-2xl font-bold text-ebox-dark mb-8">Prefer to talk to someone first?</h2>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-white p-6 rounded-md shadow-sm border border-gray-100 flex flex-col items-center hover:shadow-md transition-shadow">
-              <div className="bg-ebox-forest/20 p-3 rounded-full mb-4">
-                <Mail className="w-6 h-6 text-teal-700" />
-              </div>
-              <h3 className="font-bold text-lg mb-2">Email Us</h3>
-              <p className="text-gray-500 mb-4 text-sm">We usually respond within 2 hours.</p>
-              <a href="mailto:ProductSales@eboxsoftware.com" className="text-ebox-dark font-bold hover:text-ebox-lime transition-colors">ProductSales@eboxsoftware.com</a>
-            </div>
+        <div className="max-w-2xl mx-auto px-4">
+          <h2 className="text-2xl font-bold text-ebox-dark mb-2 text-center">Prefer to send a message?</h2>
+          <p className="text-gray-500 text-center mb-8">We'll get back to you as soon as possible.</p>
 
-            <div className="bg-white p-6 rounded-md shadow-sm border border-gray-100 flex flex-col items-center hover:shadow-md transition-shadow">
-               <div className="bg-ebox-lime/20 p-3 rounded-full mb-4">
-                <Phone className="w-6 h-6 text-green-700" />
+          <div className="bg-white p-10 rounded-lg shadow-sm border border-gray-100">
+            <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <label htmlFor="firstName" className="block text-sm font-medium text-gray-700 mb-2">First Name</label>
+                  <input 
+                    type="text" 
+                    id="firstName" 
+                    className="w-full px-4 py-3 rounded-md border border-gray-300 focus:ring-2 focus:ring-ebox-lime focus:border-transparent outline-none transition-all"
+                    placeholder="Sam"
+                  />
+                </div>
+                <div>
+                  <label htmlFor="lastName" className="block text-sm font-medium text-gray-700 mb-2">Last Name</label>
+                  <input 
+                    type="text" 
+                    id="lastName" 
+                    className="w-full px-4 py-3 rounded-md border border-gray-300 focus:ring-2 focus:ring-ebox-lime focus:border-transparent outline-none transition-all"
+                    placeholder="Property"
+                  />
+                </div>
               </div>
-              <h3 className="font-bold text-lg mb-2">Call Sales</h3>
-              <p className="text-gray-500 mb-4 text-sm">Mon-Fri, 9am - 5pm EST</p>
-              <a href="tel:+15551234567" className="text-ebox-dark font-bold hover:text-ebox-lime transition-colors">+1 (555) 123-4567</a>
-            </div>
+
+              <div>
+                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">Work Email</label>
+                <input 
+                  type="email" 
+                  id="email" 
+                  className="w-full px-4 py-3 rounded-md border border-gray-300 focus:ring-2 focus:ring-ebox-lime focus:border-transparent outline-none transition-all"
+                  placeholder="sam@company.com"
+                />
+              </div>
+
+              <div>
+                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">How can we help?</label>
+                <textarea 
+                  id="message" 
+                  rows={4}
+                  className="w-full px-4 py-3 rounded-md border border-gray-300 focus:ring-2 focus:ring-ebox-lime focus:border-transparent outline-none transition-all resize-none"
+                  placeholder="Tell us about your needs..."
+                ></textarea>
+              </div>
+
+              <Button variant="primary" className="w-full">Send Message</Button>
+            </form>
           </div>
         </div>
       </section>

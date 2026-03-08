@@ -20,6 +20,12 @@ const Header: React.FC = () => {
           
           <div className="hidden md:flex items-center space-x-8">
             <Link
+              to="/"
+              className={`text-sm font-medium transition-colors ${pathname === '/' ? 'text-ebox-dark' : 'text-gray-500 hover:text-ebox-dark'}`}
+            >
+              Home
+            </Link>
+            <Link
               to="/about"
               className={`text-sm font-medium transition-colors ${pathname === '/about' ? 'text-ebox-dark' : 'text-gray-500 hover:text-ebox-dark'}`}
             >
@@ -55,6 +61,13 @@ const Header: React.FC = () => {
       {isMobileMenuOpen && (
         <div className="md:hidden bg-white border-t border-gray-100 absolute w-full shadow-lg">
           <div className="px-4 pt-2 pb-6 space-y-2">
+            <Link
+              to="/"
+              onClick={closeMobileMenu}
+              className="block w-full text-left px-3 py-3 text-base font-medium text-gray-700 hover:bg-gray-50 rounded-md"
+            >
+              Home
+            </Link>
             <Link
               to="/about"
               onClick={closeMobileMenu}

@@ -161,7 +161,7 @@ const Home: React.FC = () => {
                 <Shield className="w-7 h-7 text-ebox-forest" />
               </div>
               <div className="text-3xl font-extrabold text-ebox-dark">MRI</div>
-              <div className="text-sm text-gray-500 font-medium mt-1">Certified Technology Partner</div>
+              <div className="text-sm text-gray-500 font-medium mt-1">Certified Solutions Partner</div>
             </div>
           </div>
 
