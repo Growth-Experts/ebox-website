@@ -74,7 +74,7 @@ const PrivacyPolicy: React.FC = () => {
             <li><strong>Personal information:</strong> This includes, but is not limited to, information that could identify you such as:
               <ul className="list-circle pl-6 mt-2 space-y-1">
                 <li>For site visitors, clients and suppliers: Name, contact details and other basic identifiers required to respond to inquiries, manage services or maintain business relationships.</li>
-                <li>For candidates and employees: In addition to basic information, this may include sensitive or special category information such as information about your education, health (where required for role suitability or statutory obligations), criminal record (where required for role screening or legal compliance) or work history. We only collect and use such information when necessary for a specific, lawful purpose—for example, when assessing suitability for a role, fulfilling legal or contractual obligations or supporting operational needs. Collection of such information is in line with applicable data protection laws such as POPIA and GDPR.</li>
+                <li>For candidates and employees: In addition to basic information, this may include sensitive or special category information such as information about your education, health (where required for role suitability or statutory obligations), criminal record (where required for role screening or legal compliance) or work history. We only collect and use such information when necessary for a specific, lawful purpose, for example, when assessing suitability for a role, fulfilling legal or contractual obligations or supporting operational needs. Collection of such information is in line with applicable data protection laws such as POPIA and GDPR.</li>
                 <li>Knowing this helps us provide a personalised experience, from managing projects to offering relevant advice and solutions, to ensuring we hire the right individuals into Open Box. We take great care to protect information and use it only to nurture our relationships with you, or to ensure we are working with good people who fit our culture and delivery expectations.</li>
               </ul>
             </li>
@@ -104,7 +104,7 @@ const PrivacyPolicy: React.FC = () => {
             By sharing your information with us, you're giving us your permission to securely process and
             store it in line with these terms and any relevant laws. If you ever feel concerned, you can
             withdraw this consent by notifying us in writing to{' '}
-            <a href="mailto:info@openboxsoftware.com" className="text-ebox-forest hover:underline">info@openboxsoftware.com</a>.
+            <a href="mailto:ProductSales@eboxsoftware.com" className="text-ebox-forest hover:underline">ProductSales@eboxsoftware.com</a>.
           </p>
           <p className="mt-4">
             Please note that certain information may be retained in accordance with our PAIA Manual or other
@@ -172,7 +172,7 @@ const PrivacyPolicy: React.FC = () => {
             feel free to reach out. You can find our contact information on the{' '}
             <Link to="/contact" className="text-ebox-forest hover:underline">Contact Us</Link> page of our
             website or email us directly at{' '}
-            <a href="mailto:info@openboxsoftware.com" className="text-ebox-forest hover:underline">info@openboxsoftware.com</a>.
+            <a href="mailto:ProductSales@eboxsoftware.com" className="text-ebox-forest hover:underline">ProductSales@eboxsoftware.com</a>.
           </p>
           <p className="mt-6 text-gray-600">
             Thank you for trusting us with your information. We look forward to continuing our relationship

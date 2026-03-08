@@ -1,12 +1,35 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Mail, Phone } from 'lucide-react';
 
+const CALENDLY_URL = 'https://calendly.com/bjornpeterson-eboxsoftware/30min';
+
 const BookDemo: React.FC = () => {
+  const widgetRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.src = 'https://assets.calendly.com/assets/external/widget.js';
+    script.async = true;
+    document.body.appendChild(script);
+
+    const handleMessage = (e: MessageEvent) => {
+      if (e.data.event === 'calendly.page_height' && widgetRef.current) {
+        widgetRef.current.style.height = e.data.payload.height;
+      }
+    };
+    window.addEventListener('message', handleMessage);
+
+    return () => {
+      window.removeEventListener('message', handleMessage);
+      document.body.removeChild(script);
+    };
+  }, []);
+
   return (
     <div className="flex flex-col w-full bg-white">
       <Helmet>
-        <title>Book a Demo | eBox — See It in Action</title>
+        <title>Book a Demo | eBox: See It in Action</title>
         <meta name="description" content="Schedule a 20-minute personalised walkthrough. See how eForms can streamline your specific MRI workflows." />
         <link rel="canonical" href="https://eboxsoftware.com/book-demo" />
       </Helmet>
@@ -18,22 +41,15 @@ const BookDemo: React.FC = () => {
         </p>
       </section>
 
-      {/* Calendly Embed Placeholder */}
+      {/* Calendly Inline Embed */}
       <section className="pb-16 px-4">
-        <div className="max-w-4xl mx-auto bg-white rounded-md shadow-2xl border border-gray-100 overflow-hidden min-h-[600px] relative">
-          {/* This is where the actual Calendly embed would go */}
-          <div className="absolute inset-0 bg-gray-50 flex flex-col items-center justify-center border-2 border-dashed border-gray-300 m-4 rounded-md">
-             <div className="text-center p-8">
-               <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                 <span className="text-2xl">📅</span>
-               </div>
-               <h3 className="text-xl font-bold text-gray-800 mb-2">Calendly Embed</h3>
-               <p className="text-gray-500 mb-6">The calendar widget will load here.</p>
-               <div className="animate-pulse w-64 h-8 bg-gray-200 rounded mx-auto"></div>
-               <div className="animate-pulse w-48 h-4 bg-gray-200 rounded mx-auto mt-3"></div>
-               <div className="animate-pulse w-56 h-4 bg-gray-200 rounded mx-auto mt-2"></div>
-             </div>
-          </div>
+        <div className="max-w-4xl mx-auto">
+          <div
+            ref={widgetRef}
+            className="calendly-inline-widget"
+            data-url={CALENDLY_URL}
+            style={{ minWidth: '320px', height: '700px', overflow: 'hidden' }}
+          />
         </div>
       </section>
 
@@ -49,7 +65,7 @@ const BookDemo: React.FC = () => {
               </div>
               <h3 className="font-bold text-lg mb-2">Email Us</h3>
               <p className="text-gray-500 mb-4 text-sm">We usually respond within 2 hours.</p>
-              <a href="mailto:productsales@openboxsoftware.com" className="text-ebox-dark font-bold hover:text-ebox-lime transition-colors">productsales@openboxsoftware.com</a>
+              <a href="mailto:ProductSales@eboxsoftware.com" className="text-ebox-dark font-bold hover:text-ebox-lime transition-colors">ProductSales@eboxsoftware.com</a>
             </div>
 
             <div className="bg-white p-6 rounded-md shadow-sm border border-gray-100 flex flex-col items-center hover:shadow-md transition-shadow">

@@ -2,7 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Button from '../components/Button';
 import { EFormsLogo } from '../components/Logos';
-import { Check, Shield, Lock, FileText, Settings, RefreshCw, AlertCircle, Database, Upload, Users, Layers, ArrowRight, ChevronRight, CheckCircle, Layout, Star } from 'lucide-react';
+import { Check, Shield, Lock, FileText, Settings, RefreshCw, AlertCircle, Database, Upload, Users, Layers, ArrowRight, ChevronRight, CheckCircle, Layout } from 'lucide-react';
 
 const EFormsPage: React.FC = () => {
   const useCases = [
@@ -29,7 +29,7 @@ const EFormsPage: React.FC = () => {
             Data imports for MRI, made&nbsp;easy
           </h1>
           <p className="text-xl text-gray-500 mb-8 leading-relaxed max-w-2xl mx-auto">
-            Structured data entry. Approval routing. Real-time validation. All feeding directly into your MRI database.
+            Structured data entry. Approval routing. Real-time validation.<br />All feeding directly into your MRI database.
           </p>
           <div className="flex gap-4 justify-center mb-16">
             <Button variant="primary" size="lg" to="/book-demo">Book a Demo</Button>
@@ -76,7 +76,7 @@ const EFormsPage: React.FC = () => {
               </div>
               <h3 className="text-2xl font-bold mb-2">Import from Excel</h3>
               <p className="text-gray-500 text-lg leading-relaxed max-w-2xl mx-auto">
-                Your team already works in spreadsheets. eForms lets you import journals, vendors, invoices, charges, and leases directly into MRI — validated and approved before anything touches your database.
+                Your team already works in spreadsheets. eForms lets you import journals, vendors, invoices, charges, and leases directly into MRI, validated and approved before anything touches your database.
               </p>
             </div>
 
@@ -256,7 +256,7 @@ const EFormsPage: React.FC = () => {
                   <FileText className="text-blue-600" />
                 </div>
                 <h3 className="text-2xl font-bold mb-3">Structured Forms</h3>
-                <p className="text-gray-500 text-lg leading-relaxed mb-6">MRI gives you bulk import tools. eForms gives you forms anyone can fill out — no training required.</p>
+                <p className="text-gray-500 text-lg leading-relaxed mb-6">MRI gives you bulk import tools. eForms gives you forms anyone can fill out, no training required.</p>
                 <ul className="space-y-3">
                   <li className="flex gap-3 items-center text-gray-700"><CheckCircle className="w-5 h-5 text-ebox-forest flex-shrink-0" /> Guided fields with dropdowns and date pickers</li>
                   <li className="flex gap-3 items-center text-gray-700"><CheckCircle className="w-5 h-5 text-ebox-forest flex-shrink-0" /> Tabs for multi-section entries like leases</li>
@@ -365,21 +365,21 @@ const EFormsPage: React.FC = () => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="md:col-span-2 bg-white p-8 rounded-lg shadow-sm border border-gray-100">
-              <div className="h-10 w-10 bg-blue-100 rounded-md flex items-center justify-center mb-4">
-                <Layers className="text-blue-600" />
-              </div>
-              <h3 className="text-2xl font-bold mb-2">Journal Entries</h3>
-              <p className="text-gray-500">Single or multiple auto posting batches.</p>
-              <div className="mt-6 bg-gray-50 h-48 rounded-md w-full border border-gray-100 flex items-center justify-center text-gray-400">
-                Journal form preview
-              </div>
-            </div>
-            <div className="bg-white p-8 rounded-lg shadow-sm border border-gray-100">
               <div className="h-10 w-10 bg-green-100 rounded-md flex items-center justify-center mb-4">
                 <FileText className="text-green-600" />
               </div>
-              <h3 className="text-xl font-bold mb-2">Lease Entry</h3>
+              <h3 className="text-2xl font-bold mb-2">Lease Entry</h3>
               <p className="text-gray-500">Lease creation, renewals, and amendments with full validation workflows.</p>
+              <div className="mt-6 bg-gray-50 h-48 rounded-md w-full border border-gray-100 flex items-center justify-center text-gray-400">
+                Lease form preview
+              </div>
+            </div>
+            <div className="bg-white p-8 rounded-lg shadow-sm border border-gray-100">
+              <div className="h-10 w-10 bg-blue-100 rounded-md flex items-center justify-center mb-4">
+                <Layers className="text-blue-600" />
+              </div>
+              <h3 className="text-xl font-bold mb-2">Journal Entries</h3>
+              <p className="text-gray-500">Single or multiple auto posting batches.</p>
             </div>
             <div className="bg-white p-8 rounded-lg shadow-sm border border-gray-100">
               <div className="h-10 w-10 bg-purple-100 rounded-md flex items-center justify-center mb-4">
@@ -411,7 +411,7 @@ const EFormsPage: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-14 text-center">
             <p className="text-ebox-lime font-bold uppercase tracking-wider text-sm mb-3">Built for real estate finance</p>
-            <h2 className="text-4xl font-bold text-white">Where finance teams use eForms</h2>
+            <h2 className="text-4xl font-bold text-white">Where property teams use eForms</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
             {useCases.map((uc, i) => (
@@ -668,48 +668,30 @@ const EFormsPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Testimonials — gray-50 */}
+      {/* Testimonial — gray-50 */}
       <section className="py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-gray-900">Teams using eForms</h2>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              {
-                quote: 'We went from 6 hours to 70 minutes on month-end journal entries. The approval workflows alone saved us countless email chains.',
-                role: 'Controller',
-                company: 'Commercial Real Estate Portfolio',
-              },
-              {
-                quote: "Property managers can finally enter lease data themselves. Finance approves before it hits MRI. Game changer.",
-                role: 'VP Operations',
-                company: 'Multi-Family Property Group',
-              },
-              {
-                quote: 'The audit trail is worth it alone. Our external auditors were impressed with the documentation.',
-                role: 'CFO',
-                company: 'Mixed-Use Property Fund',
-              },
-            ].map((testimonial, i) => (
-              <div key={i} className="bg-white p-8 rounded-lg border border-gray-100">
-                <div className="flex gap-1 mb-4">
-                  {[...Array(5)].map((_, j) => (
-                    <Star key={j} className="w-5 h-5 text-yellow-400 fill-current" />
-                  ))}
-                </div>
-                <p className="text-lg text-gray-700 mb-6 italic">"{testimonial.quote}"</p>
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center text-sm font-bold text-gray-500">
-                    {testimonial.role[0]}
-                  </div>
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-white p-10 md:p-14 rounded-xl shadow-lg border border-gray-100 relative">
+              <svg className="absolute top-6 left-8 w-12 h-12 text-ebox-lime/20" fill="currentColor" viewBox="0 0 32 32"><path d="M10 8c-3.3 0-6 2.7-6 6v10h10V14H8c0-1.1.9-2 2-2V8zm14 0c-3.3 0-6 2.7-6 6v10h10V14h-6c0-1.1.9-2 2-2V8z" /></svg>
+              <div className="relative z-10">
+                <img src="/images/savills.svg" alt="Savills" className="h-8 object-contain mb-8" />
+                <p className="text-xl md:text-2xl text-gray-800 leading-relaxed mb-4">
+                  "Although still relatively new to Savills, eForms is already proving invaluable for teams managing repetitive, manual processes. We implemented the system smoothly and launched our first form in just under three months."
+                </p>
+                <p className="text-xl md:text-2xl text-gray-800 leading-relaxed mb-8">
+                  "eForms represents a significant growth area for Savills Property Management, with plans for a wider rollout across EMEA. We're enthusiastic about the opportunities it brings and the resource savings it will undoubtedly deliver."
+                </p>
+                <div className="flex items-center gap-4 pt-6 border-t border-gray-100">
+                  <div className="w-12 h-12 bg-ebox-forest/10 rounded-full flex items-center justify-center text-lg font-bold text-ebox-forest">RR</div>
                   <div>
-                    <p className="font-bold text-gray-900">{testimonial.role}</p>
-                    <p className="text-sm text-gray-500">{testimonial.company}</p>
+                    <div className="font-bold text-gray-900 text-lg">Rachel Rule</div>
+                    <div className="text-gray-500">Director, Systems Accountant, Property Management</div>
+                    <div className="text-sm text-gray-400">Savills UK</div>
                   </div>
                 </div>
               </div>
-            ))}
+            </div>
           </div>
         </div>
       </section>
@@ -896,7 +878,7 @@ const EFormsPage: React.FC = () => {
           </div>
           <Button variant="primary" size="lg" to="/book-demo">Schedule a Demo</Button>
           <p className="mt-6 text-gray-400">
-            Questions? <a href="mailto:productsales@openboxsoftware.com" className="text-ebox-lime hover:underline font-medium">productsales@openboxsoftware.com</a>
+            Questions? <a href="mailto:ProductSales@eboxsoftware.com" className="text-ebox-lime hover:underline font-medium">ProductSales@eboxsoftware.com</a>
           </p>
         </div>
       </section>

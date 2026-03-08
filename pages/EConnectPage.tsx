@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Button from '../components/Button';
-import { Mail, Send, BarChart3, Shield, Users, ArrowRight } from 'lucide-react';
+import { Mail, FolderUp, BarChart3, Shield, Users, Database, ArrowRight } from 'lucide-react';
 import { EConnectLogo } from '../components/Logos';
 
 const EConnectPage: React.FC = () => {
@@ -9,7 +9,7 @@ const EConnectPage: React.FC = () => {
     <div className="flex flex-col w-full">
       <Helmet>
         <title>eConnect | Tenant Communications for MRI | eBox</title>
-        <meta name="description" content="Email hundreds of tenants directly from your MRI data. Track every delivery. Handle correspondence without leaving your workflow." />
+        <meta name="description" content="Email thousands of tenants directly from your MRI data. Track every delivery. Handle correspondence without leaving your workflow." />
         <link rel="canonical" href="https://eboxsoftware.com/econnect" />
       </Helmet>
       {/* Hero Section */}
@@ -21,7 +21,7 @@ const EConnectPage: React.FC = () => {
             <span className="text-ebox-lime">done right.</span>
           </h1>
           <p className="text-xl text-gray-300 mb-10 leading-relaxed max-w-2xl mx-auto">
-            Email hundreds of tenants directly from your MRI data. Track every delivery. Handle correspondence without leaving your workflow.
+            Email thousands of tenants directly from your MRI data. Track every delivery. Handle correspondence without leaving your workflow.
           </p>
           <div className="flex gap-4 justify-center">
             <Button variant="primary" size="lg" to="/book-demo">Book a Demo</Button>
@@ -52,12 +52,12 @@ const EConnectPage: React.FC = () => {
               {
                 icon: <BarChart3 className="w-8 h-8 text-ebox-lime" />,
                 title: "Delivery Tracking",
-                desc: "Know exactly who opened what, when. Track bounces, deliveries, and engagement — all in one dashboard."
+                desc: "Know exactly who opened what, when. Track bounces, deliveries, and engagement."
               },
               {
-                icon: <Send className="w-8 h-8 text-ebox-lime" />,
-                title: "Automated Correspondence",
-                desc: "Set up recurring communications that trigger based on lease events, payment reminders, or custom schedules."
+                icon: <FolderUp className="w-8 h-8 text-ebox-lime" />,
+                title: "Save to SharePoint",
+                desc: "Sync all reports and documents sent from MRI directly to SharePoint."
               },
               {
                 icon: <Users className="w-8 h-8 text-ebox-lime" />,
@@ -67,10 +67,10 @@ const EConnectPage: React.FC = () => {
               {
                 icon: <Shield className="w-8 h-8 text-ebox-lime" />,
                 title: "Audit Trail",
-                desc: "Every email logged. Full history of what was sent, to whom, and when. Answer compliance questions in seconds."
+                desc: "Every email logged. Full history of what was sent, to whom, and when. Answer compliance questions."
               },
               {
-                icon: <ArrowRight className="w-8 h-8 text-ebox-lime" />,
+                icon: <Database className="w-8 h-8 text-ebox-lime" />,
                 title: "MRI Integration",
                 desc: "Connects directly to your MRI database. No manual exports, no CSV files, no data mismatches."
               }
@@ -81,6 +81,40 @@ const EConnectPage: React.FC = () => {
                 <p className="text-gray-500 leading-relaxed">{feature.desc}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials */}
+      <section className="py-24 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-14">
+            <h2 className="text-sm font-bold tracking-wide uppercase text-ebox-forest mb-3">What Our Clients Say</h2>
+            <h3 className="text-3xl font-bold text-ebox-dark">Teams using eConnect</h3>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            <div className="bg-white p-8 rounded-lg shadow-md border border-gray-200 flex flex-col">
+              <img src="/images/cls.png" alt="CLS" className="h-7 object-contain self-start mb-6" />
+              <p className="text-lg text-gray-700 italic leading-relaxed flex-grow">"eConnect has sped up our invoice emailing process, allowing us to attach invoices and backup documents and seamlessly send them out to tenants. It saves us significant time and effort. It's a game changer."</p>
+              <div className="flex items-center gap-3 mt-6 pt-6 border-t border-gray-100">
+                <div className="w-10 h-10 bg-ebox-forest/10 rounded-full flex items-center justify-center text-sm font-bold text-ebox-forest">TL</div>
+                <div>
+                  <div className="font-bold text-gray-900">Tommy Law</div>
+                  <div className="text-sm text-gray-500">UK Credit Control Manager, CLS</div>
+                </div>
+              </div>
+            </div>
+            <div className="bg-white p-8 rounded-lg shadow-md border border-gray-200 flex flex-col">
+              <img src="/images/savills.svg" alt="Savills" className="h-7 object-contain self-start mb-6" />
+              <p className="text-lg text-gray-700 italic leading-relaxed flex-grow">"We've used eConnect since 2013 for invoices, letters, and internal rent approvals from MRI. It's embedded and integral to our processes, helping us avoid costly re-sending by post or manual email. The significant time and resource savings have further reduced our operational risk."</p>
+              <div className="flex items-center gap-3 mt-6 pt-6 border-t border-gray-100">
+                <div className="w-10 h-10 bg-ebox-forest/10 rounded-full flex items-center justify-center text-sm font-bold text-ebox-forest">RR</div>
+                <div>
+                  <div className="font-bold text-gray-900">Rachel Rule</div>
+                  <div className="text-sm text-gray-500">Director, Systems Accountant, Savills UK</div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>

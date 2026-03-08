@@ -10,7 +10,7 @@ const Home: React.FC = () => {
     <div className="flex flex-col w-full">
       <Helmet>
         <title>eBox | MRI Data Imports Made Easy</title>
-        <meta name="description" content="eBox gives your real estate team the tools to eliminate manual processes, reduce errors, and get more from MRI — starting with eForms for data imports and eConnect for communications." />
+        <meta name="description" content="eBox gives your real estate team the tools to eliminate manual processes, reduce errors, and get more from MRI, starting with eForms for data imports and eConnect for communications." />
         <link rel="canonical" href="https://eboxsoftware.com/" />
       </Helmet>
       {/* Hero Section — Dark, eBox-branded */}
@@ -27,7 +27,7 @@ const Home: React.FC = () => {
                 <span className="text-ebox-lime">work harder for you</span>
               </h1>
               <p className="text-xl text-gray-300 mb-10 max-w-2xl leading-relaxed">
-                eBox gives your real estate team the tools to eliminate manual processes, reduce errors, and get more from MRI — starting with eForms for data imports and eConnect for communications.
+                eBox gives your real estate team the tools to eliminate manual processes, reduce errors, and get more from MRI, starting with eForms for data imports and eConnect for communications.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button variant="primary" size="lg" to="/book-demo">Book a Demo</Button>
@@ -81,7 +81,7 @@ const Home: React.FC = () => {
                     <div className="text-[10px] font-semibold text-gray-400 uppercase tracking-wider mb-1">Description</div>
                     <div className="flex items-center gap-2">
                       <div className="flex-1 h-8 bg-gray-50 rounded-md border border-gray-200 px-3 flex items-center">
-                        <span className="text-xs text-gray-700">Monthly rent adjustment — Lvl 4</span>
+                        <span className="text-xs text-gray-700">Monthly rent adjustment, Lvl 4</span>
                       </div>
                       <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0" />
                     </div>
@@ -111,7 +111,7 @@ const Home: React.FC = () => {
                 {/* Validation bar */}
                 <div className="mx-5 mb-3 flex items-center gap-2 bg-green-50 rounded-md px-3 py-2 border border-green-100">
                   <CheckCircle className="w-4 h-4 text-green-600" />
-                  <span className="text-[11px] text-green-700 font-medium">All fields validated — ready for approval</span>
+                  <span className="text-[11px] text-green-700 font-medium">All fields validated, ready for approval</span>
                 </div>
 
                 {/* Action buttons */}
@@ -135,7 +135,7 @@ const Home: React.FC = () => {
           <div className="max-w-3xl mx-auto text-center mb-12">
             <h2 className="text-sm font-bold tracking-wide uppercase text-ebox-forest mb-3">Our Story</h2>
             <p className="text-2xl md:text-3xl font-bold text-ebox-dark leading-snug">
-              Through 25 years in real estate technology, we saw the same problems again and again — manual processes, error-prone imports, disconnected workflows.
+              Through 25 years in real estate technology, we saw the same problems again and again: manual processes, error-prone imports, disconnected workflows.
             </p>
             <p className="text-xl text-gray-500 mt-4">
               eBox was built to fix them.
@@ -280,9 +280,9 @@ const Home: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               { title: "Monthly Journals", desc: "Stop manually entering adjustments. Build approval workflows. Close faster." },
-              { title: "Lease Data", desc: "New leases, renewals, and amendments. Capture everything accurately, the first time." },
+              { title: "Lease & Property Data", desc: "New leases, renewals, and amendments. Unit details, tenant info, maintenance records. Capture everything accurately, the first time." },
               { title: "AP & Vendor Invoices", desc: "Structured forms for invoice data. Route for approval. Push to MRI when ready." },
-              { title: "Property Data", desc: "Unit details, tenant info, maintenance records. Keep everything current." }
+              { title: "Property Correspondence", desc: "Secure and reliable delivered correspondence from your domain. Fully tracked. Fully audited." }
             ].map((card, i) => (
               <div key={i} className="bg-white/5 p-6 rounded-md border border-white/10 hover:bg-white/10 transition-colors">
                 <h4 className="text-xl font-bold text-ebox-lime mb-2">{card.title}</h4>
@@ -352,7 +352,7 @@ const Home: React.FC = () => {
               {
                 icon: <Lock className="w-8 h-8 text-ebox-lime" />,
                 title: "Secure Hosting",
-                desc: "Enterprise-grade infrastructure. Meets compliance requirements."
+                desc: "Enterprise-grade infrastructure. ISO\u00A027001:2022 compliant."
               },
               {
                 icon: <CheckCircle className="w-8 h-8 text-ebox-lime" />,
@@ -375,16 +375,38 @@ const Home: React.FC = () => {
         </div>
       </section>
 
-      {/* Testimonial */}
+      {/* Testimonials */}
       <section className="py-24 bg-gray-50 border-t border-gray-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="max-w-3xl mx-auto bg-white p-10 rounded-lg shadow-md border border-gray-200">
-            <p className="text-2xl font-medium text-ebox-dark mb-6">"Cut journal entry time from 6 hours to 20 minutes. The approval workflows alone saved us countless email chains."</p>
-            <div className="flex items-center justify-center gap-4">
-              <div className="w-12 h-12 bg-gray-200 rounded-full"></div>
-              <div className="text-left">
-                <div className="font-bold">Controller</div>
-                <div className="text-sm text-gray-500">Commercial Real Estate Portfolio</div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-sm font-bold tracking-wide uppercase text-ebox-forest mb-3 text-center">What Our Clients Say</h2>
+          <h3 className="text-3xl font-bold text-ebox-dark text-center mb-14">Trusted by real estate teams worldwide</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            <div className="bg-white p-8 rounded-lg shadow-md border border-gray-200 flex flex-col">
+              <div className="flex items-center gap-3 mb-6">
+                <img src="/images/cls.png" alt="CLS" className="h-7 object-contain" />
+                <span className="text-xs font-bold text-ebox-forest bg-ebox-forest/10 px-2.5 py-1 rounded-full">eConnect</span>
+              </div>
+              <p className="text-lg text-gray-700 italic leading-relaxed flex-grow">"eConnect has sped up our invoice emailing process, allowing us to attach invoices and backup documents and seamlessly send them out to tenants. It saves us significant time and effort. It's a game changer."</p>
+              <div className="flex items-center gap-3 mt-6 pt-6 border-t border-gray-100">
+                <div className="w-10 h-10 bg-ebox-forest/10 rounded-full flex items-center justify-center text-sm font-bold text-ebox-forest">TL</div>
+                <div>
+                  <div className="font-bold text-gray-900">Tommy Law</div>
+                  <div className="text-sm text-gray-500">UK Credit Control Manager, CLS</div>
+                </div>
+              </div>
+            </div>
+            <div className="bg-white p-8 rounded-lg shadow-md border border-gray-200 flex flex-col">
+              <div className="flex items-center gap-3 mb-6">
+                <img src="/images/savills.svg" alt="Savills" className="h-7 object-contain" />
+                <span className="text-xs font-bold text-ebox-forest bg-ebox-forest/10 px-2.5 py-1 rounded-full">eForms</span>
+              </div>
+              <p className="text-lg text-gray-700 italic leading-relaxed flex-grow">"eForms is already proving invaluable for teams managing repetitive, manual processes. We launched our first form in just under three months, and it represents a significant growth area with plans for a wider rollout across EMEA."</p>
+              <div className="flex items-center gap-3 mt-6 pt-6 border-t border-gray-100">
+                <div className="w-10 h-10 bg-ebox-forest/10 rounded-full flex items-center justify-center text-sm font-bold text-ebox-forest">RR</div>
+                <div>
+                  <div className="font-bold text-gray-900">Rachel Rule</div>
+                  <div className="text-sm text-gray-500">Director, Systems Accountant, Savills UK</div>
+                </div>
               </div>
             </div>
           </div>

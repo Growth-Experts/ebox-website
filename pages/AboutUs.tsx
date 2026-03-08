@@ -8,7 +8,7 @@ const AboutUs: React.FC = () => {
   return (
     <div className="flex flex-col w-full">
       <Helmet>
-        <title>About Us | eBox — Built from 25 Years in Real Estate Tech</title>
+        <title>About Us | eBox: Built from 25 Years in Real Estate Tech</title>
         <meta name="description" content="eBox is part of the Open Box Group, a global software consultancy serving real estate for over two decades. We build tools that make MRI work harder for you." />
         <link rel="canonical" href="https://eboxsoftware.com/about" />
       </Helmet>
@@ -22,7 +22,7 @@ const AboutUs: React.FC = () => {
               <span className="block text-ebox-lime">work harder for&nbsp;you</span>
             </h1>
             <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-              eBox was founded to solve the specific, messy data problems that real estate teams face every day. We believe enterprise software doesn't have to be&nbsp;complicated.
+              eBox was founded to solve the specific, data and communication pain points that real estate teams face every day. We believe enterprise software doesn't have to be&nbsp;complicated.
             </p>
           </div>
         </div>

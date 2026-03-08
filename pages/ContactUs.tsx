@@ -7,8 +7,8 @@ const ContactUs: React.FC = () => {
   return (
     <div className="flex flex-col w-full">
       <Helmet>
-        <title>Contact Us | eBox — Get in Touch</title>
-        <meta name="description" content="Have questions about eForms or eConnect? Need a custom solution? Contact the eBox team — offices in New York, London, and Cape Town." />
+        <title>Contact Us | eBox: Get in Touch</title>
+        <meta name="description" content="Have questions about eForms or eConnect? Need a custom solution? Contact the eBox team, with offices in New York, London, and Cape Town." />
         <link rel="canonical" href="https://eboxsoftware.com/contact" />
       </Helmet>
       {/* Header */}
@@ -37,7 +37,7 @@ const ContactUs: React.FC = () => {
                     </div>
                     <div>
                       <h3 className="font-bold text-gray-900">Email Us</h3>
-                      <a href="mailto:productsales@openboxsoftware.com" className="text-gray-600 mt-1 block hover:text-ebox-dark transition-colors">productsales@openboxsoftware.com</a>
+                      <a href="mailto:ProductSales@eboxsoftware.com" className="text-gray-600 mt-1 block hover:text-ebox-dark transition-colors">ProductSales@eboxsoftware.com</a>
                     </div>
                   </div>
 
