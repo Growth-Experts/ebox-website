@@ -52,7 +52,7 @@ const EFormsPage: React.FC = () => {
             </div>
 
             <img
-              src="/images/eforms-screenshot.png"
+              src="/images/eforms-new-lease-creation.png"
               alt="eForms new lease creation screen showing form statuses, approval workflows, and data upload tracking"
               className="w-full block"
             />
