@@ -170,7 +170,7 @@ const Home: React.FC = () => {
             <div className="flex flex-wrap justify-center items-center gap-x-16 gap-y-8 opacity-70">
                <img src="/images/brisbane-airport.svg" alt="Brisbane Airport" className="h-10 object-contain" />
                <img src="/images/savills.svg" alt="Savills" className="h-9 object-contain" />
-               <img src="/images/segro.png" alt="SEGRO" className="h-9 object-contain" />
+               <img src="/images/segro.svg" alt="SEGRO" className="h-9 object-contain" />
                <img src="/images/cls.png" alt="CLS" className="h-9 object-contain" />
             </div>
           </div>
