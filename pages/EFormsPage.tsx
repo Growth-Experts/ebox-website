@@ -2,7 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Button from '../components/Button';
 import { EFormsLogo } from '../components/Logos';
-import { Check, Shield, Lock, FileText, Settings, RefreshCw, AlertCircle, Database, Upload, Users, Layers, ArrowRight, ChevronRight, CheckCircle, Layout } from 'lucide-react';
+import { Check, Shield, Lock, FileText, Settings, RefreshCw, AlertCircle, Database, Upload, Users, Layers, ArrowRight, ChevronRight, CheckCircle, Layout, Building, Receipt, PlusCircle, ShieldCheck } from 'lucide-react';
 
 const EFormsPage: React.FC = () => {
   const useCases = [
@@ -370,9 +370,83 @@ const EFormsPage: React.FC = () => {
               </div>
               <h3 className="text-2xl font-bold mb-2">Lease Entry</h3>
               <p className="text-gray-500">Lease creation, renewals, and amendments with full validation workflows.</p>
-              <div className="mt-6 bg-gray-50 h-48 rounded-md w-full border border-gray-100 flex items-center justify-center text-gray-400">
-                Lease form preview
-              </div>
+              {/* Lease entry flow diagram */}
+              {(() => {
+                const steps = [
+                  { icon: <Building className="w-5 h-5" />, label: 'Create Unit', bg: 'bg-ebox-forest/10', text: 'text-ebox-forest' },
+                  { icon: <FileText className="w-5 h-5" />, label: 'Create Lease', bg: 'bg-ebox-forest/10', text: 'text-ebox-forest' },
+                  { icon: <Receipt className="w-5 h-5" />, label: 'Create Charges', bg: 'bg-ebox-forest/10', text: 'text-ebox-forest' },
+                  { icon: <PlusCircle className="w-5 h-5" />, label: 'Add Space', bg: 'bg-ebox-forest/10', text: 'text-ebox-forest' },
+                  { icon: <ShieldCheck className="w-5 h-5" />, label: 'Approval', bg: 'bg-amber-50', text: 'text-amber-600', ring: 'ring-1 ring-amber-200' },
+                  { icon: <Database className="w-5 h-5" />, label: 'Import to MRI', bg: 'bg-ebox-forest/10', text: 'text-ebox-forest', badge: true },
+                ];
+                return (
+                  <>
+                    {/* Desktop: horizontal flow */}
+                    <div className="mt-6 hidden md:flex items-start justify-between gap-1">
+                      {steps.map((step, i) => (
+                        <React.Fragment key={i}>
+                          <div className="flex flex-col items-center gap-2 flex-1 min-w-0">
+                            <div className={`relative w-12 h-12 rounded-full ${step.bg} ${step.text} ${step.ring || ''} flex items-center justify-center`}>
+                              {step.icon}
+                              {step.badge && (
+                                <div className="absolute -bottom-0.5 -right-0.5 w-4 h-4 bg-green-500 rounded-full flex items-center justify-center">
+                                  <Check className="w-2.5 h-2.5 text-white" />
+                                </div>
+                              )}
+                            </div>
+                            <span className="text-xs font-semibold text-gray-700 text-center leading-tight">{step.label}</span>
+                          </div>
+                          {i < steps.length - 1 && (
+                            <div className="flex items-center pt-3.5 flex-shrink-0">
+                              <ChevronRight className="w-4 h-4 text-ebox-forest/30" />
+                            </div>
+                          )}
+                        </React.Fragment>
+                      ))}
+                    </div>
+
+                    {/* Mobile: 3-column grid with connector */}
+                    <div className="mt-6 md:hidden">
+                      <div className="grid grid-cols-3 gap-y-2 gap-x-1">
+                        {steps.slice(0, 3).map((step, i) => (
+                          <React.Fragment key={i}>
+                            <div className="flex flex-col items-center gap-1.5">
+                              <div className={`relative w-10 h-10 rounded-full ${step.bg} ${step.text} ${step.ring || ''} flex items-center justify-center`}>
+                                {React.cloneElement(step.icon, { className: 'w-4 h-4' })}
+                              </div>
+                              <span className="text-[10px] font-semibold text-gray-700 text-center leading-tight">{step.label}</span>
+                            </div>
+                          </React.Fragment>
+                        ))}
+                      </div>
+                      <div className="flex justify-center py-1.5">
+                        <svg width="120" height="20" viewBox="0 0 120 20" className="text-ebox-forest/30">
+                          <path d="M100 2 L60 10 L20 18" stroke="currentColor" strokeWidth="1.5" fill="none" strokeLinecap="round" />
+                          <polygon points="20,14 14,20 22,20" fill="currentColor" />
+                        </svg>
+                      </div>
+                      <div className="grid grid-cols-3 gap-y-2 gap-x-1">
+                        {steps.slice(3).map((step, i) => (
+                          <React.Fragment key={i}>
+                            <div className="flex flex-col items-center gap-1.5">
+                              <div className={`relative w-10 h-10 rounded-full ${step.bg} ${step.text} ${step.ring || ''} flex items-center justify-center`}>
+                                {React.cloneElement(step.icon, { className: 'w-4 h-4' })}
+                                {step.badge && (
+                                  <div className="absolute -bottom-0.5 -right-0.5 w-3.5 h-3.5 bg-green-500 rounded-full flex items-center justify-center">
+                                    <Check className="w-2 h-2 text-white" />
+                                  </div>
+                                )}
+                              </div>
+                              <span className="text-[10px] font-semibold text-gray-700 text-center leading-tight">{step.label}</span>
+                            </div>
+                          </React.Fragment>
+                        ))}
+                      </div>
+                    </div>
+                  </>
+                );
+              })()}
             </div>
             <div className="bg-white p-8 rounded-lg shadow-sm border border-gray-100">
               <div className="h-10 w-10 bg-blue-100 rounded-md flex items-center justify-center mb-4">
