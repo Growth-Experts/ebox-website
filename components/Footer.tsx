@@ -10,7 +10,7 @@ const Footer: React.FC = () => {
           <div className="col-span-1 md:col-span-1">
             <EBoxLogo className="h-8 mb-6" />
             <p className="text-gray-500 text-sm leading-relaxed">
-              Software built specifically for MRI users. Solving the real, day-to-day operational problems that MRI users experience.
+              Software built specifically for MRI users, making day-to-day operations so much easier.
             </p>
           </div>
           

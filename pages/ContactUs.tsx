@@ -37,7 +37,7 @@ const ContactUs: React.FC = () => {
                     </div>
                     <div>
                       <h3 className="font-bold text-gray-900">Email Us</h3>
-                      <a href="mailto:ProductSales@eboxsoftware.com" className="text-gray-600 mt-1 block hover:text-ebox-dark transition-colors">ProductSales@eboxsoftware.com</a>
+                      <a href="mailto:ProductSales@eboxsoftware.com" className="text-ebox-forest font-semibold mt-1 block hover:underline transition-colors">ProductSales@eboxsoftware.com</a>
                     </div>
                   </div>
 

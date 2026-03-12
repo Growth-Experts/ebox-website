@@ -185,7 +185,8 @@ const Home: React.FC = () => {
             <h3 className="text-4xl font-bold text-ebox-dark">Two products. Built for MRI.</h3>
           </div>
           <p className="text-xl text-gray-500 text-center max-w-2xl mx-auto mb-16">
-            eForms handles your data imports. eConnect handles your communications.
+            eForms handles your data imports.<br />
+            eConnect handles your communications.
           </p>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
@@ -382,13 +383,12 @@ const Home: React.FC = () => {
           <h3 className="text-3xl font-bold text-ebox-dark text-center mb-14">Trusted by real estate teams worldwide</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             <div className="bg-white p-8 rounded-lg shadow-md border border-gray-200 flex flex-col">
-              <div className="flex items-center gap-3 mb-6">
+              <div className="mb-6">
                 <img src="/images/cls.png" alt="CLS" className="h-7 object-contain" />
-                <span className="text-xs font-bold text-ebox-forest bg-ebox-forest/10 px-2.5 py-1 rounded-full">eConnect</span>
               </div>
               <p className="text-lg text-gray-700 italic leading-relaxed flex-grow">"eConnect has sped up our invoice emailing process, allowing us to attach invoices and backup documents and seamlessly send them out to tenants. It saves us significant time and effort. It's a game changer."</p>
               <div className="flex items-center gap-3 mt-6 pt-6 border-t border-gray-100">
-                <div className="w-10 h-10 bg-ebox-forest/10 rounded-full flex items-center justify-center text-sm font-bold text-ebox-forest">TL</div>
+                <img src="/images/tommy-law.jpeg" alt="Tommy Law" className="w-10 h-10 rounded-full object-cover" />
                 <div>
                   <div className="font-bold text-gray-900">Tommy Law</div>
                   <div className="text-sm text-gray-500">UK Credit Control Manager, CLS</div>
@@ -396,16 +396,15 @@ const Home: React.FC = () => {
               </div>
             </div>
             <div className="bg-white p-8 rounded-lg shadow-md border border-gray-200 flex flex-col">
-              <div className="flex items-center gap-3 mb-6">
+              <div className="mb-6">
                 <img src="/images/savills.svg" alt="Savills" className="h-7 object-contain" />
-                <span className="text-xs font-bold text-ebox-forest bg-ebox-forest/10 px-2.5 py-1 rounded-full">eForms</span>
               </div>
-              <p className="text-lg text-gray-700 italic leading-relaxed flex-grow">"eForms is already proving invaluable for teams managing repetitive, manual processes. We launched our first form in just under three months, and it represents a significant growth area with plans for a wider rollout across EMEA."</p>
+              <p className="text-lg text-gray-700 italic leading-relaxed flex-grow">"We now use multiple eBox products across multiple countries, and they have all been absolute game changers. All round it's been a massive success story."</p>
               <div className="flex items-center gap-3 mt-6 pt-6 border-t border-gray-100">
-                <div className="w-10 h-10 bg-ebox-forest/10 rounded-full flex items-center justify-center text-sm font-bold text-ebox-forest">RR</div>
+                <img src="/images/rachel-rule.jpeg" alt="Rachel Rule" className="w-10 h-10 rounded-full object-cover" />
                 <div>
                   <div className="font-bold text-gray-900">Rachel Rule</div>
-                  <div className="text-sm text-gray-500">Director, Systems Accountant, Savills UK</div>
+                  <div className="text-sm text-gray-500">Director - Systems Accountant, Savills UK</div>
                 </div>
               </div>
             </div>

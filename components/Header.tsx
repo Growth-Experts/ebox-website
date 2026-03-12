@@ -43,6 +43,12 @@ const Header: React.FC = () => {
             >
               eConnect
             </Link>
+            <Link
+              to="/contact"
+              className={`text-sm font-medium transition-colors ${pathname === '/contact' ? 'text-ebox-dark' : 'text-gray-500 hover:text-ebox-dark'}`}
+            >
+              Contact Us
+            </Link>
             <Button variant="primary" size="sm" to="/book-demo">Book a Demo</Button>
           </div>
 
@@ -88,6 +94,13 @@ const Header: React.FC = () => {
               className="block w-full text-left px-3 py-3 text-base font-medium text-gray-700 hover:bg-gray-50 rounded-md"
             >
               eConnect
+            </Link>
+            <Link
+              to="/contact"
+              onClick={closeMobileMenu}
+              className="block w-full text-left px-3 py-3 text-base font-medium text-gray-700 hover:bg-gray-50 rounded-md"
+            >
+              Contact Us
             </Link>
             <div className="pt-4">
               <Button variant="primary" className="w-full" to="/book-demo" onClick={closeMobileMenu}>Book a Demo</Button>

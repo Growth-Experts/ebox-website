@@ -7,11 +7,11 @@ import { Check, Shield, Lock, FileText, Settings, RefreshCw, AlertCircle, Databa
 const EFormsPage: React.FC = () => {
   const useCases = [
     { gradient: "from-blue-600 to-blue-700", color: "blue", iconBg: "bg-blue-100", iconText: "text-blue-600", borderColor: "border-blue-500", statBg: "bg-blue-50", statText: "text-blue-300", dotColor: "bg-blue-400", icon: <Database className="text-white w-6 h-6" />, title: "Month-End Close", desc: "Process and schedule 1000s of journal entries with approval workflows.", stat: "No more late nights" },
-    { gradient: "from-emerald-600 to-emerald-700", color: "emerald", iconBg: "bg-emerald-100", iconText: "text-emerald-600", borderColor: "border-emerald-500", statBg: "bg-emerald-50", statText: "text-emerald-300", dotColor: "bg-emerald-400", icon: <FileText className="text-white w-6 h-6" />, title: "Lease Administration", desc: "Property administrators enter leases, finance captures charges, property managers approve into MRI.", stat: "Real-time email notifications." },
-    { gradient: "from-purple-600 to-purple-700", color: "purple", iconBg: "bg-purple-100", iconText: "text-purple-600", borderColor: "border-purple-500", statBg: "bg-purple-50", statText: "text-purple-300", dotColor: "bg-purple-400", icon: <Settings className="text-white w-6 h-6" />, title: "Accounts Payable", desc: "Structured invoice entry with auto-routing by amount or vendor", stat: "Every action logged" },
-    { gradient: "from-amber-500 to-orange-600", color: "amber", iconBg: "bg-amber-100", iconText: "text-amber-600", borderColor: "border-amber-500", statBg: "bg-amber-50", statText: "text-amber-300", dotColor: "bg-amber-400", icon: <RefreshCw className="text-white w-6 h-6" />, title: "Recurring Processes", desc: "Configure once, apply to hundreds of units with validation", stat: "Set up once, reuse monthly" },
-    { gradient: "from-rose-500 to-pink-600", color: "rose", iconBg: "bg-rose-100", iconText: "text-rose-600", borderColor: "border-rose-500", statBg: "bg-rose-50", statText: "text-rose-300", dotColor: "bg-rose-400", icon: <Database className="text-white w-6 h-6" />, title: "Master Data Management", desc: "Regional teams create buildings and units with approval layer", stat: "Consistent data, every time" },
-    { gradient: "from-teal-500 to-cyan-600", color: "teal", iconBg: "bg-teal-100", iconText: "text-teal-600", borderColor: "border-teal-500", statBg: "bg-teal-50", statText: "text-teal-300", dotColor: "bg-teal-400", icon: <Check className="text-white w-6 h-6" />, title: "Tenant Charges", desc: "Validate accounts, tenant details and charge codes before posting", stat: "Reduce tenant queries" },
+    { gradient: "from-emerald-600 to-emerald-700", color: "emerald", iconBg: "bg-emerald-100", iconText: "text-emerald-600", borderColor: "border-emerald-500", statBg: "bg-emerald-50", statText: "text-emerald-300", dotColor: "bg-emerald-400", icon: <FileText className="text-white w-6 h-6" />, title: "Lease Administration", desc: "Property administrators enter leases, finance captures charges, property managers approve into MRI.", stat: "Real-time email notifications" },
+    { gradient: "from-purple-600 to-purple-700", color: "purple", iconBg: "bg-purple-100", iconText: "text-purple-600", borderColor: "border-purple-500", statBg: "bg-purple-50", statText: "text-purple-300", dotColor: "bg-purple-400", icon: <Settings className="text-white w-6 h-6" />, title: "Accounts Payable", desc: "Structured invoice entry with auto-routing by amount or vendor.", stat: "Every action logged" },
+    { gradient: "from-amber-500 to-orange-600", color: "amber", iconBg: "bg-amber-100", iconText: "text-amber-600", borderColor: "border-amber-500", statBg: "bg-amber-50", statText: "text-amber-300", dotColor: "bg-amber-400", icon: <RefreshCw className="text-white w-6 h-6" />, title: "Recurring Processes", desc: "Configure once, apply to hundreds of units with validation.", stat: "Set up once, reuse monthly" },
+    { gradient: "from-rose-500 to-pink-600", color: "rose", iconBg: "bg-rose-100", iconText: "text-rose-600", borderColor: "border-rose-500", statBg: "bg-rose-50", statText: "text-rose-300", dotColor: "bg-rose-400", icon: <Database className="text-white w-6 h-6" />, title: "Master Data Management", desc: "Regional teams create buildings and units with approval layer.", stat: "Consistent data, every time" },
+    { gradient: "from-teal-500 to-cyan-600", color: "teal", iconBg: "bg-teal-100", iconText: "text-teal-600", borderColor: "border-teal-500", statBg: "bg-teal-50", statText: "text-teal-300", dotColor: "bg-teal-400", icon: <Check className="text-white w-6 h-6" />, title: "Tenant Charges", desc: "Validate accounts, tenant details and charge codes before posting.", stat: "Reduce tenant queries" },
   ];
 
   return (
@@ -316,10 +316,10 @@ const EFormsPage: React.FC = () => {
             <div className="bg-ebox-forest/10 p-8 rounded-lg border border-ebox-forest/20">
               <h3 className="text-xl font-bold mb-2 text-ebox-dark">Catch errors at the source</h3>
               <ul className="space-y-3 mt-4">
-                <li className="flex gap-2 items-center text-gray-800"><AlertCircle className="w-5 h-5 shrink-0 text-ebox-forest" /> Avoid human error.</li>
-                <li className="flex gap-2 items-center text-gray-800"><AlertCircle className="w-5 h-5 shrink-0 text-ebox-forest" /> Enforce business rules.</li>
-                <li className="flex gap-2 items-center text-gray-800"><AlertCircle className="w-5 h-5 shrink-0 text-ebox-forest" /> Respect your organisation's data security hierarchy.</li>
-                <li className="flex gap-2 items-center text-gray-800"><AlertCircle className="w-5 h-5 shrink-0 text-ebox-forest" /> Clean data flows to MRI.</li>
+                <li className="flex gap-2 items-center text-gray-800"><AlertCircle className="w-5 h-5 shrink-0 text-ebox-forest" /> Avoid human error</li>
+                <li className="flex gap-2 items-center text-gray-800"><AlertCircle className="w-5 h-5 shrink-0 text-ebox-forest" /> Enforce business rules</li>
+                <li className="flex gap-2 items-center text-gray-800"><AlertCircle className="w-5 h-5 shrink-0 text-ebox-forest" /> Respect your organisation's data security hierarchy</li>
+                <li className="flex gap-2 items-center text-gray-800"><AlertCircle className="w-5 h-5 shrink-0 text-ebox-forest" /> Clean data flows to MRI</li>
               </ul>
             </div>
           </div>
@@ -489,16 +489,16 @@ const EFormsPage: React.FC = () => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
             {useCases.map((uc, i) => (
-              <div key={`c-${i}`} className="bg-white/10 rounded-xl overflow-hidden border border-white/10 hover:bg-white/15 transition-all duration-200">
+              <div key={`c-${i}`} className="bg-white/10 rounded-xl overflow-hidden border border-white/10 hover:bg-white/15 transition-all duration-200 flex flex-col">
                 <div className={`h-1.5 bg-gradient-to-r ${uc.gradient}`}></div>
-                <div className="p-7">
+                <div className="p-7 flex flex-col flex-1">
                   <div className="flex items-center gap-4 mb-4">
                     <div className={`w-11 h-11 ${uc.iconBg} rounded-lg flex items-center justify-center`}>
                       {React.cloneElement(uc.icon, { className: `${uc.iconText} w-5 h-5` })}
                     </div>
                     <h3 className="text-lg font-bold text-white">{uc.title}</h3>
                   </div>
-                  <p className="text-gray-300 text-sm leading-relaxed mb-5">{uc.desc}</p>
+                  <p className="text-gray-300 text-sm leading-relaxed mb-5 flex-1">{uc.desc}</p>
                   <div className="flex items-center gap-2 pt-4 border-t border-white/10">
                     <div className={`w-2 h-2 rounded-full ${uc.dotColor}`}></div>
                     <span className={`${uc.statText} font-semibold text-sm`}>{uc.stat}</span>
@@ -508,7 +508,7 @@ const EFormsPage: React.FC = () => {
             ))}
           </div>
           <div className="text-center pt-10">
-            <span className="text-lg font-bold text-gray-500">+100 more potential business workflows available.</span>
+            <span className="text-xl font-bold text-white/80">+100 more potential business workflows available.</span>
           </div>
         </div>
       </section>
@@ -525,7 +525,7 @@ const EFormsPage: React.FC = () => {
                 <FileText className="text-blue-600 w-6 h-6" />
               </div>
               <h3 className="text-2xl font-bold mb-2">Structured forms</h3>
-              <p className="text-gray-500 mb-6">For one-at-a-time entry by team members</p>
+              <p className="text-gray-500 mb-6">For one-at-a-time entry by team members.</p>
               <div className="rounded-lg overflow-hidden border border-gray-200 shadow-md">
                 <div className="flex items-center gap-2.5 px-4 py-2.5 bg-gray-100 border-b border-gray-200">
                   <div className="flex items-center gap-1.5">
@@ -548,7 +548,7 @@ const EFormsPage: React.FC = () => {
                 <Upload className="text-green-600 w-6 h-6" />
               </div>
               <h3 className="text-2xl font-bold mb-2">File upload</h3>
-              <p className="text-gray-500 mb-6">For bulk imports from your existing spreadsheets</p>
+              <p className="text-gray-500 mb-6">For bulk imports from your existing spreadsheets.</p>
               <div className="rounded-lg overflow-hidden border border-gray-200 shadow-md">
                 <div className="flex items-center gap-2.5 px-4 py-2.5 bg-gray-100 border-b border-gray-200">
                   <div className="flex items-center gap-1.5">
@@ -670,7 +670,7 @@ const EFormsPage: React.FC = () => {
             <div>
               <p className="text-ebox-lime font-bold uppercase tracking-wider text-sm mb-3">Security done your way</p>
               <h2 className="text-4xl font-bold mb-6">Give people forms, not full system access</h2>
-              <p className="text-xl text-gray-400">They enter data. You control what gets approved. What goes to MRI.</p>
+              <p className="text-xl text-gray-400">They enter data. You control what gets approved and goes into MRI.</p>
             </div>
             <div className="space-y-4">
               {[
@@ -757,7 +757,7 @@ const EFormsPage: React.FC = () => {
                   "eForms represents a significant growth area for Savills Property Management, with plans for a wider rollout across EMEA. We're enthusiastic about the opportunities it brings and the resource savings it will undoubtedly deliver."
                 </p>
                 <div className="flex items-center gap-4 pt-6 border-t border-gray-100">
-                  <div className="w-12 h-12 bg-ebox-forest/10 rounded-full flex items-center justify-center text-lg font-bold text-ebox-forest">RR</div>
+                  <img src="/images/rachel-rule.jpeg" alt="Rachel Rule" className="w-12 h-12 rounded-full object-cover" />
                   <div>
                     <div className="font-bold text-gray-900 text-lg">Rachel Rule</div>
                     <div className="text-gray-500">Director, Systems Accountant, Property Management</div>
@@ -777,7 +777,7 @@ const EFormsPage: React.FC = () => {
             <h2 className="text-3xl font-bold text-gray-900">Clear errors, not cryptic codes</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-            <div className="bg-gray-50 p-8 rounded-lg border border-gray-100 shadow-sm opacity-60">
+            <div className="bg-gray-200 p-8 rounded-lg border border-gray-300 shadow-sm">
                 <span className="inline-block bg-red-100 text-red-700 px-3 py-1 rounded-full text-xs font-bold mb-6">Typical Error Log</span>
               <div className="bg-white p-6 rounded-md font-mono text-sm space-y-3">
                   <div className="text-red-500">Import failed</div>
@@ -796,6 +796,10 @@ const EFormsPage: React.FC = () => {
                 </div>
               </div>
             </div>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mt-4">
+            <p className="text-sm text-gray-500 text-center">Vague messages. No row numbers. No way to pinpoint the problem.</p>
+            <p className="text-sm text-gray-500 text-center">Exact row, exact field, exact issue. Fix it and resubmit.</p>
           </div>
         </div>
       </section>

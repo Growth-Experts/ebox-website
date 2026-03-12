@@ -97,7 +97,7 @@ const EConnectPage: React.FC = () => {
               <img src="/images/cls.png" alt="CLS" className="h-7 object-contain self-start mb-6" />
               <p className="text-lg text-gray-700 italic leading-relaxed flex-grow">"eConnect has sped up our invoice emailing process, allowing us to attach invoices and backup documents and seamlessly send them out to tenants. It saves us significant time and effort. It's a game changer."</p>
               <div className="flex items-center gap-3 mt-6 pt-6 border-t border-gray-100">
-                <div className="w-10 h-10 bg-ebox-forest/10 rounded-full flex items-center justify-center text-sm font-bold text-ebox-forest">TL</div>
+                <img src="/images/tommy-law.jpeg" alt="Tommy Law" className="w-10 h-10 rounded-full object-cover" />
                 <div>
                   <div className="font-bold text-gray-900">Tommy Law</div>
                   <div className="text-sm text-gray-500">UK Credit Control Manager, CLS</div>
@@ -108,7 +108,7 @@ const EConnectPage: React.FC = () => {
               <img src="/images/savills.svg" alt="Savills" className="h-7 object-contain self-start mb-6" />
               <p className="text-lg text-gray-700 italic leading-relaxed flex-grow">"We've used eConnect since 2013 for invoices, letters, and internal rent approvals from MRI. It's embedded and integral to our processes, helping us avoid costly re-sending by post or manual email. The significant time and resource savings have further reduced our operational risk."</p>
               <div className="flex items-center gap-3 mt-6 pt-6 border-t border-gray-100">
-                <div className="w-10 h-10 bg-ebox-forest/10 rounded-full flex items-center justify-center text-sm font-bold text-ebox-forest">RR</div>
+                <img src="/images/rachel-rule.jpeg" alt="Rachel Rule" className="w-10 h-10 rounded-full object-cover" />
                 <div>
                   <div className="font-bold text-gray-900">Rachel Rule</div>
                   <div className="text-sm text-gray-500">Director, Systems Accountant, Savills UK</div>
