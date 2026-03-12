@@ -32,8 +32,16 @@ const ContactUs: React.FC = () => {
         body: JSON.stringify(form),
       });
 
+      const contentType = res.headers.get('content-type') ?? '';
+      if (!contentType.includes('application/json')) {
+        console.error('API returned non-JSON response:', { status: res.status, contentType });
+        throw new Error('The form endpoint is not responding. Please try again or email us directly.');
+      }
+
+      const data = await res.json();
+
       if (!res.ok) {
-        const data = await res.json().catch(() => ({}));
+        console.error('API error response:', data);
         throw new Error(data.error || 'Something went wrong.');
       }
 

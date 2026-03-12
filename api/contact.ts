@@ -10,20 +10,35 @@ const FROM = 'ProductSales@eboxsoftware.com';
 const FROM_NAME = 'eBox';
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
+  console.log('[contact] Function invoked, method:', req.method);
+
+  if (req.method === 'OPTIONS') {
+    return res.status(200).end();
+  }
+
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
   const { firstName, lastName, email, message } = req.body ?? {};
+  console.log('[contact] Fields received:', { firstName: !!firstName, lastName: !!lastName, email: !!email, message: !!message });
 
   if (!firstName || !lastName || !email || !message) {
     return res.status(400).json({ error: 'All fields are required.' });
   }
 
-  const resend = new Resend(process.env.RESEND_API_KEY);
+  const apiKey = process.env.RESEND_API_KEY;
+  console.log('[contact] RESEND_API_KEY present:', !!apiKey, '| length:', apiKey?.length ?? 0);
+
+  if (!apiKey) {
+    console.error('[contact] RESEND_API_KEY is not set');
+    return res.status(500).json({ error: 'Email service is not configured.' });
+  }
+
+  const resend = new Resend(apiKey);
 
   try {
-    await Promise.all([
+    const [teamResult, autoReplyResult] = await Promise.all([
       resend.emails.send({
         from: `${FROM_NAME} <${FROM}>`,
         to: RECIPIENTS,
@@ -39,9 +54,27 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       }),
     ]);
 
+    console.log('[contact] Team email result:', JSON.stringify(teamResult));
+    console.log('[contact] Auto-reply result:', JSON.stringify(autoReplyResult));
+
+    if (teamResult.error || autoReplyResult.error) {
+      console.error('[contact] Resend returned errors:', {
+        team: teamResult.error,
+        autoReply: autoReplyResult.error,
+      });
+      return res.status(500).json({
+        error: 'Email delivery failed.',
+        details: {
+          team: teamResult.error?.message ?? null,
+          autoReply: autoReplyResult.error?.message ?? null,
+        },
+      });
+    }
+
     return res.status(200).json({ success: true });
-  } catch (err) {
-    console.error('Failed to send contact emails:', err);
-    return res.status(500).json({ error: 'Failed to send email. Please try again.' });
+  } catch (err: unknown) {
+    const message = err instanceof Error ? err.message : String(err);
+    console.error('[contact] Unexpected error:', message);
+    return res.status(500).json({ error: 'Failed to send email.', details: message });
   }
 }
