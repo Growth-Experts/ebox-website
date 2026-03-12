@@ -956,7 +956,7 @@ const EFormsPage: React.FC = () => {
           </div>
           <Button variant="primary" size="lg" to="/book-demo">Schedule a Demo</Button>
           <p className="mt-6 text-gray-400">
-            Questions? <a href="mailto:ProductSales@eboxsoftware.com" className="text-ebox-lime hover:underline font-medium">ProductSales@eboxsoftware.com</a>
+            Questions? <a href="mailto:sales@eboxsoftware.com" className="text-ebox-lime hover:underline font-medium">sales@eboxsoftware.com</a>
           </p>
         </div>
       </section>

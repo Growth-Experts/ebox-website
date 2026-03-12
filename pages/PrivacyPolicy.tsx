@@ -104,7 +104,7 @@ const PrivacyPolicy: React.FC = () => {
             By sharing your information with us, you're giving us your permission to securely process and
             store it in line with these terms and any relevant laws. If you ever feel concerned, you can
             withdraw this consent by notifying us in writing to{' '}
-            <a href="mailto:ProductSales@eboxsoftware.com" className="text-ebox-forest hover:underline">ProductSales@eboxsoftware.com</a>.
+            <a href="mailto:sales@eboxsoftware.com" className="text-ebox-forest hover:underline">sales@eboxsoftware.com</a>.
           </p>
           <p className="mt-4">
             Please note that certain information may be retained in accordance with our PAIA Manual or other
@@ -172,7 +172,7 @@ const PrivacyPolicy: React.FC = () => {
             feel free to reach out. You can find our contact information on the{' '}
             <Link to="/contact" className="text-ebox-forest hover:underline">Contact Us</Link> page of our
             website or email us directly at{' '}
-            <a href="mailto:ProductSales@eboxsoftware.com" className="text-ebox-forest hover:underline">ProductSales@eboxsoftware.com</a>.
+            <a href="mailto:sales@eboxsoftware.com" className="text-ebox-forest hover:underline">sales@eboxsoftware.com</a>.
           </p>
           <p className="mt-6 text-gray-600">
             Thank you for trusting us with your information. We look forward to continuing our relationship
