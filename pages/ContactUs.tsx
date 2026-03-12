@@ -1,9 +1,49 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
+import { useNavigate } from 'react-router-dom';
 import Button from '../components/Button';
-import { Mail, MapPin } from 'lucide-react';
+import { Mail, MapPin, Loader2 } from 'lucide-react';
 
 const ContactUs: React.FC = () => {
+  const navigate = useNavigate();
+  const [form, setForm] = useState({ firstName: '', lastName: '', email: '', message: '' });
+  const [status, setStatus] = useState<'idle' | 'submitting' | 'error'>('idle');
+  const [errorMsg, setErrorMsg] = useState('');
+
+  const update = (field: string) => (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) =>
+    setForm((f) => ({ ...f, [field]: e.target.value }));
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+
+    if (!form.firstName || !form.lastName || !form.email || !form.message) {
+      setErrorMsg('Please fill in all fields.');
+      setStatus('error');
+      return;
+    }
+
+    setStatus('submitting');
+    setErrorMsg('');
+
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(form),
+      });
+
+      if (!res.ok) {
+        const data = await res.json().catch(() => ({}));
+        throw new Error(data.error || 'Something went wrong.');
+      }
+
+      navigate('/contact/thank-you', { state: { firstName: form.firstName } });
+    } catch (err) {
+      setErrorMsg(err instanceof Error ? err.message : 'Something went wrong. Please try again.');
+      setStatus('error');
+    }
+  };
+
   return (
     <div className="flex flex-col w-full">
       <Helmet>
@@ -66,13 +106,16 @@ const ContactUs: React.FC = () => {
             {/* Contact Form (Right Side) */}
             <div className="p-10 md:w-3/5 bg-white">
               <h2 className="text-2xl font-bold text-ebox-dark mb-6">Send us a message</h2>
-              <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
+              <form className="space-y-6" onSubmit={handleSubmit}>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label htmlFor="firstName" className="block text-sm font-medium text-gray-700 mb-2">First Name</label>
                     <input 
                       type="text" 
-                      id="firstName" 
+                      id="firstName"
+                      required
+                      value={form.firstName}
+                      onChange={update('firstName')}
                       className="w-full px-4 py-3 rounded-md border border-gray-300 focus:ring-2 focus:ring-ebox-lime focus:border-transparent outline-none transition-all"
                       placeholder="Sam"
                     />
@@ -81,7 +124,10 @@ const ContactUs: React.FC = () => {
                     <label htmlFor="lastName" className="block text-sm font-medium text-gray-700 mb-2">Last Name</label>
                     <input 
                       type="text" 
-                      id="lastName" 
+                      id="lastName"
+                      required
+                      value={form.lastName}
+                      onChange={update('lastName')}
                       className="w-full px-4 py-3 rounded-md border border-gray-300 focus:ring-2 focus:ring-ebox-lime focus:border-transparent outline-none transition-all"
                       placeholder="Property"
                     />
@@ -92,7 +138,10 @@ const ContactUs: React.FC = () => {
                   <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">Work Email</label>
                   <input 
                     type="email" 
-                    id="email" 
+                    id="email"
+                    required
+                    value={form.email}
+                    onChange={update('email')}
                     className="w-full px-4 py-3 rounded-md border border-gray-300 focus:ring-2 focus:ring-ebox-lime focus:border-transparent outline-none transition-all"
                     placeholder="sam@company.com"
                   />
@@ -103,12 +152,33 @@ const ContactUs: React.FC = () => {
                   <textarea 
                     id="message" 
                     rows={4}
+                    required
+                    value={form.message}
+                    onChange={update('message')}
                     className="w-full px-4 py-3 rounded-md border border-gray-300 focus:ring-2 focus:ring-ebox-lime focus:border-transparent outline-none transition-all resize-none"
                     placeholder="Tell us about your needs..."
                   ></textarea>
                 </div>
 
-                <Button variant="primary" className="w-full">Send Message</Button>
+                {status === 'error' && (
+                  <p className="text-red-600 text-sm">{errorMsg}</p>
+                )}
+
+                <Button
+                  variant="primary"
+                  className="w-full"
+                  type="submit"
+                  disabled={status === 'submitting'}
+                >
+                  {status === 'submitting' ? (
+                    <>
+                      <Loader2 className="w-5 h-5 mr-2 animate-spin" />
+                      Sending...
+                    </>
+                  ) : (
+                    'Send Message'
+                  )}
+                </Button>
               </form>
             </div>
 

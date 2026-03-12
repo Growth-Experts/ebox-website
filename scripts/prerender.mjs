@@ -14,7 +14,9 @@ const ROUTES = [
   '/econnect',
   '/about',
   '/contact',
+  '/contact/thank-you',
   '/book-demo',
+  '/book-demo/thank-you',
 ];
 
 const MIME_TYPES = {

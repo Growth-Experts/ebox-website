@@ -8,6 +8,7 @@ import EConnectPage from './pages/EConnectPage';
 import AboutUs from './pages/AboutUs';
 import ContactUs from './pages/ContactUs';
 import BookDemo from './pages/BookDemo';
+import ThankYou from './pages/ThankYou';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 
 const ScrollToTop: React.FC = () => {
@@ -40,7 +41,9 @@ const App: React.FC = () => {
         <Route path="/econnect" element={<EConnectPage />} />
         <Route path="/about" element={<AboutUs />} />
         <Route path="/contact" element={<ContactUs />} />
+        <Route path="/contact/thank-you" element={<ThankYou variant="contact" />} />
         <Route path="/book-demo" element={<BookDemo />} />
+        <Route path="/book-demo/thank-you" element={<ThankYou variant="demo" />} />
         <Route path="/privacy" element={<PrivacyPolicy />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Route>
