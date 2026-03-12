@@ -6,8 +6,9 @@ const RECIPIENTS = [
   'ProductSales@eboxsoftware.com',
   'marketing@growthexperts.co',
 ];
-const FROM = 'ProductSales@eboxsoftware.com';
+const FROM = 'onboarding@resend.dev';
 const FROM_NAME = 'eBox';
+const REPLY_TO = 'sales@eboxsoftware.com';
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
   console.log('[contact] Function invoked, method:', req.method);
@@ -42,13 +43,14 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       resend.emails.send({
         from: `${FROM_NAME} <${FROM}>`,
         to: RECIPIENTS,
-        replyTo: email,
+        replyTo: [email, REPLY_TO],
         subject: `New Contact Form Submission from ${firstName} ${lastName}`,
         html: teamNotificationHtml({ firstName, lastName, email, message, formType: 'contact' }),
       }),
       resend.emails.send({
         from: `${FROM_NAME} <${FROM}>`,
         to: [email],
+        replyTo: REPLY_TO,
         subject: `We've received your message | eBox`,
         html: autoReplyHtml({ firstName, formType: 'contact' }),
       }),
