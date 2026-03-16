@@ -3,7 +3,7 @@ import { Resend } from 'resend';
 import { teamNotificationHtml, autoReplyHtml } from './_emails.js';
 
 const RECIPIENTS = [
-  'ProductSales@eboxsoftware.com',
+  'sales@eboxsoftware.com',
   'marketing@growthexperts.co',
 ];
 const FROM = 'sales@updates.eboxsoftware.com';

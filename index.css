@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-ebox-lime: #BCD632;
+  --color-ebox-teal: #A0C9C9;
+  --color-ebox-dark: #1A1A1A;
+  --color-ebox-gray: #F3F4F6;
+  --color-ebox-light: #FAFAF9;
+  --color-ebox-deep: #1B3A20;
+  --color-ebox-forest: #2D5016;
+  --font-sans: 'Inter', system-ui, sans-serif;
+}
