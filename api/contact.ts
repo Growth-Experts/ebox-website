@@ -6,7 +6,7 @@ const RECIPIENTS = [
   'ProductSales@eboxsoftware.com',
   'marketing@growthexperts.co',
 ];
-const FROM = 'onboarding@resend.dev';
+const FROM = 'sales@eboxsoftware.com';
 const FROM_NAME = 'eBox';
 const REPLY_TO = 'sales@eboxsoftware.com';
 
