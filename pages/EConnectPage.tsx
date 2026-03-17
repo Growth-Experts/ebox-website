@@ -10,7 +10,39 @@ const EConnectPage: React.FC = () => {
       <Helmet>
         <title>eConnect | Tenant Communications for MRI | eBox</title>
         <meta name="description" content="Email thousands of tenants directly from your MRI data. Track every delivery. Handle correspondence without leaving your workflow." />
-        <link rel="canonical" href="https://eboxsoftware.com/econnect" />
+        <link rel="canonical" href="https://www.eboxsoftware.com/econnect" />
+        <meta property="og:title" content="eConnect | Tenant Communications for MRI | eBox" />
+        <meta property="og:description" content="Email thousands of tenants directly from your MRI data. Track every delivery. Handle correspondence without leaving your workflow." />
+        <meta property="og:url" content="https://www.eboxsoftware.com/econnect" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://www.eboxsoftware.com/images/og-ebox.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="eConnect | Tenant Communications for MRI | eBox" />
+        <meta name="twitter:description" content="Email thousands of tenants directly from your MRI data. Track every delivery. Handle correspondence without leaving your workflow." />
+        <meta name="twitter:image" content="https://www.eboxsoftware.com/images/og-ebox.png" />
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "SoftwareApplication",
+          "name": "eConnect",
+          "applicationCategory": "BusinessApplication",
+          "operatingSystem": "Web",
+          "url": "https://www.eboxsoftware.com/econnect",
+          "description": "eConnect enables property management teams to email thousands of tenants directly from MRI data, with full delivery tracking and correspondence management.",
+          "offers": {
+            "@type": "Offer",
+            "priceCurrency": "USD",
+            "price": "0",
+            "priceSpecification": {
+              "@type": "UnitPriceSpecification",
+              "priceType": "https://schema.org/InvoicePrice"
+            }
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "eBox Software",
+            "url": "https://www.eboxsoftware.com"
+          }
+        })}</script>
       </Helmet>
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-ebox-dark to-ebox-deep pt-20 pb-24 overflow-hidden relative">

@@ -19,7 +19,39 @@ const EFormsPage: React.FC = () => {
       <Helmet>
         <title>eForms | Structured MRI Data Imports &amp; Approval Workflows | eBox</title>
         <meta name="description" content="eForms provides structured forms for MRI imports with real-time validation, approval routing, and complete audit trails. Built for real estate finance teams." />
-        <link rel="canonical" href="https://eboxsoftware.com/eforms" />
+        <link rel="canonical" href="https://www.eboxsoftware.com/eforms" />
+        <meta property="og:title" content="eForms | Structured MRI Data Imports & Approval Workflows | eBox" />
+        <meta property="og:description" content="eForms provides structured forms for MRI imports with real-time validation, approval routing, and complete audit trails. Built for real estate finance teams." />
+        <meta property="og:url" content="https://www.eboxsoftware.com/eforms" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://www.eboxsoftware.com/images/og-eforms.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="eForms | Structured MRI Data Imports & Approval Workflows | eBox" />
+        <meta name="twitter:description" content="eForms provides structured forms for MRI imports with real-time validation, approval routing, and complete audit trails. Built for real estate finance teams." />
+        <meta name="twitter:image" content="https://www.eboxsoftware.com/images/og-eforms.png" />
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "SoftwareApplication",
+          "name": "eForms",
+          "applicationCategory": "BusinessApplication",
+          "operatingSystem": "Web",
+          "url": "https://www.eboxsoftware.com/eforms",
+          "description": "eForms provides structured forms for MRI imports with real-time validation, approval routing, and complete audit trails. Built for real estate finance teams.",
+          "offers": {
+            "@type": "Offer",
+            "priceCurrency": "USD",
+            "price": "0",
+            "priceSpecification": {
+              "@type": "UnitPriceSpecification",
+              "priceType": "https://schema.org/InvoicePrice"
+            }
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "eBox Software",
+            "url": "https://www.eboxsoftware.com"
+          }
+        })}</script>
       </Helmet>
       {/* Product Hero — Light, product-centric (distinct from Home2 dark hero) */}
       <section className="bg-white pt-20 pb-0 overflow-hidden">

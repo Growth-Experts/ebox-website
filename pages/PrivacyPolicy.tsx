@@ -8,7 +8,12 @@ const PrivacyPolicy: React.FC = () => {
       <Helmet>
         <title>Privacy Policy | eBox Software</title>
         <meta name="description" content="eBox Software privacy policy. Learn how we collect, use, and protect your personal information when you use eBox products and our website." />
-        <link rel="canonical" href="https://eboxsoftware.com/privacy" />
+        <link rel="canonical" href="https://www.eboxsoftware.com/privacy" />
+        <meta property="og:title" content="Privacy Policy | eBox Software" />
+        <meta property="og:description" content="eBox Software privacy policy. Learn how we collect, use, and protect your personal information when you use eBox products and our website." />
+        <meta property="og:url" content="https://www.eboxsoftware.com/privacy" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://www.eboxsoftware.com/images/og-ebox.png" />
       </Helmet>
 
       {/* Header */}

@@ -10,16 +10,25 @@ const AboutUs: React.FC = () => {
       <Helmet>
         <title>About Us | eBox: Built from 25 Years in Real Estate Tech</title>
         <meta name="description" content="eBox is part of the Open Box Group, a global software consultancy serving real estate for over two decades. We build tools that make MRI work harder for you." />
-        <link rel="canonical" href="https://eboxsoftware.com/about" />
+        <link rel="canonical" href="https://www.eboxsoftware.com/about" />
+        <meta property="og:title" content="About Us | eBox: Built from 25 Years in Real Estate Tech" />
+        <meta property="og:description" content="eBox is part of the Open Box Group, a global software consultancy serving real estate for over two decades. We build tools that make MRI work harder for you." />
+        <meta property="og:url" content="https://www.eboxsoftware.com/about" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://www.eboxsoftware.com/images/og-ebox.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="About Us | eBox: Built from 25 Years in Real Estate Tech" />
+        <meta name="twitter:description" content="eBox is part of the Open Box Group, a global software consultancy serving real estate for over two decades. We build tools that make MRI work harder for you." />
+        <meta name="twitter:image" content="https://www.eboxsoftware.com/images/og-ebox.png" />
       </Helmet>
       {/* Hero Section */}
       <section className="bg-ebox-light pt-20 pb-24 relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-3xl">
             <h1 className="text-5xl md:text-6xl font-extrabold tracking-tight text-ebox-dark mb-6">
-              <span className="block">Making your</span>
-              <span className="block">property systems</span>
-              <span className="block text-ebox-lime">work harder for&nbsp;you</span>
+              <span className="block">25 years in</span>
+              <span className="block">real estate</span>
+              <span className="block text-ebox-lime">technology</span>
             </h1>
             <p className="text-xl text-gray-600 mb-8 leading-relaxed">
               eBox was founded to solve the specific, data and communication pain points that real estate teams face every day. We believe enterprise software doesn't have to be&nbsp;complicated.

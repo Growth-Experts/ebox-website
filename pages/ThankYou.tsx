@@ -11,7 +11,7 @@ interface ThankYouProps {
 const CONTENT = {
   contact: {
     title: 'Contact Us - Thank You | eBox',
-    canonical: 'https://eboxsoftware.com/contact/thank-you',
+    canonical: 'https://www.eboxsoftware.com/contact/thank-you',
     heading: (name: string) =>
       name ? `Thanks for reaching out, ${name}!` : 'Thanks for reaching out!',
     message:
@@ -21,7 +21,7 @@ const CONTENT = {
   },
   demo: {
     title: 'Demo Request - Thank You | eBox',
-    canonical: 'https://eboxsoftware.com/book-demo/thank-you',
+    canonical: 'https://www.eboxsoftware.com/book-demo/thank-you',
     heading: (name: string) =>
       name ? `Thanks for your interest, ${name}!` : 'Thanks for your interest!',
     message:

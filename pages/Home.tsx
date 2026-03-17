@@ -9,9 +9,32 @@ const Home: React.FC = () => {
   return (
     <div className="flex flex-col w-full">
       <Helmet>
-        <title>eBox | MRI Data Imports Made Easy</title>
+        <title>eBox | MRI Data Imports & Tenant Communications for Real Estate Teams</title>
         <meta name="description" content="eBox gives your real estate team the tools to eliminate manual processes, reduce errors, and get more from MRI, starting with eForms for data imports and eConnect for communications." />
-        <link rel="canonical" href="https://eboxsoftware.com/" />
+        <link rel="canonical" href="https://www.eboxsoftware.com/" />
+        <meta property="og:title" content="eBox | MRI Data Imports & Tenant Communications for Real Estate Teams" />
+        <meta property="og:description" content="eBox gives your real estate team the tools to eliminate manual processes, reduce errors, and get more from MRI, starting with eForms for data imports and eConnect for communications." />
+        <meta property="og:url" content="https://www.eboxsoftware.com/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://www.eboxsoftware.com/images/og-ebox.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="eBox | MRI Data Imports & Tenant Communications for Real Estate Teams" />
+        <meta name="twitter:description" content="eBox gives your real estate team the tools to eliminate manual processes, reduce errors, and get more from MRI, starting with eForms for data imports and eConnect for communications." />
+        <meta name="twitter:image" content="https://www.eboxsoftware.com/images/og-ebox.png" />
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "eBox Software",
+          "url": "https://www.eboxsoftware.com",
+          "logo": "https://www.eboxsoftware.com/images/ebox-logo.svg",
+          "description": "eBox is a B2B SaaS product by Open Box Group providing structured eForms and workflows for real estate teams using MRI software.",
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "email": "sales@eboxsoftware.com",
+            "contactType": "sales"
+          },
+          "sameAs": []
+        })}</script>
       </Helmet>
       {/* Hero Section — Dark, eBox-branded */}
       <section className="bg-gradient-to-br from-ebox-dark to-ebox-deep pt-20 pb-24 overflow-hidden relative">

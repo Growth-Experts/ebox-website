@@ -80,7 +80,16 @@ const BookDemo: React.FC = () => {
       <Helmet>
         <title>Book a Demo | eBox: See It in Action</title>
         <meta name="description" content="Schedule a 20-minute personalised walkthrough. See how eForms can streamline your specific MRI workflows." />
-        <link rel="canonical" href="https://eboxsoftware.com/book-demo" />
+        <link rel="canonical" href="https://www.eboxsoftware.com/book-demo" />
+        <meta property="og:title" content="Book a Demo | eBox: See It in Action" />
+        <meta property="og:description" content="Schedule a 20-minute personalised walkthrough. See how eForms can streamline your specific MRI workflows." />
+        <meta property="og:url" content="https://www.eboxsoftware.com/book-demo" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://www.eboxsoftware.com/images/og-ebox.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Book a Demo | eBox: See It in Action" />
+        <meta name="twitter:description" content="Schedule a 20-minute personalised walkthrough. See how eForms can streamline your specific MRI workflows." />
+        <meta name="twitter:image" content="https://www.eboxsoftware.com/images/og-ebox.png" />
       </Helmet>
       {/* Header */}
       <section className="pt-16 pb-10 text-center px-4">

@@ -57,7 +57,16 @@ const ContactUs: React.FC = () => {
       <Helmet>
         <title>Contact Us | eBox: Get in Touch</title>
         <meta name="description" content="Have questions about eForms or eConnect? Need a custom solution? Contact the eBox team, with offices in New York, London, and Cape Town." />
-        <link rel="canonical" href="https://eboxsoftware.com/contact" />
+        <link rel="canonical" href="https://www.eboxsoftware.com/contact" />
+        <meta property="og:title" content="Contact Us | eBox: Get in Touch" />
+        <meta property="og:description" content="Have questions about eForms or eConnect? Need a custom solution? Contact the eBox team, with offices in New York, London, and Cape Town." />
+        <meta property="og:url" content="https://www.eboxsoftware.com/contact" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://www.eboxsoftware.com/images/og-ebox.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Contact Us | eBox: Get in Touch" />
+        <meta name="twitter:description" content="Have questions about eForms or eConnect? Need a custom solution? Contact the eBox team, with offices in New York, London, and Cape Town." />
+        <meta name="twitter:image" content="https://www.eboxsoftware.com/images/og-ebox.png" />
       </Helmet>
       {/* Header */}
       <section className="bg-ebox-dark text-white pt-20 pb-12">
