@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build && npx puppeteer browsers install chrome && node scripts/prerender.mjs",
+    "build": "vite build && node scripts/prerender.mjs",
     "build:no-prerender": "vite build",
     "preview": "vite preview"
   },
@@ -20,11 +20,13 @@
     "tailwindcss": "^4.2.1"
   },
   "devDependencies": {
+    "@sparticuz/chromium": "^143.0.4",
     "@types/node": "^22.14.0",
     "@vercel/node": "^5.6.15",
     "@vitejs/plugin-react": "^5.0.0",
     "marked": "^17.0.4",
     "puppeteer": "^24.37.3",
+    "puppeteer-core": "^24.39.1",
     "typescript": "~5.8.2",
     "vite": "^6.2.0"
   }

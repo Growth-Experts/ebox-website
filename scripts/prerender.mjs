@@ -3,6 +3,7 @@ import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'fs';
 import { join, extname } from 'path';
 import { fileURLToPath } from 'url';
 import puppeteer from 'puppeteer';
+import puppeteerCore from 'puppeteer-core';
 
 const __dirname = fileURLToPath(new URL('.', import.meta.url));
 const DIST_DIR = join(__dirname, '..', 'dist');
@@ -63,10 +64,23 @@ async function prerender() {
   console.log('Starting prerender...\n');
 
   const server = await startServer();
-  const browser = await puppeteer.launch({
-    headless: true,
-    args: ['--no-sandbox', '--disable-setuid-sandbox'],
-  });
+
+  // Vercel's build environment is missing Chrome's system libraries, so use
+  // @sparticuz/chromium which bundles all dependencies for restricted Linux environments.
+  let browser;
+  if (process.env.VERCEL) {
+    const chromium = (await import('@sparticuz/chromium')).default;
+    browser = await puppeteerCore.launch({
+      args: chromium.args,
+      executablePath: await chromium.executablePath(),
+      headless: chromium.headless,
+    });
+  } else {
+    browser = await puppeteer.launch({
+      headless: true,
+      args: ['--no-sandbox', '--disable-setuid-sandbox'],
+    });
+  }
 
   for (const route of ROUTES) {
     const url = `http://localhost:${PORT}${route}`;
