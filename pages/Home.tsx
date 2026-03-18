@@ -426,7 +426,7 @@ const Home: React.FC = () => {
                 <img src="/images/rachel-rule.jpeg" alt="Rachel Rule" className="w-10 h-10 rounded-full object-cover" />
                 <div>
                   <div className="font-bold text-gray-900">Rachel Rule</div>
-                  <div className="text-sm text-gray-500">Director - Systems Accountant, Savills UK</div>
+                  <div className="text-sm text-gray-500">Director – Savills UK</div>
                 </div>
               </div>
             </div>

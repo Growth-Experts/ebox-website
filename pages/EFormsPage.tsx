@@ -792,8 +792,7 @@ const EFormsPage: React.FC = () => {
                   <img src="/images/rachel-rule.jpeg" alt="Rachel Rule" className="w-12 h-12 rounded-full object-cover" />
                   <div>
                     <div className="font-bold text-gray-900 text-lg">Rachel Rule</div>
-                    <div className="text-gray-500">Director, Systems Accountant, Property Management</div>
-                    <div className="text-sm text-gray-400">Savills UK</div>
+                    <div className="text-gray-500">Director – Savills UK</div>
                   </div>
                 </div>
               </div>
