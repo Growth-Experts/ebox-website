@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Button from '../components/Button';
-import { Mail, FolderUp, BarChart3, Shield, Users, Database, ArrowRight } from 'lucide-react';
+import { Mail, FolderUp, BarChart3, Shield, Users, Database, ArrowRight, AtSign, Type, Palette, Lock, FileSignature, Files, Paperclip, Sparkles, CheckCircle } from 'lucide-react';
 import { EConnectLogo } from '../components/Logos';
 
 const EConnectPage: React.FC = () => {
@@ -117,8 +117,151 @@ const EConnectPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Testimonials */}
+      {/* Before / After: what eConnect does to your MRI emails */}
       <section className="py-24 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16 max-w-3xl mx-auto">
+            <h2 className="text-sm font-bold tracking-wide uppercase text-ebox-forest mb-3">Before &amp; After</h2>
+            <h3 className="text-4xl font-bold text-ebox-dark mb-5">From a standard MRI notification to a branded, personalised email.</h3>
+            <p className="text-lg text-gray-600 leading-relaxed">
+              MRI PMX's built-in correspondence reliably delivers reports to the right inboxes.
+              eConnect builds on that foundation, taking the same underlying data and turning every email into a polished, on-brand communication for your tenants and vendors.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-[45fr_55fr] gap-8 mb-16 items-center">
+            {/* Before */}
+            <div className="bg-white rounded-xl border border-gray-200 shadow-sm overflow-hidden flex flex-col">
+              <div className="bg-gray-100 px-6 py-4 border-b border-gray-200 flex items-center justify-between">
+                <div className="flex items-center gap-3">
+                  <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-gray-300 text-gray-700 font-bold text-sm">1</span>
+                  <div>
+                    <div className="text-xs font-bold uppercase tracking-wide text-gray-500">Before</div>
+                    <div className="font-semibold text-ebox-dark">Standard MRI PMX email</div>
+                  </div>
+                </div>
+                <span className="text-xs font-semibold px-2.5 py-1 rounded-full bg-gray-200 text-gray-700">Out of the box</span>
+              </div>
+              <div className="p-6 bg-white flex justify-center">
+                <img
+                  src="/images/econnect-email-before.png"
+                  alt="Generic MRI PMX notification email with a workflow@mrinetsource.com sender and a cryptic PDF filename"
+                  className="max-w-[320px] w-full h-auto rounded-md border border-gray-200"
+                />
+              </div>
+              <ul className="px-6 pb-6 space-y-2 text-sm text-gray-600">
+                <li className="flex gap-2"><span className="text-gray-400">&times;</span> Generic sender address (<span className="font-mono text-xs">workflow@mrinetsource.com</span>)</li>
+                <li className="flex gap-2"><span className="text-gray-400">&times;</span> Non-descriptive subject line</li>
+                <li className="flex gap-2"><span className="text-gray-400">&times;</span> Cryptic attachment filename</li>
+                <li className="flex gap-2"><span className="text-gray-400">&times;</span> Unsecured PDF, no encryption</li>
+                <li className="flex gap-2"><span className="text-gray-400">&times;</span> No branding, no signature block</li>
+              </ul>
+            </div>
+
+            {/* After */}
+            <div className="bg-white rounded-xl border-2 border-ebox-forest shadow-lg overflow-hidden flex flex-col">
+              <div className="bg-ebox-dark px-6 py-4 border-b border-ebox-forest flex items-center justify-between">
+                <div className="flex items-center gap-3">
+                  <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-ebox-lime text-ebox-dark font-bold text-sm">2</span>
+                  <div>
+                    <div className="text-xs font-bold uppercase tracking-wide text-ebox-lime">After</div>
+                    <div className="font-semibold text-white">With eConnect</div>
+                  </div>
+                </div>
+                <span className="text-xs font-semibold px-2.5 py-1 rounded-full bg-ebox-lime text-ebox-dark flex items-center gap-1"><Sparkles className="w-3 h-3" /> Transformed</span>
+              </div>
+              <div className="p-6 bg-white">
+                <img
+                  src="/images/econnect-email-after.png"
+                  alt="Branded TerraVista statement email with dynamic subject, descriptive file names, secured PDFs and company branding"
+                  className="w-full h-auto rounded-md border border-gray-200"
+                />
+              </div>
+              <ul className="px-6 pb-6 space-y-2.5 text-sm text-gray-700">
+                <li className="flex gap-3 items-start"><CheckCircle className="w-5 h-5 text-ebox-forest flex-shrink-0 mt-0.5" /><span>Sent from <span className="font-semibold">your own domain</span></span></li>
+                <li className="flex gap-3 items-start"><CheckCircle className="w-5 h-5 text-ebox-forest flex-shrink-0 mt-0.5" /><span>Dynamic subject with property, unit and invoice details</span></li>
+                <li className="flex gap-3 items-start"><CheckCircle className="w-5 h-5 text-ebox-forest flex-shrink-0 mt-0.5" /><span>Clear, descriptive filenames pulled from MRI</span></li>
+                <li className="flex gap-3 items-start"><CheckCircle className="w-5 h-5 text-ebox-forest flex-shrink-0 mt-0.5" /><span>Encrypted, password-protected and digitally sealed PDFs</span></li>
+                <li className="flex gap-3 items-start"><CheckCircle className="w-5 h-5 text-ebox-forest flex-shrink-0 mt-0.5" /><span>Personalised body with tenant name, balance and context</span></li>
+                <li className="flex gap-3 items-start"><CheckCircle className="w-5 h-5 text-ebox-forest flex-shrink-0 mt-0.5" /><span>Full company branding, logo and signature block</span></li>
+              </ul>
+            </div>
+          </div>
+
+          {/* How it transforms */}
+          <div className="mb-10 text-center">
+            <h4 className="text-2xl md:text-3xl font-bold text-ebox-dark mb-3">How eConnect transforms every email</h4>
+            <p className="text-gray-600 max-w-2xl mx-auto">Same MRI data. Same recipients. A completely different experience for your tenants, vendors and brand.</p>
+          </div>
+
+          <div className="bg-ebox-dark rounded-2xl p-8 md:p-12 shadow-xl">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-8">
+              {[
+                {
+                  icon: <AtSign className="w-5 h-5 text-ebox-dark" />,
+                  title: "Your domain, your brand",
+                  desc: "Send from your own Microsoft 365 / Exchange so emails look native and land in the inbox, not the spam folder."
+                },
+                {
+                  icon: <Type className="w-5 h-5 text-ebox-dark" />,
+                  title: "Dynamic subject &amp; body",
+                  desc: "Merge any PMX field into the subject, body and filenames: tenant name, property, unit, invoice number, balance, due date."
+                },
+                {
+                  icon: <Palette className="w-5 h-5 text-ebox-dark" />,
+                  title: "On-brand templates",
+                  desc: "A WYSIWYG editor lets your team design branded templates with logos, colours and a professional signature block."
+                },
+                {
+                  icon: <Lock className="w-5 h-5 text-ebox-dark" />,
+                  title: "Encrypted &amp; password protected",
+                  desc: "Statements and invoices leave your system as secured PDFs, so sensitive tenant and financial data stays private."
+                },
+                {
+                  icon: <FileSignature className="w-5 h-5 text-ebox-dark" />,
+                  title: "Digitally sealed PDFs",
+                  desc: "Apply a trusted PDF electronic seal with certificate and timestamp so recipients can verify authenticity."
+                },
+                {
+                  icon: <Files className="w-5 h-5 text-ebox-dark" />,
+                  title: "Merged report packs",
+                  desc: "Combine multiple MRI reports into a single document with a cover page and contents page, or send them separately."
+                },
+                {
+                  icon: <Paperclip className="w-5 h-5 text-ebox-dark" />,
+                  title: "Add supporting documents",
+                  desc: "Attach files from outside MRI (utility bills, service charge breakdowns, certificates) to the same communication."
+                },
+                {
+                  icon: <Mail className="w-5 h-5 text-ebox-dark" />,
+                  title: "Custom reply-to mapping",
+                  desc: "Replies and bounce-backs route to the right team, building or property manager, down to tenant level if needed."
+                },
+                {
+                  icon: <FolderUp className="w-5 h-5 text-ebox-dark" />,
+                  title: "Auto-archive to SharePoint",
+                  desc: "Every report sent is automatically filed in SharePoint, organised by building, lease or report type."
+                }
+              ].map((item, i) => (
+                <div key={i} className="flex gap-5 group">
+                  <div className="flex-shrink-0">
+                    <div className="bg-ebox-lime rounded-full w-11 h-11 flex items-center justify-center shadow-md group-hover:scale-110 transition-transform">
+                      {item.icon}
+                    </div>
+                  </div>
+                  <div className="flex-1 pt-1">
+                    <h5 className="text-lg font-bold text-white mb-1.5" dangerouslySetInnerHTML={{ __html: item.title }} />
+                    <p className="text-gray-400 text-sm leading-relaxed" dangerouslySetInnerHTML={{ __html: item.desc }} />
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials */}
+      <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14">
             <h2 className="text-sm font-bold tracking-wide uppercase text-ebox-forest mb-3">What Our Clients Say</h2>
