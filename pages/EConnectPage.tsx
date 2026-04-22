@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Button from '../components/Button';
-import { Mail, FolderUp, BarChart3, Shield, Users, Database, ArrowRight, AtSign, Type, Palette, Lock, FileSignature, Files, Paperclip, Sparkles, CheckCircle } from 'lucide-react';
+import { Mail, FolderUp, BarChart3, Shield, Users, Database, ArrowRight, AtSign, Type, Palette, Lock, FileSignature, Files, Paperclip, CheckCircle } from 'lucide-react';
 import { EConnectLogo } from '../components/Logos';
 
 const EConnectPage: React.FC = () => {
@@ -117,67 +117,28 @@ const EConnectPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Before / After: what eConnect does to your MRI emails */}
+      {/* What an eConnect email looks like */}
       <section className="py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16 max-w-3xl mx-auto">
-            <h2 className="text-sm font-bold tracking-wide uppercase text-ebox-forest mb-3">Before &amp; After</h2>
-            <h3 className="text-4xl font-bold text-ebox-dark mb-5">From a standard MRI notification to a branded, personalised email.</h3>
+            <h2 className="text-sm font-bold tracking-wide uppercase text-ebox-forest mb-3">See it in action</h2>
+            <h3 className="text-4xl font-bold text-ebox-dark mb-5 text-balance">Professional, personalised emails for every tenant.</h3>
             <p className="text-lg text-gray-600 leading-relaxed">
-              MRI PMX's built-in correspondence reliably delivers reports to the right inboxes.
-              eConnect builds on that foundation, taking the same underlying data and turning every email into a polished, on-brand communication for your tenants and vendors.
+              eConnect works alongside MRI PMX to turn your underlying data into polished, on-brand emails, sent from your own domain with every detail personalised to the recipient.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-[45fr_55fr] gap-8 mb-16 items-center">
-            {/* Before */}
-            <div className="bg-white rounded-xl border border-gray-200 shadow-sm overflow-hidden flex flex-col">
-              <div className="bg-gray-100 px-6 py-4 border-b border-gray-200 flex items-center justify-between">
-                <div className="flex items-center gap-3">
-                  <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-gray-300 text-gray-700 font-bold text-sm">1</span>
-                  <div>
-                    <div className="text-xs font-bold uppercase tracking-wide text-gray-500">Before</div>
-                    <div className="font-semibold text-ebox-dark">Standard MRI PMX email</div>
-                  </div>
-                </div>
-                <span className="text-xs font-semibold px-2.5 py-1 rounded-full bg-gray-200 text-gray-700">Out of the box</span>
-              </div>
-              <div className="p-6 bg-white flex justify-center">
-                <img
-                  src="/images/econnect-email-before.png"
-                  alt="Generic MRI PMX notification email with a workflow@mrinetsource.com sender and a cryptic PDF filename"
-                  className="max-w-[320px] w-full h-auto rounded-md border border-gray-200"
-                />
-              </div>
-              <ul className="px-6 pb-6 space-y-2 text-sm text-gray-600">
-                <li className="flex gap-2"><span className="text-gray-400">&times;</span> Generic sender address (<span className="font-mono text-xs">workflow@mrinetsource.com</span>)</li>
-                <li className="flex gap-2"><span className="text-gray-400">&times;</span> Non-descriptive subject line</li>
-                <li className="flex gap-2"><span className="text-gray-400">&times;</span> Cryptic attachment filename</li>
-                <li className="flex gap-2"><span className="text-gray-400">&times;</span> Unsecured PDF, no encryption</li>
-                <li className="flex gap-2"><span className="text-gray-400">&times;</span> No branding, no signature block</li>
-              </ul>
+          <div className="grid grid-cols-1 lg:grid-cols-[65fr_35fr] gap-10 lg:gap-12 mb-20 items-center">
+            <div className="bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden p-4 sm:p-6">
+              <img
+                src="/images/econnect-email-after.png"
+                alt="Branded TerraVista statement email with dynamic subject, descriptive file names, secured PDFs and company branding, powered by eConnect"
+                className="w-full h-auto rounded-md"
+              />
             </div>
-
-            {/* After */}
-            <div className="bg-white rounded-xl border-2 border-ebox-forest shadow-lg overflow-hidden flex flex-col">
-              <div className="bg-ebox-dark px-6 py-4 border-b border-ebox-forest flex items-center justify-between">
-                <div className="flex items-center gap-3">
-                  <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-ebox-lime text-ebox-dark font-bold text-sm">2</span>
-                  <div>
-                    <div className="text-xs font-bold uppercase tracking-wide text-ebox-lime">After</div>
-                    <div className="font-semibold text-white">With eConnect</div>
-                  </div>
-                </div>
-                <span className="text-xs font-semibold px-2.5 py-1 rounded-full bg-ebox-lime text-ebox-dark flex items-center gap-1"><Sparkles className="w-3 h-3" /> Transformed</span>
-              </div>
-              <div className="p-6 bg-white">
-                <img
-                  src="/images/econnect-email-after.png"
-                  alt="Branded TerraVista statement email with dynamic subject, descriptive file names, secured PDFs and company branding"
-                  className="w-full h-auto rounded-md border border-gray-200"
-                />
-              </div>
-              <ul className="px-6 pb-6 space-y-2.5 text-sm text-gray-700">
+            <div>
+              <h4 className="text-2xl font-bold text-ebox-dark mb-5">What every email includes</h4>
+              <ul className="space-y-3.5 text-gray-700">
                 <li className="flex gap-3 items-start"><CheckCircle className="w-5 h-5 text-ebox-forest flex-shrink-0 mt-0.5" /><span>Sent from <span className="font-semibold">your own domain</span></span></li>
                 <li className="flex gap-3 items-start"><CheckCircle className="w-5 h-5 text-ebox-forest flex-shrink-0 mt-0.5" /><span>Dynamic subject with property, unit and invoice details</span></li>
                 <li className="flex gap-3 items-start"><CheckCircle className="w-5 h-5 text-ebox-forest flex-shrink-0 mt-0.5" /><span>Clear, descriptive filenames pulled from MRI</span></li>
@@ -188,10 +149,10 @@ const EConnectPage: React.FC = () => {
             </div>
           </div>
 
-          {/* How it transforms */}
+          {/* Capabilities */}
           <div className="mb-10 text-center">
-            <h4 className="text-2xl md:text-3xl font-bold text-ebox-dark mb-3">How eConnect transforms every email</h4>
-            <p className="text-gray-600 max-w-2xl mx-auto">Same MRI data. Same recipients. A completely different experience for your tenants, vendors and brand.</p>
+            <h4 className="text-2xl md:text-3xl font-bold text-ebox-dark mb-3">Everything your team needs to send emails from MRI</h4>
+            <p className="text-gray-600 max-w-2xl mx-auto">A complete toolkit for branded, personalised, secure correspondence at scale.</p>
           </div>
 
           <div className="bg-ebox-dark rounded-2xl p-8 md:p-12 shadow-xl">
@@ -200,7 +161,7 @@ const EConnectPage: React.FC = () => {
                 {
                   icon: <AtSign className="w-5 h-5 text-ebox-dark" />,
                   title: "Your domain, your brand",
-                  desc: "Send from your own Microsoft 365 / Exchange so emails look native and land in the inbox, not the spam folder."
+                  desc: "Send from your own Microsoft 365 / Exchange so emails look native to your tenants and reinforce your brand with every send."
                 },
                 {
                   icon: <Type className="w-5 h-5 text-ebox-dark" />,
