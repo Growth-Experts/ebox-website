@@ -6,4 +6,10 @@
   <url><loc>https://www.eboxsoftware.com/about</loc><priority>0.6</priority></url>
   <url><loc>https://www.eboxsoftware.com/contact</loc><priority>0.5</priority></url>
   <url><loc>https://www.eboxsoftware.com/book-demo</loc><priority>0.8</priority></url>
+  <url><loc>https://www.eboxsoftware.com/blog</loc><priority>0.7</priority></url>
+  <url><loc>https://www.eboxsoftware.com/blog/journal-entry-approval-workflow-multi-entity-mri-portfolio</loc><priority>0.7</priority></url>
+  <url><loc>https://www.eboxsoftware.com/blog/reduce-mri-import-errors-before-month-end-close</loc><priority>0.6</priority></url>
+  <url><loc>https://www.eboxsoftware.com/blog/approval-routing-rules-property-finance-teams</loc><priority>0.6</priority></url>
+  <url><loc>https://www.eboxsoftware.com/blog/when-property-teams-outgrow-spreadsheets-for-mri-processes</loc><priority>0.6</priority></url>
+  <url><loc>https://www.eboxsoftware.com/privacy</loc><priority>0.3</priority></url>
 </urlset>

@@ -10,6 +10,8 @@ import ContactUs from './pages/ContactUs';
 import BookDemo from './pages/BookDemo';
 import ThankYou from './pages/ThankYou';
 import PrivacyPolicy from './pages/PrivacyPolicy';
+import BlogLanding from './pages/BlogLanding';
+import BlogArticlePage from './pages/BlogArticlePage';
 
 const ScrollToTop: React.FC = () => {
   const { pathname } = useLocation();
@@ -44,6 +46,8 @@ const App: React.FC = () => {
         <Route path="/contact/thank-you" element={<ThankYou variant="contact" />} />
         <Route path="/book-demo" element={<BookDemo />} />
         <Route path="/book-demo/thank-you" element={<ThankYou variant="demo" />} />
+        <Route path="/blog" element={<BlogLanding />} />
+        <Route path="/blog/:slug" element={<BlogArticlePage />} />
         <Route path="/privacy" element={<PrivacyPolicy />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Route>

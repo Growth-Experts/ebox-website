@@ -18,6 +18,12 @@ const ROUTES = [
   '/contact/thank-you',
   '/book-demo',
   '/book-demo/thank-you',
+  '/blog',
+  '/blog/journal-entry-approval-workflow-multi-entity-mri-portfolio',
+  '/blog/reduce-mri-import-errors-before-month-end-close',
+  '/blog/approval-routing-rules-property-finance-teams',
+  '/blog/when-property-teams-outgrow-spreadsheets-for-mri-processes',
+  '/privacy',
 ];
 
 const MIME_TYPES = {

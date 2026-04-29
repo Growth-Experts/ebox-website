@@ -1,6 +1,6 @@
 import React from 'react';
 
-export type PageRoute = 'home' | 'eforms' | 'econnect' | 'about' | 'contact' | 'contact-thank-you' | 'book-demo' | 'book-demo-thank-you' | 'privacy';
+export type PageRoute = 'home' | 'eforms' | 'econnect' | 'about' | 'contact' | 'contact-thank-you' | 'book-demo' | 'book-demo-thank-you' | 'blog' | 'privacy';
 
 export const ROUTE_PATHS: Record<PageRoute, string> = {
   home: '/',
@@ -11,6 +11,7 @@ export const ROUTE_PATHS: Record<PageRoute, string> = {
   'contact-thank-you': '/contact/thank-you',
   'book-demo': '/book-demo',
   'book-demo-thank-you': '/book-demo/thank-you',
+  blog: '/blog',
   privacy: '/privacy',
 };
 

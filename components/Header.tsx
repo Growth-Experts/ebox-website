@@ -7,6 +7,7 @@ import { Menu, X } from 'lucide-react';
 const Header: React.FC = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const { pathname } = useLocation();
+  const isBlogActive = pathname === '/blog' || pathname.startsWith('/blog/');
 
   const closeMobileMenu = () => setIsMobileMenuOpen(false);
 
@@ -42,6 +43,12 @@ const Header: React.FC = () => {
               className={`text-sm font-medium transition-colors ${pathname === '/econnect' ? 'text-ebox-dark' : 'text-gray-500 hover:text-ebox-dark'}`}
             >
               eConnect
+            </Link>
+            <Link
+              to="/blog"
+              className={`text-sm font-medium transition-colors ${isBlogActive ? 'text-ebox-dark' : 'text-gray-500 hover:text-ebox-dark'}`}
+            >
+              Blog
             </Link>
             <Link
               to="/contact"
@@ -94,6 +101,13 @@ const Header: React.FC = () => {
               className="block w-full text-left px-3 py-3 text-base font-medium text-gray-700 hover:bg-gray-50 rounded-md"
             >
               eConnect
+            </Link>
+            <Link
+              to="/blog"
+              onClick={closeMobileMenu}
+              className="block w-full text-left px-3 py-3 text-base font-medium text-gray-700 hover:bg-gray-50 rounded-md"
+            >
+              Blog
             </Link>
             <Link
               to="/contact"
