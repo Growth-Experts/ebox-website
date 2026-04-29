@@ -7,6 +7,7 @@ export interface BlogAuthor {
   profile: string;
   avatarInitials: string;
   avatarImage: string;
+  linkedinUrl: string;
 }
 
 export interface BlogContentBlock {
@@ -43,6 +44,7 @@ export const blogAuthors: Record<BlogAuthorId, BlogAuthor> = {
       'Björn works with real estate finance and operations teams to turn complex MRI workflows into structured, auditable software processes.',
     avatarInitials: 'BP',
     avatarImage: '/images/bjorn-peterson.png',
+    linkedinUrl: 'https://www.linkedin.com/in/bjornspeterson/',
   },
   dean: {
     id: 'dean',
@@ -52,6 +54,7 @@ export const blogAuthors: Record<BlogAuthorId, BlogAuthor> = {
       'Dean helps property teams connect day-to-day operational workflows with the MRI data structures that keep portfolios running.',
     avatarInitials: 'DN',
     avatarImage: '/images/dean-nixon.png',
+    linkedinUrl: 'https://www.linkedin.com/in/dean-nixon-29356213/',
   },
 };
 

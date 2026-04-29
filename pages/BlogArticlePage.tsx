@@ -58,6 +58,12 @@ const ArticleVisual: React.FC<{ label: string; alt?: string; src?: string }> = (
   </div>
 );
 
+const LinkedInIcon: React.FC<{ className?: string }> = ({ className = '' }) => (
+  <svg viewBox="0 0 24 24" aria-hidden="true" className={className} fill="currentColor">
+    <path d="M20.45 20.45h-3.56v-5.58c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.95v5.67H9.34V8.99h3.42v1.57h.05c.48-.9 1.64-1.85 3.37-1.85 3.61 0 4.28 2.38 4.28 5.47v6.27ZM5.32 7.42a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12Zm1.78 13.03H3.54V8.99H7.1v11.46ZM22.23 0H1.76C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.76 24h20.47c.97 0 1.77-.77 1.77-1.72V1.72C24 .77 23.2 0 22.23 0Z" />
+  </svg>
+);
+
 const BlogArticlePage: React.FC = () => {
   const { slug } = useParams();
   const post = getBlogPostBySlug(slug);
@@ -110,6 +116,7 @@ const BlogArticlePage: React.FC = () => {
             jobTitle: author.role,
             description: author.profile,
             image: `https://www.eboxsoftware.com${author.avatarImage}`,
+            sameAs: [author.linkedinUrl],
           },
           publisher: {
             '@type': 'Organization',
@@ -231,6 +238,15 @@ const BlogArticlePage: React.FC = () => {
                   <p className="font-bold text-ebox-dark">{author.name}</p>
                   <p className="mt-1 text-sm font-medium text-ebox-forest">{author.role}</p>
                   <p className="mt-4 text-sm leading-relaxed text-gray-600">{author.profile}</p>
+                  <a
+                    href={author.linkedinUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-5 inline-flex items-center gap-2 rounded-full border border-gray-200 px-4 py-2 text-sm font-semibold text-gray-700 transition-colors hover:border-ebox-forest hover:text-ebox-forest"
+                  >
+                    <LinkedInIcon className="h-4 w-4" />
+                    Connect on LinkedIn
+                  </a>
                 </div>
 
                 <div className="rounded-2xl border border-gray-100 bg-white p-6 shadow-sm">
@@ -240,7 +256,7 @@ const BlogArticlePage: React.FC = () => {
                       href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodedUrl}`}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center justify-between rounded-full border border-gray-200 px-4 py-2.5 text-sm font-semibold text-gray-700 transition-colors hover:border-ebox-forest hover:text-ebox-forest"
+                      className="flex cursor-pointer items-center justify-between rounded-full border border-gray-200 px-4 py-2.5 text-sm font-semibold text-gray-700 transition-colors hover:border-ebox-forest hover:text-ebox-forest"
                     >
                       LinkedIn
                       <LinkIcon className="h-4 w-4" />
@@ -249,7 +265,7 @@ const BlogArticlePage: React.FC = () => {
                       href={`https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center justify-between rounded-full border border-gray-200 px-4 py-2.5 text-sm font-semibold text-gray-700 transition-colors hover:border-ebox-forest hover:text-ebox-forest"
+                      className="flex cursor-pointer items-center justify-between rounded-full border border-gray-200 px-4 py-2.5 text-sm font-semibold text-gray-700 transition-colors hover:border-ebox-forest hover:text-ebox-forest"
                     >
                       Facebook
                       <LinkIcon className="h-4 w-4" />
@@ -257,7 +273,7 @@ const BlogArticlePage: React.FC = () => {
                     <button
                       type="button"
                       onClick={copyLink}
-                      className="flex w-full items-center justify-between rounded-full border border-gray-200 px-4 py-2.5 text-sm font-semibold text-gray-700 transition-colors hover:border-ebox-forest hover:text-ebox-forest"
+                      className="flex w-full cursor-pointer items-center justify-between rounded-full border border-gray-200 px-4 py-2.5 text-sm font-semibold text-gray-700 transition-colors hover:border-ebox-forest hover:text-ebox-forest"
                     >
                       {copied ? 'Copied' : 'Copy link'}
                       {copied ? <Check className="h-4 w-4" /> : <Copy className="h-4 w-4" />}
