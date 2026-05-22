@@ -2,7 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Button from '../components/Button';
 import { EFormsLogo } from '../components/Logos';
-import { Check, Shield, Lock, FileText, Settings, RefreshCw, AlertCircle, Database, Upload, Users, Layers, ArrowRight, ChevronRight, CheckCircle, Layout, Building, Receipt, PlusCircle, ShieldCheck } from 'lucide-react';
+import { Check, Shield, Lock, FileText, Settings, RefreshCw, AlertCircle, Database, Upload, Users, Layers, ArrowRight, ChevronRight, ChevronDown, CheckCircle, Layout, Building, Receipt, PlusCircle, ShieldCheck, Webhook, Server } from 'lucide-react';
 
 const EFormsPage: React.FC = () => {
   const useCases = [
@@ -549,9 +549,9 @@ const EFormsPage: React.FC = () => {
       <section className="py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-gray-900">Two ways to work</h2>
+            <h2 className="text-3xl font-bold text-gray-900">Multiple ways to work</h2>
           </div>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-white p-8 rounded-lg shadow-sm border border-gray-100 flex flex-col">
               <div className="p-4 bg-blue-100 rounded-lg w-fit mb-6">
                 <FileText className="text-blue-600 w-6 h-6" />
@@ -595,6 +595,88 @@ const EFormsPage: React.FC = () => {
                 </div>
                 <div className="h-72 overflow-hidden">
                   <img src="/images/eforms-file-import.png" alt="eForms file upload interface for bulk spreadsheet imports into MRI" className="w-full block" />
+                </div>
+              </div>
+            </div>
+            <div className="bg-white p-8 rounded-lg shadow-sm border border-gray-100 flex flex-col">
+              <div className="p-4 bg-violet-100 rounded-lg w-fit mb-6">
+                <Webhook className="text-violet-600 w-6 h-6" />
+              </div>
+              <h3 className="text-2xl font-bold mb-2">API In</h3>
+              <p className="text-gray-500 mb-6">Connect third-party systems and auto-submit data into MRI through eForms.</p>
+              <div className="rounded-lg overflow-hidden border border-gray-200 shadow-md">
+                <div className="flex items-center gap-2.5 px-4 py-2.5 bg-gray-100 border-b border-gray-200">
+                  <div className="flex items-center gap-1.5">
+                    <div className="w-2.5 h-2.5 rounded-full bg-gray-300"></div>
+                    <div className="w-2.5 h-2.5 rounded-full bg-gray-300"></div>
+                    <div className="w-2.5 h-2.5 rounded-full bg-gray-300"></div>
+                  </div>
+                  <div className="flex-1 flex justify-center">
+                    <div className="bg-white rounded-md px-3 py-0.5 text-[10px] text-gray-400 border border-gray-200 text-center">api.eboxsoftware.com</div>
+                  </div>
+                  <div className="w-10"></div>
+                </div>
+                <div className="h-72 bg-gradient-to-br from-gray-50 to-violet-50/40 flex items-center justify-center p-5">
+                  <div className="w-full max-w-sm">
+                    <div className="flex items-center justify-between gap-2">
+                      <div className="flex flex-col gap-2 flex-shrink-0">
+                        <div className="bg-white border border-gray-200 rounded-lg px-3 py-2.5 shadow-sm flex items-center gap-2">
+                          <Server className="w-4 h-4 text-gray-400 flex-shrink-0" />
+                          <div>
+                            <div className="text-[10px] font-bold text-gray-700 leading-tight">ERP System</div>
+                            <div className="text-[9px] text-gray-400">Third-party</div>
+                          </div>
+                        </div>
+                        <div className="bg-white border border-gray-200 rounded-lg px-3 py-2.5 shadow-sm flex items-center gap-2">
+                          <Building className="w-4 h-4 text-gray-400 flex-shrink-0" />
+                          <div>
+                            <div className="text-[10px] font-bold text-gray-700 leading-tight">PM Platform</div>
+                            <div className="text-[9px] text-gray-400">Third-party</div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div className="flex flex-col items-center gap-0.5 flex-shrink-0">
+                        <svg width="28" height="12" viewBox="0 0 28 12" aria-hidden="true">
+                          <line x1="0" y1="6" x2="20" y2="6" stroke="#8B5CF6" strokeWidth="1.5" />
+                          <polygon points="20,3 28,6 20,9" fill="#8B5CF6" />
+                        </svg>
+                        <span className="text-[8px] font-semibold text-violet-500 uppercase tracking-wide">POST</span>
+                        <svg width="28" height="12" viewBox="0 0 28 12" aria-hidden="true">
+                          <line x1="0" y1="6" x2="20" y2="6" stroke="#8B5CF6" strokeWidth="1.5" />
+                          <polygon points="20,3 28,6 20,9" fill="#8B5CF6" />
+                        </svg>
+                      </div>
+
+                      <div className="bg-violet-600 rounded-lg px-3 py-3 shadow-md flex flex-col items-center gap-1 flex-shrink-0 border border-violet-700">
+                        <Webhook className="w-5 h-5 text-white" />
+                        <div className="text-[10px] font-bold text-white leading-tight text-center">eForms<br />API In</div>
+                      </div>
+
+                      <div className="flex flex-col items-center gap-0.5 flex-shrink-0">
+                        <svg width="28" height="12" viewBox="0 0 28 12" aria-hidden="true">
+                          <line x1="0" y1="6" x2="20" y2="6" stroke="#BCD632" strokeWidth="1.5" />
+                          <polygon points="20,3 28,6 20,9" fill="#BCD632" />
+                        </svg>
+                        <span className="text-[8px] font-semibold text-ebox-forest uppercase tracking-wide">Sync</span>
+                      </div>
+
+                      <div className="bg-ebox-forest rounded-lg px-3 py-3 shadow-md flex flex-col items-center gap-1 flex-shrink-0 border border-ebox-deep">
+                        <Database className="w-5 h-5 text-ebox-lime" />
+                        <div className="text-[10px] font-bold text-white leading-tight text-center">MRI<br />Database</div>
+                      </div>
+                    </div>
+
+                    <div className="mt-4 bg-white/80 border border-gray-200 rounded-md px-3 py-2 font-mono text-[9px] text-gray-500 leading-relaxed">
+                      <span className="text-violet-600 font-semibold">POST</span> /api/v1/forms/submit{' '}
+                      <span className="text-gray-400">→ validate → approve → import</span>
+                    </div>
+
+                    <div className="mt-2 flex items-center justify-center gap-1.5">
+                      <div className="w-1.5 h-1.5 rounded-full bg-violet-400 animate-pulse"></div>
+                      <span className="text-[9px] text-gray-400 font-medium">Automated submission</span>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

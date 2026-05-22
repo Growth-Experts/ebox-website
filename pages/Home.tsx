@@ -191,9 +191,10 @@ const Home: React.FC = () => {
           <div className="mt-16 text-center">
             <h3 className="text-gray-400 font-bold uppercase tracking-widest text-sm mb-10">Trusted by industry leaders</h3>
             <div className="flex flex-wrap justify-center items-center gap-x-16 gap-y-8 opacity-70">
-               <img src="/images/brisbane-airport.svg" alt="Brisbane Airport" className="h-10 object-contain" />
-               <img src="/images/savills.svg" alt="Savills" className="h-9 object-contain" />
-               <img src="/images/cls.png" alt="CLS" className="h-9 object-contain" />
+               <img src="/images/brisbane-airport.svg" alt="Brisbane Airport" className="h-11 object-contain" />
+               <img src="/images/savills.svg" alt="Savills" className="h-10 object-contain" />
+               <img src="/images/va-logo.svg" alt="V&A" className="h-14 object-contain" />
+               <img src="/images/cls.png" alt="CLS" className="h-10 object-contain" />
             </div>
           </div>
         </div>

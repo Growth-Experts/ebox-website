@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Button from '../components/Button';
-import { Mail, FolderUp, BarChart3, Shield, Users, Database, ArrowRight, AtSign, Type, Palette, Lock, FileSignature, Files, Paperclip, CheckCircle } from 'lucide-react';
+import { Mail, FolderUp, BarChart3, Shield, Users, Database, ArrowRight, AtSign, Type, Palette, Lock, Files, Paperclip, CheckCircle } from 'lucide-react';
 import { EConnectLogo } from '../components/Logos';
 
 const EConnectPage: React.FC = () => {
@@ -142,7 +142,7 @@ const EConnectPage: React.FC = () => {
                 <li className="flex gap-3 items-start"><CheckCircle className="w-5 h-5 text-ebox-forest flex-shrink-0 mt-0.5" /><span>Sent from <span className="font-semibold">your own domain</span></span></li>
                 <li className="flex gap-3 items-start"><CheckCircle className="w-5 h-5 text-ebox-forest flex-shrink-0 mt-0.5" /><span>Dynamic subject with property, unit and invoice details</span></li>
                 <li className="flex gap-3 items-start"><CheckCircle className="w-5 h-5 text-ebox-forest flex-shrink-0 mt-0.5" /><span>Clear, descriptive filenames pulled from MRI</span></li>
-                <li className="flex gap-3 items-start"><CheckCircle className="w-5 h-5 text-ebox-forest flex-shrink-0 mt-0.5" /><span>Encrypted, password-protected and digitally sealed PDFs</span></li>
+                <li className="flex gap-3 items-start"><CheckCircle className="w-5 h-5 text-ebox-forest flex-shrink-0 mt-0.5" /><span>Encrypted, password-protected PDFs</span></li>
                 <li className="flex gap-3 items-start"><CheckCircle className="w-5 h-5 text-ebox-forest flex-shrink-0 mt-0.5" /><span>Personalised body with tenant name, balance and context</span></li>
                 <li className="flex gap-3 items-start"><CheckCircle className="w-5 h-5 text-ebox-forest flex-shrink-0 mt-0.5" /><span>Full company branding, logo and signature block</span></li>
               </ul>
@@ -177,11 +177,6 @@ const EConnectPage: React.FC = () => {
                   icon: <Lock className="w-5 h-5 text-ebox-dark" />,
                   title: "Encrypted &amp; password protected",
                   desc: "Statements and invoices leave your system as secured PDFs, so sensitive tenant and financial data stays private."
-                },
-                {
-                  icon: <FileSignature className="w-5 h-5 text-ebox-dark" />,
-                  title: "Digitally sealed PDFs",
-                  desc: "Apply a trusted PDF electronic seal with certificate and timestamp so recipients can verify authenticity."
                 },
                 {
                   icon: <Files className="w-5 h-5 text-ebox-dark" />,
