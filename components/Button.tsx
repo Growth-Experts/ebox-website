@@ -22,7 +22,7 @@ const Button: React.FC<ButtonProps> = ({
   to,
   ...props 
 }) => {
-  const baseStyles = "inline-flex items-center justify-center font-semibold rounded-full transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2";
+  const baseStyles = "inline-flex items-center justify-center font-semibold rounded-full transition-all duration-200 cursor-pointer disabled:cursor-not-allowed focus:outline-none focus:ring-2 focus:ring-offset-2";
   
   const variants = {
     primary: "bg-ebox-lime text-ebox-dark hover:brightness-95 border border-transparent shadow-sm hover:shadow-md",
