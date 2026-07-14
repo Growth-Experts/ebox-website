@@ -72,6 +72,109 @@ export function teamNotificationHtml({
 </html>`.trim();
 }
 
+export function ascendTeamHtml({
+  name,
+  company,
+  email,
+  phone,
+}: {
+  name: string;
+  company: string;
+  email: string;
+  phone?: string;
+}) {
+  const row = (label: string, value: string) => `
+    <tr>
+      <td style="padding:8px 0;color:#666;font-size:13px;width:120px;vertical-align:top;">${label}</td>
+      <td style="padding:8px 0;color:${BRAND.dark};font-size:15px;font-weight:600;">${value}</td>
+    </tr>`;
+
+  return `
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8"></head>
+<body style="margin:0;padding:0;background:${BRAND.gray};font-family:Inter,system-ui,sans-serif;">
+  <table width="100%" cellpadding="0" cellspacing="0" style="background:${BRAND.gray};padding:32px 16px;">
+    <tr><td align="center">
+      <table width="600" cellpadding="0" cellspacing="0" style="background:#fff;border-radius:12px;overflow:hidden;">
+        <tr>
+          <td style="background:${BRAND.dark};padding:24px 32px;">
+            <span style="color:${BRAND.lime};font-size:20px;font-weight:700;">eBox</span>
+            <span style="color:#fff;font-size:14px;margin-left:12px;">New MRI Ascend Lead</span>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding:32px;">
+            <table width="100%" cellpadding="0" cellspacing="0">
+              ${row('Name', name)}
+              ${row('Company', company)}
+              <tr>
+                <td style="padding:8px 0;color:#666;font-size:13px;vertical-align:top;">Email</td>
+                <td style="padding:8px 0;color:${BRAND.dark};font-size:15px;">
+                  <a href="mailto:${email}" style="color:${BRAND.forest};">${email}</a>
+                </td>
+              </tr>
+              ${phone ? row('Phone', phone) : ''}
+              ${row('Source', 'MRI Ascend APAC 2026 (stand QR code)')}
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding:0 32px 24px;">
+            <a href="mailto:${email}" style="display:inline-block;background:${BRAND.lime};color:${BRAND.dark};padding:10px 24px;border-radius:999px;font-size:14px;font-weight:600;text-decoration:none;">
+              Reply to ${name}
+            </a>
+          </td>
+        </tr>
+      </table>
+    </td></tr>
+  </table>
+</body>
+</html>`.trim();
+}
+
+export function ascendAutoReplyHtml({ name }: { name: string }) {
+  return `
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8"></head>
+<body style="margin:0;padding:0;background:${BRAND.gray};font-family:Inter,system-ui,sans-serif;">
+  <table width="100%" cellpadding="0" cellspacing="0" style="background:${BRAND.gray};padding:32px 16px;">
+    <tr><td align="center">
+      <table width="600" cellpadding="0" cellspacing="0" style="background:#fff;border-radius:12px;overflow:hidden;">
+        <tr>
+          <td style="background:${BRAND.dark};padding:24px 32px;text-align:center;">
+            <span style="color:${BRAND.lime};font-size:24px;font-weight:700;">eBox</span>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding:40px 32px;text-align:center;">
+            <h1 style="margin:0 0 16px;color:${BRAND.dark};font-size:24px;font-weight:700;">Thanks for stopping by, ${name}!</h1>
+            <p style="margin:0 0 24px;color:#555;font-size:16px;line-height:1.6;">
+              It was great to meet you at MRI Ascend APAC 2026. We've got your details and the eBox team will be in touch soon.
+            </p>
+            <p style="margin:0 0 32px;color:#555;font-size:16px;line-height:1.6;">
+              Take a look at how eBox helps MRI users get more done with less manual work.
+            </p>
+            <a href="https://eboxsoftware.com" style="display:inline-block;background:${BRAND.lime};color:${BRAND.dark};padding:12px 32px;border-radius:999px;font-size:15px;font-weight:600;text-decoration:none;">
+              Explore eBox
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding:24px 32px;border-top:1px solid #eee;text-align:center;">
+            <p style="margin:0;color:#999;font-size:13px;">
+              eBox by Open Box Group. New York &bull; London &bull; Cape Town
+            </p>
+          </td>
+        </tr>
+      </table>
+    </td></tr>
+  </table>
+</body>
+</html>`.trim();
+}
+
 export function autoReplyHtml({
   firstName,
   formType,

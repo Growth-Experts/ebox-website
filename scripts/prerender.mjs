@@ -18,6 +18,8 @@ const ROUTES = [
   '/contact/thank-you',
   '/book-demo',
   '/book-demo/thank-you',
+  '/mriascend',
+  '/mriascend/thank-you',
 ];
 
 const MIME_TYPES = {

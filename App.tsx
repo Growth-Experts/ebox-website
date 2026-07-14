@@ -10,6 +10,8 @@ import ContactUs from './pages/ContactUs';
 import BookDemo from './pages/BookDemo';
 import ThankYou from './pages/ThankYou';
 import PrivacyPolicy from './pages/PrivacyPolicy';
+import MriAscend from './pages/MriAscend';
+import MriAscendThankYou from './pages/MriAscendThankYou';
 
 const ScrollToTop: React.FC = () => {
   const { pathname } = useLocation();
@@ -37,6 +39,8 @@ const App: React.FC = () => {
     <Routes>
       <Route element={<Layout />}>
         <Route path="/" element={<Home />} />
+        <Route path="/mriascend" element={<MriAscend />} />
+        <Route path="/mriascend/thank-you" element={<MriAscendThankYou />} />
         <Route path="/eforms" element={<EFormsPage />} />
         <Route path="/econnect" element={<EConnectPage />} />
         <Route path="/about" element={<AboutUs />} />
